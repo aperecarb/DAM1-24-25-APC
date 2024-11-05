@@ -1,0 +1,6 @@
+# Arquivos de configuración do IDE
+.vscode/
+
+# Arquivos de compilación
+*.class
+bin/
