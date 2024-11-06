@@ -5,7 +5,7 @@ cuenta que si el número de entradas vendidas no supera el 20% del aforo del loc
 cancela el concierto. Si el número de entradas vendidas no supera el 50% del aforo del
 local, se realiza una rebaja del 25% del precio de la entrada. */
 
-package ejerciciosU2.condicionales;
+package ejercicios;
 import java.util.Scanner;
 
 public class Propuesto {

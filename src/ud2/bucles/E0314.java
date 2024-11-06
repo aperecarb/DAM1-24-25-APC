@@ -1,6 +1,6 @@
 /* Diseñar una aplicación que muestre las tablas de multiplicar del 1 al 10 */
 
-package ejerciciosU2.bucles;
+package bucles;
 public class E0314 {
     public static void main(String[] args) {
         for(int i = 1; i < 11; i++){

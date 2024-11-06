@@ -4,7 +4,7 @@ cuando se utilice el -1 como altura). Los árboles se identifican mediante etiqu
 comenzando en 0. Diseñar una aplicación que, al terminar la introducción de datos, muestre el número y la altura 
 del árbol más alto. */
 
-package ejerciciosU2.bucles;
+package bucles;
 import java.util.Scanner;
 
 public class E0304 {

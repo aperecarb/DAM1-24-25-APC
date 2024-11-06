@@ -2,7 +2,7 @@
 Si el ángulo introducido por el usuario no se encuentra en el rango de 0° a 360°, hay que transformarlo a dicho rango. 
 Nota: El operador módulo (%) puede ayudarnos a convertir un ángulo a su equivalente en el rango comprendido de 0 a 360°. */
 
-package ejerciciosU2.propuestos.condicionales;
+package ejercicioscondicionales;
 
 import java.util.Scanner;
 

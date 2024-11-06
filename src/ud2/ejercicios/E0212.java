@@ -2,7 +2,7 @@
  tener en cuenta que existen meses con 28, 30 y 31 días (no se considerarán los años
  bisiestos). */
 
-package ejerciciosU2.condicionales;
+package ejercicios;
 import java.util.Scanner;
 
 public class E0212 {

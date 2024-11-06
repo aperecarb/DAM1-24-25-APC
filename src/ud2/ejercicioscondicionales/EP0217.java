@@ -4,7 +4,7 @@ es correcto o incorrecto.
 
 Pista: Puedes utilizar el método random() de la clase Math o la clase Random. */
 
-package ejerciciosU2.propuestos.condicionales;
+package ejercicioscondicionales;
 
 import java.util.Scanner;
 import java.util.Random;

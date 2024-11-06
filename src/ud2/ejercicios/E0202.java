@@ -1,6 +1,6 @@
 /* Pedir dos números enteros y decir si son iguales o no */
 
-package ejerciciosU2.condicionales;
+package ejercicios;
 import java.util.Scanner;
 
 public class E0202 {

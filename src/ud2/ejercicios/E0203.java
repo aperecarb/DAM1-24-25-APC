@@ -1,6 +1,6 @@
 /* Solicitar dos números distintos y mostrar cuál es el mayor */
 
-package ejerciciosU2.condicionales;
+package ejercicios;
 import java.util.Scanner;
 
 public class E0203 {

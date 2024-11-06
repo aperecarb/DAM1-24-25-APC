@@ -1,6 +1,6 @@
 /* Escribir todos los múltiplos de 7 menores que 100. */
 
-package ejerciciosU2.bucles;
+package bucles;
 
 public class E0307 {
     public static void main(String[] args) {

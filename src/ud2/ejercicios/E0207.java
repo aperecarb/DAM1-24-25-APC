@@ -1,6 +1,6 @@
 /* Pedir tres números y mostrarlos ordenados de mayor a menor */
 
-package ejerciciosU2.condicionales;
+package ejercicios;
 import java.util.Scanner;
 
 public class E0207 {

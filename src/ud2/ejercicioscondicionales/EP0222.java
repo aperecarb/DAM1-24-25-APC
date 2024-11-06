@@ -1,7 +1,7 @@
 /* Haz un programa que lea por teclado un número de fallos en el juego del ahorcado, entre 0 y 7, y que imprima un dibujo 
 de un ahorcado más o menos completo en función del número de fallos, como los de los siguientes ejemplos: */
 
-package ejerciciosU2.propuestos.condicionales;
+package ejercicioscondicionales;
 
 import java.util.Scanner;
 

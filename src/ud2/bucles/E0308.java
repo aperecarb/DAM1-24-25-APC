@@ -1,7 +1,7 @@
 /* Pedir diez números enteros por teclado y mostrar la media.
  Amplía codificando el número de números como una constante.*/
 
-package ejerciciosU2.bucles;
+package bucles;
 import java.util.Scanner;
 
 public class E0308 {

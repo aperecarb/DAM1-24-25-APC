@@ -1,6 +1,6 @@
 /* Dadas 6 notas, escribir la cantidad de alumnos aprobados, condicionados (nota igual a 4) y suspensos. */
 
-package ejerciciosU2.bucles;
+package bucles;
 
 import java.util.Scanner;
 

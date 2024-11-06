@@ -1,6 +1,6 @@
 /* Escribir una aplicación para aprender a contar, que pedirá un número n y mostrará todos los números del 1 al n. */
 
-package ejerciciosU2.bucles;
+package bucles;
 import java.util.Scanner;
 
 public class E0306 {

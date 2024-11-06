@@ -2,7 +2,7 @@
 es par, si es positivo y su cuadrado. El proceso se repetirá hasta que el número
 introducido sea 0. */
 
-package ejerciciosU2.bucles;
+package bucles;
 import java.util.Scanner;
 
 public class E0301 {

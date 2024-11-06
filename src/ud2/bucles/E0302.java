@@ -3,7 +3,7 @@ alumnos de un centro educativo. Se introducirán datos hasta que uno de ellos se
 negativo, y se mostrará: la suma de todas las edades introducidas, la media, el número
 de alumnos y cuántos son mayores de edad. */
 
-package ejerciciosU2.bucles;
+package bucles;
 import java.util.Scanner;
 
 public class E0302{

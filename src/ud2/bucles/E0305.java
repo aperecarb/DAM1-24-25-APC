@@ -7,7 +7,7 @@ Amplía el programa para que muestre el número de aciertos al terminar.
 
 Variante. Permite al usuario un número limitado de fallos. */
 
-package ejerciciosU2.bucles;
+package bucles;
 import java.util.Scanner;
 import java.util.Random;
 

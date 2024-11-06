@@ -5,7 +5,7 @@ de lado, utilizando para ello asteriscos (*). Por ejemplo, para n = 4:
 * *
 *                                                                               */
 
-package ejerciciosU2.bucles;
+package bucles;
 import java.util.Scanner;
 
 public class E0315 {

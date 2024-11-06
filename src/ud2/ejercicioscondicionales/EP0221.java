@@ -3,7 +3,7 @@ al azar entre un número mínimo, por ejemplo 5, y un número máximo, por ejemp
 El programa contará el tiempo que el usuario ha tardado en pulsar Enter y responderá con un mensaje diciendo si acertó en el momento correcto o, en caso 
 contrario, cuántos segundos, de adelanto o de retraso, se desvió.  */
 
-package ejerciciosU2.propuestos.condicionales;
+package ejercicioscondicionales;
 
 import java.util.Scanner;
 import java.util.Random;

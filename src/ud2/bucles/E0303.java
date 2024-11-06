@@ -7,7 +7,7 @@ rinde (introduciendo un -1).
 Amplía el programa para que muestre el número secreto cuando el usuario se rinda y el 
 número de intentos cuando haya acertado.*/
 
-package ejerciciosU2.bucles;
+package bucles;
 import java.util.Scanner;
 import java.util.Random;
 
