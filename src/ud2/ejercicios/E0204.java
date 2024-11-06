@@ -2,7 +2,7 @@
 son aquellos, positivos o negativos, que se acercan a 0 por menos de 1 unidad, aunque curiosamente el 0 
 no se considera un número casi-cero. */
 
-package ejercicios2;
+package ejercicios;
 import java.util.Scanner;
 
 public class E0204 {

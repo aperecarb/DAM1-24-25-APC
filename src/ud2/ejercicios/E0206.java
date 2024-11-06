@@ -1,6 +1,6 @@
 /* Realizar de nuevo la actividad 3 considerando el caso de que los números introducidos sean iguales */
 
-package ejercicios2;
+package ejercicios;
 import java.util.Scanner;
 
 public class E0206 {

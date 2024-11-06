@@ -2,7 +2,7 @@
  correspondiente a un día de la semana. Se debe mostrar el nombre del día de la semana
  al que corresponde. Por ejemplo, el número 1 corresponde a “lunes” y el 6 a “sábado”. */
 
-package ejercicios2;
+package ejercicios;
 import java.util.Scanner;
 
 public class E0211 {

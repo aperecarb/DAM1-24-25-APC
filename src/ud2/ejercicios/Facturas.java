@@ -2,7 +2,7 @@
 y el número de unidades compradas. La factura deberá añadir al total un IVA de 21%. Si el precio final con IVA es 
 superior a 100 euros se implicará un descuento del 5% */
 
-package ejercicios2;
+package ejercicios;
 import java.util.Scanner;
 
 public class Facturas {

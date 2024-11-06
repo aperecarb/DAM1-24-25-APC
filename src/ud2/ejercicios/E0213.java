@@ -2,7 +2,7 @@
  segundos. El programa debe mostrar qué hora será un segundo más tarde. Por ejemplo:
  hora actual (10:41:59) => hora actual + 1 segundo (10:42:00) */
 
-package ejercicios2;
+package ejercicios;
 import java.util.Scanner;
 
 public class E0213 {

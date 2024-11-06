@@ -1,7 +1,7 @@
 /* Pedir los coeficientes de una ecuación de segundo grado y mostrar sus soluciones reales. 
 Si no existen, habrá que indicarlo. */
 
-package ejercicios2;
+package ejercicios;
 import java.util.Scanner;
 
 public class E0208 {
