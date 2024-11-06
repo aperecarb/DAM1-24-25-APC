@@ -1,7 +1,7 @@
 /* Realiza un programa que solicite por teclado un nombre de usuario y contraseña, y que compruebe si 
 corresponden al usuario “admin” con contraseña “abc123.,” indicando como resultado un mensaje apropiado */
 
-package ejercicioscondicionales;
+package ejerciciosU2.propuestos.condicionales;
 
 import java.util.Scanner;
 

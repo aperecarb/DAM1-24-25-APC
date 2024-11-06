@@ -1,7 +1,7 @@
 /* Escribe un programa que solicite al usuario un número comprendido entre 1 y 99. El programa
 debe mostrarlo con letras, por ejemplo, para 56, se verá "cincuenta y seis". */
 
-package ejercicioscondicionales;
+package ejerciciosU2.propuestos.condicionales;
 
 import java.util.Scanner;
 

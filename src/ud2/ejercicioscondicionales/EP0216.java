@@ -1,6 +1,6 @@
 /* Utiliza el operador ternario para calcular el valor absoluto de un número que se solicita al usuario por teclado */
 
-package ejercicioscondicionales;
+package ejerciciosU2.propuestos.condicionales;
 
 import java.util.Scanner;
 

@@ -2,7 +2,7 @@
 Hay que mostrar la tabla de multiplicar de dicho número, asegurándose de que el número 
 introducido se encuentra en el rango establecido. */
 
-package bucles;
+package ejerciciosU2.bucles;
 import java.util.Scanner;
 
 public class E0309 {

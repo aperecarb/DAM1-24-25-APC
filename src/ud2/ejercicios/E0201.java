@@ -1,6 +1,6 @@
 /* Diseña una aplicación que solicite un número al usuario e indique si es par o impar */
 
-package ejercicios;
+package ejerciciosU2.condicionales;
 import java.util.Scanner;
 
 public class E0201 {

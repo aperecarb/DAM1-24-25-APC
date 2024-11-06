@@ -1,7 +1,7 @@
 /* Crear una aplicación que solicite al usuario una fecha (día, mes, año) y muestre la
  fecha correspondiente al día siguiente. */
 
-package ejercicios;
+package ejerciciosU2.condicionales;
 import java.util.Scanner;
 
 public class E0214 {

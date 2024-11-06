@@ -1,7 +1,7 @@
 /* Escribe una aplicación que solicite al usuario un número comprendido entre 0 y 9999. 
 La aplicación tendrá que indicar si el número introducido es capicúa */
 
-package ejercicioscondicionales;
+package ejerciciosU2.propuestos.condicionales;
 
 import java.util.Scanner;
 

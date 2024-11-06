@@ -6,7 +6,7 @@ Diseña un programa que solicite al usuario los valores anteriores y determine s
 cada animal. En caso negativo, ha de calcular cuál es la ración que corresponde a cada uno de los animales.
 Nota: Evitar que la aplicación realice divisiones por cero. */
 
-package ejercicioscondicionales;
+package ejerciciosU2.propuestos.condicionales;
 
 import java.util.Scanner;
 

@@ -1,6 +1,6 @@
 /* Pedir 5 calificaciones de alumnos y decir al final si hay algún suspenso. */
 
-package bucles;
+package ejerciciosU2.bucles;
 
 import java.util.Scanner;
 

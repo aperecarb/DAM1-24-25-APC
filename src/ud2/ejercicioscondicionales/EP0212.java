@@ -1,7 +1,7 @@
 /* Diseña una aplicación en la que, dado un número de DNI, calcule la letra que le corresponde.
 Observa que un número de 8 dígitos está dentro del rango tipo int. */
 
-package ejercicioscondicionales;
+package ejerciciosU2.propuestos.condicionales;
 
 import java.util.Scanner;
 

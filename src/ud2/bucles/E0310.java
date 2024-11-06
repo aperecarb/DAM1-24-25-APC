@@ -1,6 +1,6 @@
 /* Diseñar un programa que muestre la suma de los 10 primeros números impares. */
 
-package bucles;
+package ejerciciosU2.bucles;
 
 public class E0310 {
     public static void main(String[] args) {

@@ -1,7 +1,7 @@
 /* Haz un programa que pida por teclado un número de año y que muestre un mensaje indicando
 si el año es bisiesto o no */
 
-package ejercicios;
+package ejerciciosU2.condicionales;
 import java.util.Scanner;
 
 public class Bisiesto {

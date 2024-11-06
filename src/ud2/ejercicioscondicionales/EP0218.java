@@ -4,7 +4,7 @@ aparezca aleatoriamente la operación que debe realizar el jugador: suma, resta 
 Amplía el programa anterior para que muestre el número de segundos que el usuario ha tardado en responder. 
 Utiliza la clase LocalTime.*/
 
-package ejercicioscondicionales;
+package ejerciciosU2.propuestos.condicionales;
 
 import java.util.Scanner;
 import java.util.Random;
