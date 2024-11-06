@@ -17,22 +17,5 @@ public class Util {
         Scanner sc = new Scanner(System.in);
         System.out.println("Escribe un número: ");
         int n = sc.nextInt();
-
-        if (esPar(n)) {
-            System.out.println("Es par.");
-        } else {
-            System.out.println("Es impar.");
-        }
-
-        if (esBisiesto(n)) {
-            System.out.println("Es bisiesto.");
-        } else {
-            System.out.println("No es bisiesto.");
-        }
-
-        System.out.println(mayor (4, 17));
-        System.out.println(mayor (18, 4));
-
-        sc.close();
     }
 }
