@@ -1,25 +1,25 @@
-package funciones;
+package util;
 
 import java.util.Scanner;
 
 public class Util {
-    static boolean esPar(int n) {
+    public static boolean esPar(int n) {
         return n % 2 == 0;
     }
 
-    static boolean esBisiesto(int year) {
+    public static boolean esBisiesto(int year) {
         return year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
     }
 
-    static int mayor(int a, int b) {
+    public static int mayor(int a, int b) {
         return a > b ? a : b;
     }
 
-    static boolean esCasiCero(double num) {
+    public static boolean esCasiCero(double num) {
         return (num != 0 && num > -1 && num < 1);
     }
 
-    static String notaEnTexto(int nota) {
+    public static String notaEnTexto(int nota) {
         String notaEnTexto = "";
 
         switch (nota) {
@@ -45,7 +45,7 @@ public class Util {
         return notaEnTexto;
     }
 
-    static String notaEnTexto(double nota) {
+    public static String notaEnTexto(double nota) {
         String notaEnTexto = "";
 
         if (nota < 0 || nota > 10) {

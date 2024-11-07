@@ -1,7 +1,7 @@
 package funciones;
 
 import java.util.Scanner;
-import funciones.Util;
+import util.Util; 
 
 public class LlamadaUtil {
     public static void main(String[] args) {
