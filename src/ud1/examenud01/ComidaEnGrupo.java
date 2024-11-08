@@ -4,11 +4,12 @@ que podrá tener decimales, y que tenga como salida la cantidad a pagar por cada
 que se presentará con hasta 2 decimales. */
 
 package examenud01;
+
 import java.util.Scanner;
 
 public class ComidaEnGrupo {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.print("Número de personas: ");
         int npersonas = scanner.nextInt();
@@ -19,7 +20,6 @@ public class ComidaEnGrupo {
         double individual = importe / npersonas;
 
         System.out.printf("Cantidad a pagar por comensal: %.2f €", individual);
-
 
     }
 }

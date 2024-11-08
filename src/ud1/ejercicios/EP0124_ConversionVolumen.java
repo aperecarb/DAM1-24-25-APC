@@ -11,21 +11,20 @@ import java.util.Scanner;
 
 public class EP0124_ConversionVolumen {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
+        Scanner scanner = new Scanner(System.in);
 
         final double galones = 3.78541;
-    
+
         System.out.print("Introduzca la cantidad de volumen: ");
         double volumen = scanner.nextDouble();
         System.out.print("Introduzca la unidad de medida origen (0 para litros y 1 para galones): ");
         int unidadOrigen = scanner.nextInt();
         scanner.close();
 
-        double volumenFinal = (unidadOrigen == 0) ? (volumen/galones) : (galones/volumen);
+        double volumenFinal = (unidadOrigen == 0) ? (volumen / galones) : (galones / volumen);
 
         String unidadOrigenStr = (unidadOrigen == 0) ? "litros" : "galones";
         String unidadDestino = (unidadOrigen == 0) ? "galones" : "litros";
-
 
         System.out.printf("%3.f %s son %.3f %s", volumen, unidadOrigenStr, volumenFinal, unidadDestino);
     }

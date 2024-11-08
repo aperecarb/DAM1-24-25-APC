@@ -5,15 +5,15 @@ import java.util.Scanner;
 
 public class EP0137_ConversionMoneda {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.print("\nIntroduzca la cantidad de dinero: ");
         double dinero = scanner.nextDouble();
         scanner.nextLine(); // Limpiar el buffer y evitar problemas al leer cadenas
 
-        System.out.print("\nIntroduzca la moneda de origen (en singular y minúsculas): " );
+        System.out.print("\nIntroduzca la moneda de origen (en singular y minúsculas): ");
         String monedaOrigen = scanner.nextLine();
-        System.out.print("\nIntroduzca la moneda de destino (en singular y minúsculas): " );
+        System.out.print("\nIntroduzca la moneda de destino (en singular y minúsculas): ");
         String monedaDestino = scanner.nextLine();
 
         String moneda = (monedaOrigen.equals("euro")) ? monedaDestino : monedaOrigen;

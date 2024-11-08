@@ -1,11 +1,12 @@
 /* Pedir dos números enteros y decir si son iguales o no */
 
 package ejercicios;
+
 import java.util.Scanner;
 
 public class E0202 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.print("Introduzca un número enteros: ");
         int n1 = scanner.nextInt();
@@ -13,9 +14,9 @@ public class E0202 {
         int n2 = scanner.nextInt();
         scanner.close();
 
-        if (n1 == n2){
+        if (n1 == n2) {
             System.out.printf("Los números son iguales");
-        }else{
+        } else {
             System.out.printf("Los números son distintos");
         }
     }

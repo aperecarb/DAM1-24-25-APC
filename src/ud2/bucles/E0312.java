@@ -10,10 +10,10 @@ public class E0312 {
 
         int suspenso = 0;
 
-        for (int i = 0; i < 5; i++){
+        for (int i = 0; i < 5; i++) {
             System.out.printf("\nIntroduce la calificación del alumno %d: ", i + 1);
             double calificacion = scanner.nextDouble();
-            if(calificacion < 5){
+            if (calificacion < 5) {
                 suspenso++;
             }
         }

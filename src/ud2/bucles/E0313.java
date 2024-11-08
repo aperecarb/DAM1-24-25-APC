@@ -12,14 +12,14 @@ public class E0313 {
         int aprobado = 0;
         int condicionado = 0;
 
-        for (int i = 0; i < 6; i++){
+        for (int i = 0; i < 6; i++) {
             System.out.printf("\nIntroduce la calificación del alumno %d: ", i + 1);
             double calificacion = scanner.nextDouble();
-            if(calificacion == 4){
+            if (calificacion == 4) {
                 condicionado++;
-            }else if (calificacion >= 5){
+            } else if (calificacion >= 5) {
                 aprobado++;
-            }else{
+            } else {
                 suspenso++;
             }
         }

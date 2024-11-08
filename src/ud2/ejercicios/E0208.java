@@ -2,6 +2,7 @@
 Si no existen, habrá que indicarlo. */
 
 package ejercicios;
+
 import java.util.Scanner;
 
 public class E0208 {
@@ -16,15 +17,15 @@ public class E0208 {
 
         double discriminante = Math.sqrt(b * b - 4 * a * c);
 
-        if (discriminante > 0){
-            double x1 = (- b + discriminante) / (2 * a);
-            double x2 = (- b - discriminante) / (2 * a);
+        if (discriminante > 0) {
+            double x1 = (-b + discriminante) / (2 * a);
+            double x2 = (-b - discriminante) / (2 * a);
             System.out.print("\nSolución1: " + x1);
             System.out.print("\nSolución2: " + x2);
-        } else if (discriminante == 0){
-            double x = (- b + discriminante) / 2 * a;
+        } else if (discriminante == 0) {
+            double x = (-b + discriminante) / 2 * a;
             System.out.println("\nSolución: " + x);
-        }else{
+        } else {
             System.out.println("No existe solución real");
         }
     }

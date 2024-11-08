@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class EP0117 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in); 
+        Scanner scanner = new Scanner(System.in);
 
         final int npatashormiga = 6;
         final int npatasaraña = 8;
@@ -25,10 +25,10 @@ public class EP0117 {
         System.out.print("Introduzca el numero de cochinillas captadas: ");
         int ncochinillas = scanner.nextInt();
 
-        int total = nhormigas*npatashormiga + narañas*npatasaraña + ncochinillas*npatascochinilla;
+        int total = nhormigas * npatashormiga + narañas * npatasaraña + ncochinillas * npatascochinilla;
         System.out.println("\nEl numero de patas total es de " + total);
 
         scanner.close();
     }
-    
+
 }

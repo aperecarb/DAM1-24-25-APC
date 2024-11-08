@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class EP0128 {
     public static void main(String[] args) {
-        
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Introduzca un valor para a: ");
@@ -14,8 +14,7 @@ public class EP0128 {
 
         scanner.close();
 
-        String comprobacion = (a == b) ? "true" :
-                                         "false";
+        String comprobacion = (a == b) ? "true" : "false";
 
         System.out.println("La afirmación de que los números sean iguales es " + comprobacion);
     }

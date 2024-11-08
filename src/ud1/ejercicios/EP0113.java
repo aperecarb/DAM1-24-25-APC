@@ -9,17 +9,17 @@ public class EP0113 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Introduce los coeficientes a, b y c separados por espacios: "); 
+        System.out.print("Introduce los coeficientes a, b y c separados por espacios: ");
         float a = scanner.nextFloat();
         float b = scanner.nextFloat();
         float c = scanner.nextFloat();
 
-        System.out.print("Introduce el valor de la variable x: "); 
+        System.out.print("Introduce el valor de la variable x: ");
         float x = scanner.nextFloat();
 
         float y = a * x * x + b * x * c;
 
-        System.out.print("El valor de y es: "+ y);
+        System.out.print("El valor de y es: " + y);
 
         scanner.close();
     }

@@ -16,11 +16,12 @@ public class EsNumero {
         // Obtener el valor ASCII del carácter
         int ascii = (int) caracter;
 
-        // Usar el operador ternario para determinar el tipo de carácter usando el valor ASCII
-        String resultado = (ascii >= 48 && ascii <= 57) ? "Es un número" :
-                           (ascii >= 65 && ascii <= 90) ? "Es una letra mayúscula" :
-                           (ascii >= 97 && ascii <= 122) ? "Es una letra minúscula" :
-                           "No es ni un número, ni una letra mayúscula o minúscula";
+        // Usar el operador ternario para determinar el tipo de carácter usando el valor
+        // ASCII
+        String resultado = (ascii >= 48 && ascii <= 57) ? "Es un número"
+                : (ascii >= 65 && ascii <= 90) ? "Es una letra mayúscula"
+                        : (ascii >= 97 && ascii <= 122) ? "Es una letra minúscula"
+                                : "No es ni un número, ni una letra mayúscula o minúscula";
 
         // Imprimir el resultado
         System.out.println(resultado);

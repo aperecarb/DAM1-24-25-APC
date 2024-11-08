@@ -5,6 +5,7 @@ comenzando en 0. Diseñar una aplicación que, al terminar la introducción de d
 del árbol más alto. */
 
 package bucles;
+
 import java.util.Scanner;
 
 public class E0304 {
@@ -16,14 +17,14 @@ public class E0304 {
         int arbol = 0;
         int arbolAlto = 0;
 
-        while(arbol != -1){
+        while (arbol != -1) {
             System.out.println("\nIntroduzca la altura del árbol: ");
             arbol = scanner.nextInt();
             contador++;
 
-            if(arbol > arbolAlto){
+            if (arbol > arbolAlto) {
                 arbolAlto = arbol;
-                contadorAlto = contador; 
+                contadorAlto = contador;
             }
         }
         scanner.close();

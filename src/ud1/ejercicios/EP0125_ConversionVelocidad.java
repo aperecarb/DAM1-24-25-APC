@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class EP0125_ConversionVelocidad {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
+        Scanner scanner = new Scanner(System.in);
 
         final double kmh = 0.27778; // km/h -> m/s
         final double mph = 1.60934; // mph -> km/h
@@ -21,19 +21,19 @@ public class EP0125_ConversionVelocidad {
         double velocidad = scanner.nextFloat();
         System.out.print("Introduzca la unidad de medida origen (0 para km/h, 1 para m/s y 2 para mph)");
         int unidadOrigen = scanner.nextInt();
-        
+
         // Operador ternario para las conversiones
-        double velocidadKmh = (unidadOrigen == 0) ? velocidad 
-                            : (unidadOrigen == 1) ? velocidad / kmh
-                            : velocidad * mph;
+        double velocidadKmh = (unidadOrigen == 0) ? velocidad
+                : (unidadOrigen == 1) ? velocidad / kmh
+                        : velocidad * mph;
 
         double velocidadMs = velocidadKmh * kmh;
         double velocidadMph = velocidadKmh / mph;
 
         // Definir la unidad de salida
-        String unidadEntrada = (unidadOrigen == 0) ? "km/h" 
-                             : (unidadOrigen == 1) ? "m/s" 
-                             : "mph";
+        String unidadEntrada = (unidadOrigen == 0) ? "km/h"
+                : (unidadOrigen == 1) ? "m/s"
+                        : "mph";
 
         System.out.printf("La velocidad en %.2f %s es %.2f km/h\n", velocidad, unidadEntrada, velocidadKmh);
         System.out.printf("La velocidad en %.2f %s es %.2f m/s\n", velocidad, unidadEntrada, velocidadMs);
@@ -41,5 +41,5 @@ public class EP0125_ConversionVelocidad {
 
         scanner.close();
     }
-    
+
 }

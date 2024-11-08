@@ -2,6 +2,7 @@
 si el año es bisiesto o no */
 
 package ejercicios;
+
 import java.util.Scanner;
 
 public class Bisiesto {
@@ -12,9 +13,9 @@ public class Bisiesto {
         int año = scanner.nextInt();
         scanner.close();
 
-        if (año % 4 == 0 && año % 100 != 0 && año % 400 != 0){
+        if (año % 4 == 0 && año % 100 != 0 && año % 400 != 0) {
             System.out.println("El año es bisiesto");
-        }else{
+        } else {
             System.out.println("El año NO es bisiesto");
         }
     }

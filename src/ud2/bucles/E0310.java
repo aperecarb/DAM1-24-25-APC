@@ -9,14 +9,14 @@ public class E0310 {
         int numero = 0;
         int nImpares = 0;
 
-        do{
+        do {
             numero++;
-            if (numero % 2 != 0){
+            if (numero % 2 != 0) {
                 suma = suma + numero;
                 nImpares++;
             }
 
-        }while(nImpares < NSUMA);
+        } while (nImpares < NSUMA);
 
         System.out.printf("La suma de los %d primeros números impares es %d", NSUMA, suma);
     }

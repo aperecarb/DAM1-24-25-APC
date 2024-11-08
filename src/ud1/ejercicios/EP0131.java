@@ -18,7 +18,7 @@ public class EP0131 {
         scanner.close();
 
         // Pasar de metros a centímetros
-        float centimetros = metros*MACM;
+        float centimetros = metros * MACM;
 
         // Si no ponemos esto, el valor se redondea
         int truncado = (int) centimetros;

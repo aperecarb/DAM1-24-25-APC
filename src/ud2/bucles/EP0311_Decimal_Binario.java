@@ -16,7 +16,7 @@ public class EP0311_Decimal_Binario {
             n = n / 2;
         }
         binario = n + binario;
-        
+
         System.out.println(binario);
 
         sc.close();

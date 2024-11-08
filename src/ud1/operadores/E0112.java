@@ -11,9 +11,9 @@ public class E0112 {
         System.out.print("Introduce un numero entero: ");
         int numero = scanner.nextInt();
 
-        if(numero>0){
+        if (numero > 0) {
             System.out.print("Valor absoluto: " + numero);
-        } else{
+        } else {
             System.out.print("Valor absoluto: " + -numero);
 
         }

@@ -17,25 +17,27 @@ public class EP0213 {
         System.out.print("Introduzca la cantidad diaria de comida que se compra: ");
         double comidaDiaria = scanner.nextDouble();
 
-        int numAnimales; 
+        int numAnimales;
 
-        // Repetir hasta que se introduzca un número de animales mayor que 0 para evitar posibles divisiones
-        do{
-        System.out.print("Introduzca la cantidad de animales que alimentar: ");
-        numAnimales = scanner.nextInt();
-        }while(numAnimales == 0);
+        // Repetir hasta que se introduzca un número de animales mayor que 0 para evitar
+        // posibles divisiones
+        do {
+            System.out.print("Introduzca la cantidad de animales que alimentar: ");
+            numAnimales = scanner.nextInt();
+        } while (numAnimales == 0);
 
         System.out.println("Introduzca la media de kilos que come un animal: ");
         double kilosPorAnimal = scanner.nextDouble();
 
         scanner.close();
 
-        if (numAnimales * kilosPorAnimal <= comidaDiaria){
+        if (numAnimales * kilosPorAnimal <= comidaDiaria) {
             System.out.println("Disponemos de alimento suficiente para cada animal");
-        }else{
+        } else {
             System.out.println("No se dispone de alimento suficiente para cada animal");
             double kilosAdaptado = comidaDiaria / numAnimales;
-            System.out.printf("La ración para cada animal adaptada a la comida sería de %.2f kilogramos por cabeza", kilosAdaptado);
+            System.out.printf("La ración para cada animal adaptada a la comida sería de %.2f kilogramos por cabeza",
+                    kilosAdaptado);
         }
     }
 }

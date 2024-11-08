@@ -10,11 +10,12 @@ retirarán 75 € en los billetes que corresponda y que 3 € no se pueden retir
 billetes tan pequeños. */
 
 package examenud01;
+
 import java.util.Scanner;
 
 public class CajeroAutomatico {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.print("Importe en efectivo que desea retirar (€): ");
         int efectivo = scanner.nextInt();
@@ -25,14 +26,15 @@ public class CajeroAutomatico {
         System.out.printf("\nSe retirarán %d euros", efectivo - resto);
 
         int billetes50 = efectivo / 50;
-        efectivo %= 50; // Actualiza efectivo para calcular cuánto dinero queda después de sacar los billetes de 50
+        efectivo %= 50; // Actualiza efectivo para calcular cuánto dinero queda después de sacar los
+                        // billetes de 50
         int billetes20 = efectivo / 20;
-        efectivo %= 20; // Actualiza efectivo para calcular cuánto dinero queda después de sacar los billetes de 20
+        efectivo %= 20; // Actualiza efectivo para calcular cuánto dinero queda después de sacar los
+                        // billetes de 20
         int billetes10 = efectivo / 10;
-        efectivo %= 10; // Actualiza efectivo para calcular cuánto dinero queda después de sacar los billetes de 10
+        efectivo %= 10; // Actualiza efectivo para calcular cuánto dinero queda después de sacar los
+                        // billetes de 10
         int billetes5 = efectivo / 5;
-
-
 
         System.out.printf("\n%d billetes de 50 euros: ", billetes50);
         System.out.printf("\n%d billetes de 20 euros: ", billetes20);

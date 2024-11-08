@@ -1,11 +1,12 @@
 /* Solicitar dos números distintos y mostrar cuál es el mayor */
 
 package ejercicios;
+
 import java.util.Scanner;
 
 public class E0203 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.print("Introduzca un número entero: ");
         int n1 = scanner.nextInt();
@@ -13,9 +14,9 @@ public class E0203 {
         int n2 = scanner.nextInt();
         scanner.close();
 
-        if(n1 > n2){
+        if (n1 > n2) {
             System.out.print("El número mayor es " + n1);
-        }else{
+        } else {
             System.out.print("El número mayor es " + n2);
         }
     }

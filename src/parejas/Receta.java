@@ -8,13 +8,13 @@ import java.util.Scanner;
 
 public class Receta {
     public static void main(String[] args) {
-        Scanner sc = new Scanner (System.in);
-        
+        Scanner sc = new Scanner(System.in);
+
         System.out.println("Compota de manzana");
 
         int numeroPersonas;
 
-        final double MANZANA, AGUA, AZUCAR,LIMON;
+        final double MANZANA, AGUA, AZUCAR, LIMON;
 
         MANZANA = 1.5 / 6;
         AGUA = 330 / 6;
@@ -32,7 +32,8 @@ public class Receta {
 
         final double precioManzana = 1.68;
         final double precioAzucar = 1.80;
-        double precioReceta = precioManzana * MANZANA * numeroPersonas + (precioAzucar * (AZUCAR * numeroPersonas) / 1000); 
+        double precioReceta = precioManzana * MANZANA * numeroPersonas
+                + (precioAzucar * (AZUCAR * numeroPersonas) / 1000);
         System.out.printf("\n El precio de la receta es: %.2f ", precioReceta);
 
     }

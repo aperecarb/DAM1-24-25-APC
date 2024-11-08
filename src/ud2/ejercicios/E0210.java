@@ -2,11 +2,12 @@
  0 a4), suficiente (5), bien (6), notable (7 y 8) y sobresaliente (9 y 10). */
 
 package ejercicios;
+
 import java.util.Scanner;
 
 public class E0210 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.print("Introduzca la nota entera de tu examen: ");
         int nota = scanner.nextInt();
@@ -14,7 +15,7 @@ public class E0210 {
 
         switch (nota) {
             case 0, 1, 2, 3, 4:
-               System.out.println("Insuficiente");
+                System.out.println("Insuficiente");
                 break;
             case 5:
                 System.out.println("Suficiente");

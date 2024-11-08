@@ -3,11 +3,12 @@
  hora actual (10:41:59) => hora actual + 1 segundo (10:42:00) */
 
 package ejercicios;
+
 import java.util.Scanner;
 
 public class E0213 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.print("Introduzca la hora (hh mm ss): ");
         int hora = scanner.nextInt();
@@ -21,17 +22,17 @@ public class E0213 {
             case 60 -> {
                 segundo = 0;
                 minuto++;
-        
-            switch (minuto) {
-                case 60 -> {
-                    minuto = 0;
-                    hora++;
 
-                switch (hora) {
-                    case 24 -> hora = 0;
+                switch (minuto) {
+                    case 60 -> {
+                        minuto = 0;
+                        hora++;
+
+                        switch (hora) {
+                            case 24 -> hora = 0;
+                        }
+                    }
                 }
-                }
-            }
             }
         }
 

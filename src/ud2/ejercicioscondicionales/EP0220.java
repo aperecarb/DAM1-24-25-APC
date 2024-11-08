@@ -11,7 +11,6 @@ public class EP0220 {
 
         final String nombreString = "admin";
         final String contraString = "abc123.,";
-    
 
         System.out.print("Introduzca el nombre de usuario: ");
         String usuario = scanner.nextLine();
@@ -19,9 +18,9 @@ public class EP0220 {
         String contraseña = scanner.nextLine();
         scanner.close();
 
-        if (usuario.equals(nombreString) && contraseña.equals(contraString)){
+        if (usuario.equals(nombreString) && contraseña.equals(contraString)) {
             System.out.println("Iniciando sesión...");
-        }else{
+        } else {
             System.out.println("Usuario o contraseña incorrectos");
         }
     }

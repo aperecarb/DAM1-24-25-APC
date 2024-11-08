@@ -1,20 +1,21 @@
 /* Escribe un programa que reciba un número que represente una moneda (1: Dólar, 2: Euro, 3: Yen, 4: Libra) y convierta una cantidad en otra moneda. */
 
 package extra;
+
 import java.util.Scanner;
 
 public class ConversionMoneda {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        double DOLAR = 0.920; // euros = 1 dolar   
-        double LIBRA = 1.201; // euros = 1 libra   
-        double YEN = 0.006; // euros = 1 yen   
+        double DOLAR = 0.920; // euros = 1 dolar
+        double LIBRA = 1.201; // euros = 1 libra
+        double YEN = 0.006; // euros = 1 yen
 
         System.out.print("Introduzca la cantidad a convertir en euros: ");
         double euro = scanner.nextDouble();
         scanner.nextLine(); // Eliminar buffer creado por leer números y después texto
-        
+
         System.out.print("Escriba la moneda a convertir en minúscula (dolar, libra, yen): ");
         String moneda = scanner.nextLine();
         scanner.close();

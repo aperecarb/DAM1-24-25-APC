@@ -10,9 +10,9 @@ public class EP0121 {
         System.out.print("Introduzca los grados celsius: ");
         double celsius = scanner.nextDouble();
 
-        double fahrenheit = celsius * (9.0/5.0) + 32;  // La división son numeros double, sino coge el int partido
+        double fahrenheit = celsius * (9.0 / 5.0) + 32; // La división son numeros double, sino coge el int partido
         System.out.println(celsius + " ºC son " + fahrenheit + " ºF");
 
         scanner.close();
-    } 
+    }
 }

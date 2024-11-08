@@ -13,8 +13,8 @@ public class Asistencia {
         final double PERDIDAEV = 0.10;
         final double SESIONES = MINUTOS / 50;
 
-        double sesiones06 = SESIONES * APERCIBIMIENTO; 
-        double sesiones10 = SESIONES * PERDIDAEV; 
+        double sesiones06 = SESIONES * APERCIBIMIENTO;
+        double sesiones10 = SESIONES * PERDIDAEV;
 
         Scanner sc = new Scanner(System.in);
 
@@ -24,12 +24,12 @@ public class Asistencia {
 
         System.out.println("Número de sesiones de 50': " + SESIONES);
         System.out.println("Número de faltas sin justificar que implican un apercebimiento: " + sesiones06);
-        System.out.println("Número de faltas sin justificar que implican una pérdida de la evaluación continua: " + sesiones10);
+        System.out.println(
+                "Número de faltas sin justificar que implican una pérdida de la evaluación continua: " + sesiones10);
 
-        String consecuencias = (faltas<sesiones06) ? "Ningún problema": 
-                                (faltas<sesiones10) ? "Apercibimiento" :
-                                                    "Pérdida de evaluación continua";
-        
+        String consecuencias = (faltas < sesiones06) ? "Ningún problema"
+                : (faltas < sesiones10) ? "Apercibimiento" : "Pérdida de evaluación continua";
+
         System.out.println(consecuencias);
 
     }

@@ -10,20 +10,20 @@ public class EP0120 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        final double precioinfant= 15.50;
+        final double precioinfant = 15.50;
         final double precioadult = 20;
         final double descuento = 0.05;
 
         System.out.print("Introduzca el numero de entradas infantiles: ");
-        int infant = scanner.nextInt(); 
+        int infant = scanner.nextInt();
         System.out.print("Introduzca el numero de entradas de adultos: ");
-        int adult = scanner.nextInt(); 
+        int adult = scanner.nextInt();
 
-        double preciototal = (precioinfant*infant) + (precioadult*adult);
+        double preciototal = (precioinfant * infant) + (precioadult * adult);
 
-        if(preciototal >= 100){
-            System.out.println("El precio total es: " + preciototal*(preciototal*descuento));
-        }else{
+        if (preciototal >= 100) {
+            System.out.println("El precio total es: " + preciototal * (preciototal * descuento));
+        } else {
             System.out.println("El precio total es: " + preciototal);
         }
 

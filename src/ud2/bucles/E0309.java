@@ -3,27 +3,28 @@ Hay que mostrar la tabla de multiplicar de dicho número, asegurándose de que e
 introducido se encuentra en el rango establecido. */
 
 package bucles;
+
 import java.util.Scanner;
 
 public class E0309 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int numero;
-        
-        do{
-        System.out.print("\nIntroduzca un número del 1 al 10: ");
-        numero = scanner.nextInt();
 
-        if(numero > 10 || numero < 1){
-            System.out.println("No has ingresado un número del 1 al 10.\nVuelve a intentarlo.\n");
-        }
+        do {
+            System.out.print("\nIntroduzca un número del 1 al 10: ");
+            numero = scanner.nextInt();
 
-        }while (numero > 10 || numero < 1);
+            if (numero > 10 || numero < 1) {
+                System.out.println("No has ingresado un número del 1 al 10.\nVuelve a intentarlo.\n");
+            }
 
-        for (int i = 1; i <= 10; i++){
+        } while (numero > 10 || numero < 1);
+
+        for (int i = 1; i <= 10; i++) {
             System.out.printf("%d * %d = %d\n", numero, i, numero * i);
         }
 
         scanner.close();
-    }  
+    }
 }

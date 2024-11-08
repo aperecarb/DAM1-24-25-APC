@@ -1,12 +1,12 @@
 package funciones;
 
 import java.util.Scanner;
-import util.Util; 
+import util.Util;
 
 public class LlamadaUtil {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
+
         System.out.println("Número / Año: ");
         int n = sc.nextInt();
 
@@ -15,7 +15,7 @@ public class LlamadaUtil {
         } else {
             System.out.println("Es impar.");
         }
-        
+
         sc.close();
     }
 }

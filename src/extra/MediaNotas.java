@@ -9,31 +9,31 @@ import java.util.Scanner;
 
 public class MediaNotas {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        double suma = 0; 
+        double suma = 0;
         int contador = 0;
         double nota;
 
         System.out.print("Introduzca varias notas para calcular su media (ingresando -1 para finalizar): ");
-        while (true){
+        while (true) {
             nota = scanner.nextDouble();
 
-            if (nota == -1){
+            if (nota == -1) {
                 break; // Romper el ciclo si se ingresa -1
             }
 
-            suma += nota; 
+            suma += nota;
             contador++;
         }
 
         scanner.close();
 
         // Calcular la media
-        if (contador > 0){
+        if (contador > 0) {
             double media = suma / contador;
             System.out.printf("La media de las %d notas es %.2f", contador, media);
-        }else{
+        } else {
             System.out.println("No se ingresaron notas");
         }
     }

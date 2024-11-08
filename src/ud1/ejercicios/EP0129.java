@@ -5,13 +5,13 @@
     A 14 no hay que sumarle nada (0) para que sea múltiplo de 7
 */
 
-import java.util.Scanner; 
+import java.util.Scanner;
 
 public class EP0129 {
     public static void main(String[] args) {
 
         // Cantidad que hay que sumarle para que el resultado sea múltiplo de 7
-        Scanner scanner = new Scanner (System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.print("Introduzca un número entero: ");
         int numero = scanner.nextInt();
@@ -20,16 +20,14 @@ public class EP0129 {
         int resto = numero % 7;
         int suma = (resto == 0) ? 0 : (7 - resto);
 
-
-        String mensaje = (resto  != 0) 
-        ? String.format("\nA %d hay que sumarle %d para que el resultado (%d+%d=%d) sea múltiplo de 7", numero, suma, numero, suma, numero + suma) 
-        : String.format("\nA %d no hay que sumarle nada (0) para sea múltiplo de 7", numero);
+        String mensaje = (resto != 0)
+                ? String.format("\nA %d hay que sumarle %d para que el resultado (%d+%d=%d) sea múltiplo de 7", numero,
+                        suma, numero, suma, numero + suma)
+                : String.format("\nA %d no hay que sumarle nada (0) para sea múltiplo de 7", numero);
         System.out.println(mensaje);
 
-
         // Es múltiplo de 7 o no
-        String esMúltiplo = (numero % 7 == 0) ? "\nEs múltiplo de 7\n" :
-                                                "\nNo es múltiplo de 7\n";
+        String esMúltiplo = (numero % 7 == 0) ? "\nEs múltiplo de 7\n" : "\nNo es múltiplo de 7\n";
 
         System.out.println(esMúltiplo);
     }

@@ -1,16 +1,17 @@
 /*  Escribe un programa que reciba un número de mes (1 a 12) e imprima cuántos días tiene ese mes. */
 
 package extra;
+
 import java.util.Scanner;
 
 public class MesAño {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.print("Introduzca un número del 1 al 12: ");
         int mes = scanner.nextInt();
 
-        switch (mes){ 
+        switch (mes) {
             case 1, 3, 5, 7, 8, 10, 12:
                 System.out.println("Este mes tiene 31 días");
                 break;
@@ -21,9 +22,9 @@ public class MesAño {
                 System.out.print("Ingrese el año: ");
                 int año = scanner.nextInt();
 
-                if (año % 4 == 0 && año % 100 != 0 && año % 400 != 0){
+                if (año % 4 == 0 && año % 100 != 0 && año % 400 != 0) {
                     System.out.println("Este mes tiene 28 días");
-                }else {
+                } else {
                     System.out.println("Este mes tiene 29 días");
                 }
                 break;

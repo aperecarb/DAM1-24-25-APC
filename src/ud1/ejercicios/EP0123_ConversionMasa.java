@@ -23,17 +23,18 @@ public class EP0123_ConversionMasa {
         System.out.print("Introduzca la unidad de medida origen (0 para kilogramos o 1 para libras): ");
         int unidadOrigen = scanner.nextInt();
 
-
-        /* if (unidad == k)  
-                true: de kilos a libras 
-                false: de libras a kilos */
+        /*
+         * if (unidad == k)
+         * true: de kilos a libras
+         * false: de libras a kilos
+         */
         double masaFinal = (unidadOrigen == '0') ? (masa * g_kilo / g_libra) : (masa * g_libra / g_kilo);
 
-        // Cambiar la unidad de medida del resultado 
+        // Cambiar la unidad de medida del resultado
         String unidadDestino = (unidadOrigen == '0') ? "libras" : "kilogramos";
 
         System.out.printf("%.2f %s son %.2f %s", masa, unidadOrigen, masaFinal, unidadDestino);
 
-        scanner.close(); 
+        scanner.close();
     }
 }

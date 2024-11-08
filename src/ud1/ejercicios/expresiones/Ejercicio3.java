@@ -5,7 +5,7 @@ public class Ejercicio3 {
 
         boolean resultado = 4 + 5 > 10 - 3;
         // 9 > 7, true
-        
+
         System.out.println("Resultado: " + resultado);
     }
 }

@@ -3,11 +3,12 @@
  al que corresponde. Por ejemplo, el número 1 corresponde a “lunes” y el 6 a “sábado”. */
 
 package ejercicios;
+
 import java.util.Scanner;
 
 public class E0211 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.print("Introduzca un número del 1 al 7: ");
         int numero = scanner.nextInt();

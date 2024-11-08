@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class EP0218 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
+        Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
         final int MAX = 100;
@@ -46,16 +46,16 @@ public class EP0218 {
         int respuesta = scanner.nextInt();
         scanner.close();
         long tiempoFin = System.currentTimeMillis();
-        
-        long tiempoTotal = (tiempoFin-tiempoInicio) / 1000;
+
+        long tiempoTotal = (tiempoFin - tiempoInicio) / 1000;
 
         System.out.printf("Has tardado %d segundos en responder\n", tiempoTotal);
 
-        if (respuesta == resultado){
+        if (respuesta == resultado) {
             System.out.println("La respuesta es correcta");
-        }else{
+        } else {
             System.out.println("La respuesta es incorrecta");
             System.out.println("Resultado: " + resultado);
         }
-    } 
+    }
 }

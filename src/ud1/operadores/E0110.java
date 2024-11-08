@@ -8,6 +8,7 @@ booleanos si está lloviendo, si hemos terminado nuestras tareas y si tenemos qu
 algún recado. */
 
 package operadores;
+
 import java.util.Scanner;
 
 public class E0110 {
@@ -27,5 +28,4 @@ public class E0110 {
 
         scanner.close();
     }
-
 }

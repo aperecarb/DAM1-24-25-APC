@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class EP0212 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.print("Introduzca su número de DNI: ");
         int dni = scanner.nextInt();

@@ -7,15 +7,15 @@ import java.util.Scanner;
 public class E0109 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-    
+
         System.out.print("Introduce un número entero: ");
         int numero = scanner.nextInt();
 
         boolean par = (numero % 2) == 0;
 
-        if(par){
+        if (par) {
             System.out.print("El número es par");
-        } else{
+        } else {
             System.out.print("El número es impar");
 
             scanner.close();

@@ -20,10 +20,10 @@ public class Hectareas {
         double superficie = sc.nextDouble();
         sc.close();
 
-        double aFutbol = (superficie*HECTAREA/CFUTBOL);
-        double aBaloncesto = (superficie*HECTAREA/CBALONCESO);
-        double aTenis = (superficie*HECTAREA/CTENIS);
-        double aRetiro = (superficie*HECTAREA/RETIRO);
+        double aFutbol = (superficie * HECTAREA / CFUTBOL);
+        double aBaloncesto = (superficie * HECTAREA / CBALONCESO);
+        double aTenis = (superficie * HECTAREA / CTENIS);
+        double aRetiro = (superficie * HECTAREA / RETIRO);
 
         System.out.printf("\n%.2f hectáreas son %.2f campos de fútbol", superficie, aFutbol);
         System.out.printf("\n%.2f hectáreas son %.2f canchas de baloncesto", superficie, aBaloncesto);

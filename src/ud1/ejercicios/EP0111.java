@@ -14,8 +14,7 @@ public class EP0111 {
         System.out.print("¿De cuánto es el IVA del producto?");
         float iva = scanner.nextFloat();
 
-        float importe = precio + iva/100* precio;
-
+        float importe = precio + iva / 100 * precio;
 
         System.out.print("Importe correspondiente al IVA " + iva);
         System.out.print("El precio final es: " + importe);

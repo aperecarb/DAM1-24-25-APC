@@ -8,6 +8,7 @@ Amplía el programa para que muestre el número secreto cuando el usuario se rin
 número de intentos cuando haya acertado.*/
 
 package bucles;
+
 import java.util.Scanner;
 import java.util.Random;
 
@@ -22,27 +23,27 @@ public class E0303 {
 
         int aleatorio = random.nextInt(100) + 1;
         int numero = 0;
-        int contador = 0; 
+        int contador = 0;
 
-        while (aleatorio != numero && numero != -1){
-        System.out.printf("\nIntroduzca un número del %d al %d: ", MIN, MAX);
-        numero = scanner.nextInt();
+        while (aleatorio != numero && numero != -1) {
+            System.out.printf("\nIntroduzca un número del %d al %d: ", MIN, MAX);
+            numero = scanner.nextInt();
 
-        contador++;
+            contador++;
 
-        if(aleatorio < numero){
-            System.out.printf("\nEl número es menor que %d\n", numero);
-        }else if(aleatorio > numero && numero != -1){
-            System.out.printf("\nEl número es mayor que %d\n", numero);
-        }
+            if (aleatorio < numero) {
+                System.out.printf("\nEl número es menor que %d\n", numero);
+            } else if (aleatorio > numero && numero != -1) {
+                System.out.printf("\nEl número es mayor que %d\n", numero);
+            }
         }
 
         scanner.close();
 
-        if(numero == aleatorio){
+        if (numero == aleatorio) {
             System.out.println("\nHas adivinado el número !!");
             System.out.println("Número de intentos utilizados: " + contador);
-        }else{
+        } else {
             System.out.println("Te has rendido\nEl número secreto era " + aleatorio);
         }
     }

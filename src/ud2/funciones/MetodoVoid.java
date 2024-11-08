@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class MetodoVoid {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
+
         String cadena;
         System.out.print("Introduce cadena de texto: ");
         cadena = sc.nextLine();
