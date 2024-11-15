@@ -1,24 +1,20 @@
-/*  Programa que pida un número entero al usuario y que indique si es par mediante un literal booleano (true o false). */
-
-package operadores;
+package ud1.operadores;
 
 import java.util.Scanner;
 
 public class E0109 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        System.out.print("Introduce un número entero: ");
-        int numero = scanner.nextInt();
+        System.out.print("Escribe un número: ");
+        int numero; 
 
-        boolean par = (numero % 2) == 0;
+        numero = sc.nextInt();
+        sc.close();
 
-        if (par) {
-            System.out.print("El número es par");
-        } else {
-            System.out.print("El número es impar");
+        boolean esPar = numero % 2 == 0;
 
-            scanner.close();
-        }
+        System.out.println("Es par? " + esPar);
     }
+
 }

@@ -1,25 +1,31 @@
-/* Pedir diez números enteros por teclado y mostrar la media.
- Amplía codificando el número de números como una constante.*/
-
 package bucles;
 
 import java.util.Scanner;
 
 public class E0308 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        final int NUM = 10;
+        // Declaración de variables y constantes
+        final int NUM_NUMEROS = 10;
         int numero;
         int suma = 0;
+        double media;
+        Scanner sc = new Scanner(System.in);
 
-        for (int i = 0; i < NUM; i++) {
-            System.out.printf("Introduzca el %d número: ", i + 1);
-            numero = scanner.nextInt();
-            suma = suma + numero;
+        // Entrada de datos
+        System.out.println("Vamos a calcular la media de " + NUM_NUMEROS + " números.");
+        for (int i = 1; i <= NUM_NUMEROS; i++) {
+            System.out.println("Escribe un número: ");
+            numero = sc.nextInt();
+            // suma = suma + numero;
+            suma += numero;
         }
-        scanner.close();
-        double media = suma / NUM;
-        System.out.println("La media es " + media);
+        // Proceso
+        media = suma / (double) NUM_NUMEROS;
+
+        // Salida
+        System.out.printf("La media es %.2f", media);
+
+        sc.close();
     }
+
 }

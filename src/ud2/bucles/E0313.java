@@ -1,33 +1,31 @@
-/* Dadas 6 notas, escribir la cantidad de alumnos aprobados, condicionados (nota igual a 4) y suspensos. */
-
 package bucles;
 
 import java.util.Scanner;
 
 public class E0313 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        final int NUM_NOTAS = 6;
 
-        int suspenso = 0;
-        int aprobado = 0;
-        int condicionado = 0;
+        int aprobados = 0;
+        int condicionados = 0;
+        int suspensos = 0;
 
-        for (int i = 0; i < 6; i++) {
-            System.out.printf("\nIntroduce la calificación del alumno %d: ", i + 1);
-            double calificacion = scanner.nextDouble();
-            if (calificacion == 4) {
-                condicionado++;
-            } else if (calificacion >= 5) {
-                aprobado++;
-            } else {
-                suspenso++;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Escribe " + NUM_NOTAS + " notas: ");
+
+        for(int i = 1; i <= NUM_NOTAS; i++){
+            int nota = sc.nextInt();
+            switch (nota) {
+                case 5, 6, 7, 8, 9, 10 -> aprobados++;
+                case 4 -> condicionados++;
+                case 0, 1, 2, 3 -> suspensos++;
             }
         }
+        sc.close();
 
-        scanner.close();
-
-        System.out.println("\nHay " + suspenso + " suspensos");
-        System.out.println("\nHay " + condicionado + " condicionados");
-        System.out.println("\nHay " + aprobado + " aprobados\n");
+        System.out.println("Aprobados: " + aprobados);
+        System.out.println("Condicionados: " + condicionados);
+        System.out.println("Suspensos: " + suspensos);
     }
 }

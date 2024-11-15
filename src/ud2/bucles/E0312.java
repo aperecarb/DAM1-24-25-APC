@@ -1,25 +1,26 @@
-/* Pedir 5 calificaciones de alumnos y decir al final si hay algún suspenso. */
-
 package bucles;
 
 import java.util.Scanner;
 
 public class E0312 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        final int NUM_ALUMNOS = 5;
+        boolean haySuspensos = false;
+        Scanner sc = new Scanner(System.in);
 
-        int suspenso = 0;
+        for (int i = 1; i <= NUM_ALUMNOS; i++) {
+            System.out.print("Escribe la nota del alumno " + i + ": ");
+            int nota = sc.nextInt();
+            if (nota < 5)
+                haySuspensos = true;
+        }
+        sc.close();
 
-        for (int i = 0; i < 5; i++) {
-            System.out.printf("\nIntroduce la calificación del alumno %d: ", i + 1);
-            double calificacion = scanner.nextDouble();
-            if (calificacion < 5) {
-                suspenso++;
-            }
+        if (haySuspensos) {
+            System.out.println("Hubo suspensos... :(");
+        } else {
+            System.out.println("Ningún suspenso!!! :)");
         }
 
-        scanner.close();
-
-        System.out.println("\nHay " + suspenso + " suspensos");
     }
 }

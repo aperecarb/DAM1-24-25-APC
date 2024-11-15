@@ -1,42 +1,44 @@
-/* Desarrollar un juego que ayude a mejorar el cálculo mental de la suma. El jugador tendrá que introducir 
-la solución de la suma de dos números aleatorios comprendidos entre 1 y 100. Mientras la solución sea 
-correcta, el juego continuará. En caso contrario, el programa terminará y mostrará el número de operaciones 
-realizadas correctamente.
-
-Amplía el programa para que muestre el número de aciertos al terminar.
-
-Variante. Permite al usuario un número limitado de fallos. */
-
 package bucles;
 
 import java.util.Scanner;
-import java.util.Random;
 
 public class E0305 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        Random random = new Random();
+        // Declaración de variables y constantes
+        final int NUM_MAXIMO = 100;
+        int operando1;
+        int operando2;
+        int numUsuario;
+        int numAciertos = 0;
+        boolean falloUsuario = false;
 
-        int sumando1 = 0;
-        int sumando2 = 0;
-        int respuesta = 0;
-        int contador = -1;
+        // Entrada de datos
+        Scanner sc = new Scanner(System.in);
+        System.out.println("CALCULO MENTAL: SUMAS");
 
-        int numero = 0;
-        while (respuesta == numero) {
-            sumando1 = random.nextInt(100) + 1;
-            sumando2 = random.nextInt(100) + 1;
-            respuesta = sumando1 + sumando2;
+        // Proceso
+        do {
+            // Obtener dos números aleatorios
+            operando1 = (int) (Math.random() * NUM_MAXIMO + 1);
+            operando2 = (int) (Math.random() * NUM_MAXIMO + 1);
 
-            System.out.printf("\n%d + %d = ", sumando1, sumando2);
-            numero = scanner.nextInt();
-            contador++;
-        }
+            // Mostrar al usuario y pedir el resultado
+            System.out.print(operando1 + " + " + operando2 + " = ? ");
+            numUsuario = sc.nextInt();
 
-        scanner.close();
+            // Comparar suma con el resultado del usuario
+            if (numUsuario == operando1 + operando2) {
+                numAciertos++;
+            } else {
+                System.out.println("Error! El resultado era " + (operando1 + operando2));
+                falloUsuario = true;
+            }
+        } while (!falloUsuario);
 
-        System.out.println("\nHas fallado");
-        System.out.println("La respuesta correcta era " + respuesta);
-        System.out.println("\nNúmero de sumas correctas: " + contador);
+        // Salida
+        System.out.println("Has conseguido " + numAciertos + " aciertos.");
+
+        sc.close();
     }
+
 }

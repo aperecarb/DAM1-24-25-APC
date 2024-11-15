@@ -1,9 +1,9 @@
-package funciones;
+package ud2.ejerciciosfunciones;
 
 public class EP0315_Triangulo_Pascal {
     public static void trianguloPascal(int num) {
         for (int i = 0; i < num; i++) {
-            for (int j = 0; j <= i; j++){
+            for (int j = 0; j <= i; j++) {
                 long valor = factorial(i) / (factorial(j) * factorial(i - j));
                 System.out.print(valor + " ");
             }
@@ -11,6 +11,7 @@ public class EP0315_Triangulo_Pascal {
         }
     }
 
+    // Método Java recursivo para calcular el factorial de un número entero positivo
     public static long factorial(int n) {
         if (n == 0) {
             return 1;
@@ -22,4 +23,5 @@ public class EP0315_Triangulo_Pascal {
     public static void main(String[] args) {
         trianguloPascal(10);
     }
+
 }

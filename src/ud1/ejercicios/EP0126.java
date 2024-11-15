@@ -1,21 +1,24 @@
-/* Solicita al usuario un número real y calcula su raíz cuadrada. Implementa el programa utilizando el nombre cualificado de las clases,
-en lugar de utilizar ninguna importación. */
+package ud1.ejercicios;
 
 public class EP0126 {
     public static void main(String[] args) {
+        // Declaración de variables y constantes
+        double numero, raiz;
+        // En este ejercicio usamos la clase Scanner sin importarla previamente.
+        java.util.Scanner sc;
 
-        double raiz, numero;
+        sc = new java.util.Scanner(System.in);
 
-        // No utilizar ninguna importación
-        java.util.Scanner entrada;
-        entrada = new java.util.Scanner(System.in);
-
-        System.out.print("Introduzca un número real: ");
-        numero = entrada.nextDouble();
-        entrada.close();
-
+        // Entrada de datos
+        System.out.print("Introduce un número real: ");
+        numero = sc.nextDouble();
+        sc.close();
+        
+        // Proceso
         raiz = Math.sqrt(numero);
 
+        // Salida
         System.out.println("Raíz cuadrada: " + raiz);
+
     }
 }

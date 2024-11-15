@@ -1,25 +1,25 @@
-/* Usa la clase LocalDate para obtener el año actual */
+package ud1.operadores;
 
-package operadores;
-
+import java.time.LocalDate;
 import java.util.Scanner;
-import java.time.LocalDateTime;
 
 public class E0104b {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        LocalDateTime now = LocalDateTime.now();
-        int añoactual = now.getYear();
+        // Obtengo el año actual de la API
+        int anhoActual = 0;
+        
+        anhoActual = LocalDate.now().getYear();
 
-        System.out.print("Introduzca su año de nacimiento: ");
-        int añonacimiento = scanner.nextInt();
+        System.out.print("Introduce el año de nacimiento: ");
+        int anhoNacimiento;
+        anhoNacimiento = sc.nextInt(); 
+        sc.close();
 
-        int edad = añoactual - añonacimiento;
 
-        System.out.printf("Tienes %d años.", edad);
-
-        scanner.close();
-
+        int edad = anhoActual - anhoNacimiento;
+        
+        System.out.println("Tienes " + edad + " años.");
     }
 }

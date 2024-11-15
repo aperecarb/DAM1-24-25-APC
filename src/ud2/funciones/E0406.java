@@ -1,32 +1,25 @@
-package funciones;
-
-import java.util.Scanner;
+package ud2.ejerciciosfunciones;
 
 public class E0406 {
-    public static boolean esPrimo(int n) {
-        boolean primo = true;
+    public static void main(String[] args) {
 
-        for (int i = 2; i < n - 1; i++) {
+        // Salida
+        System.out.println(esPrimo(23));
+        System.out.println(esPrimo(110));
+    }
+    
+    static boolean esPrimo(int n) {
+        boolean primo = true;
+        int i = 2;
+    
+        while (i <= n/2 && primo) {
             if (n % i == 0) {
                 primo = false;
             }
+            i++;
         }
-
+    
         return primo;
     }
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Introduzca un número: ");
-        int n = sc.nextInt();
-
-        if (esPrimo(n)) {
-            System.out.println(n + " es primo.");
-        } else {
-            System.out.println(n + " no es primo.");
-        }
-
-        sc.close();
-    }
+        
 }

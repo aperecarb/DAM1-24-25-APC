@@ -1,19 +1,23 @@
-/* Solicita la edad del usuario y muestra la que tendrá el año que viene. */
-
-package operadores;
+package ud1.operadores;
 
 import java.util.Scanner;
 
 public class E0103 {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        Scanner scanner = new Scanner(System.in);
+        byte edad;
 
-        System.out.print("Introduce tu edad: ");
-        int edad = scanner.nextInt();
+        // Pedir la edad al usuario
+        System.out.print("Escribe tu edad: ");
+        edad = sc.nextByte();
+        sc.close();
 
-        System.err.printf("El año que viene tendrás %d años", edad + 1);
 
-        scanner.close();
+        // Calcular la nueva edad
+        edad++;
+
+        // Mostrar salida
+        System.out.println("El año que viene tendrás " + edad + " años.");
     }
 }
