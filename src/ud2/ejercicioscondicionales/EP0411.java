@@ -1,4 +1,4 @@
-package ud2.ejercicioscondicionales;
+package ejercicioscondicionales;
 
 public class EP0411 {
     public static int mcd(int a, int b) {
@@ -21,7 +21,7 @@ public class EP0411 {
 
         int a = 56;
         int b = 12;
-        
+
         System.out.println("El MCD de " + a + " y " + b + " es: " + mcd(a, b));
 
     }

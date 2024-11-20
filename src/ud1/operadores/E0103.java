@@ -1,4 +1,4 @@
-package ud1.operadores;
+package operadores;
 
 import java.util.Scanner;
 
@@ -12,7 +12,6 @@ public class E0103 {
         System.out.print("Escribe tu edad: ");
         edad = sc.nextByte();
         sc.close();
-
 
         // Calcular la nueva edad
         edad++;

@@ -1,4 +1,4 @@
-package ud2;
+package util;
 
 import java.util.Scanner;
 

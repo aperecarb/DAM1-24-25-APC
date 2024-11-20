@@ -1,4 +1,4 @@
-package ud2.excepciones;
+package excepciones;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package ud2.excepciones;
+package excepciones;
 
 import java.io.IOException;
 
@@ -7,7 +7,7 @@ public class DeclararExcepcion {
         char car;
         System.out.println("Introduce un carácter");
         car = (char) System.in.read();
-        
+
         System.out.println(car);
     }
 }

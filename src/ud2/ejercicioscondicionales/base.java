@@ -1,12 +1,11 @@
-package ud2.ejercicioscondicionales;
-
+package ejercicioscondicionales;
 
 import java.util.Scanner;
 
 public class base {
 
     public static void main(String[] args) {
-        
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("¿Cuáles son tus iniciales?");
@@ -15,5 +14,5 @@ public class base {
 
         scanner.close();
     }
-    
+
 }

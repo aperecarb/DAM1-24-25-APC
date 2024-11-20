@@ -1,5 +1,3 @@
-package ud1.ejercicios;
-
 import java.util.Scanner;
 
 public class Ex3_NumerosOrdenados {

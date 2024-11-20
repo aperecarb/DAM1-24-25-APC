@@ -1,4 +1,5 @@
-package ud2.funciones;
+package funciones;
+
 import java.util.Scanner;
 
 public class CajaTexto {

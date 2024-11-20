@@ -1,4 +1,4 @@
-package ud2.ejerciciosfunciones;
+package funciones;
 
 public class E0406_Primo {
     public static boolean esPrimo(int n) {
@@ -15,7 +15,6 @@ public class E0406_Primo {
 
     public static void main(String[] args) {
         System.out.println(esPrimo(60));
-
 
         for (int i = 1; i <= 20; i++) {
             System.out.println(i + (esPrimo(i) ? " " : " no ") + " primo.");

@@ -1,4 +1,4 @@
-package ud2.ejercicioscondicionales;
+package ejercicioscondicionales;
 
 import java.util.Scanner;
 
@@ -15,19 +15,20 @@ public class E0204 {
         sc.close();
 
         // Proceso
-        /* SOLUCIÓN CON IFS ANIDADOS
-        if (numero != 0) {
-            if (numero > -1) {
-                if (numero < 1) {
-                    casiCero = true;
-                }
-            }
-        }
-        */
-        
+        /*
+         * SOLUCIÓN CON IFS ANIDADOS
+         * if (numero != 0) {
+         * if (numero > -1) {
+         * if (numero < 1) {
+         * casiCero = true;
+         * }
+         * }
+         * }
+         */
+
         // SOLUCIÓN EN UNA ÚNICA LÍNEA CON OPERADORES LÓGICOS
         casiCero = numero != 0 && numero > -1 && numero < 1;
-        
+
         // Salida
         if (casiCero) {
             System.out.println("El numero " + numero + " es casi-cero.");

@@ -1,4 +1,4 @@
-package ud2.ejerciciosexcepciones;
+package funciones;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package ud2.ejerciciosfunciones;
+package funciones;
 
 public class E0408 {
     static double calculadora(double a, double b, int operacion) {

@@ -1,5 +1,4 @@
-
-package ud1.holamundo;
+package holamundo;
 
 public class HolaMundo {
 
@@ -17,10 +16,10 @@ public class HolaMundo {
 
         System.out.println("Número de personas: " + numPersonas);
 
-        System.out.println("Cada persona debe pagar " 
-                            + importePersona + "€");
+        System.out.println("Cada persona debe pagar "
+                + importePersona + "€");
 
         System.out.println("Programa realizado por Oscar");
     }
-    
+
 }

@@ -1,4 +1,4 @@
-package ud2.dorime;
+package ejercicios;
 
 public class NumerosPrimos {
 

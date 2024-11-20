@@ -1,4 +1,4 @@
-package ud1.operadores;
+package operadores;
 
 public class E0106 {
     public static void main(String[] args) {

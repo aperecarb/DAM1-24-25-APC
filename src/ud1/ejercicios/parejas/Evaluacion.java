@@ -2,7 +2,7 @@
  * Copilot: Rocío Rial
  */
 
-package ud1.ejercicios.parejas;
+package parejas;
 
 import java.util.Scanner;
 
@@ -30,7 +30,7 @@ public class Evaluacion {
         double presentacion = sc.nextDouble();
 
         sc.close();
-        
+
         double resultado = funciona + eficiente + estructuras + identificadores + legible + presentacion;
         System.out.println("El resultado final es: " + resultado);
     }

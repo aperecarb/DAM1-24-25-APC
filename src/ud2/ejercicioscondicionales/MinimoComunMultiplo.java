@@ -1,4 +1,4 @@
-package ud2.ejercicioscondicionales;
+package ejercicioscondicionales;
 
 import java.util.Scanner;
 
@@ -17,23 +17,23 @@ public class MinimoComunMultiplo {
         System.out.printf("Usaremos los números %d y %d... %n", a, b);
         scanner.close();
 
-        if ( b < a ) {
+        if (b < a) {
             int c = a;
             a = b;
             b = c;
         }
- 
+
         int aBase = a;
         int bBase = b;
         int multiplosA = 1;
         int multiplosB = 1;
 
-        
         // System.out.printf("%d es igual a %d... ¡GENIAL! %n", a, b);
         int mcm = a;
-        System.out.printf("El MCM de %d y %d es %d %n", aBase, bBase, mcm );
-        System.out.printf("Hemos tenido que calcular %d múltiplos de %d y %d múltiplos de %d %n", multiplosA, aBase, multiplosB, bBase);
-    
+        System.out.printf("El MCM de %d y %d es %d %n", aBase, bBase, mcm);
+        System.out.printf("Hemos tenido que calcular %d múltiplos de %d y %d múltiplos de %d %n", multiplosA, aBase,
+                multiplosB, bBase);
+
     }
 
 }

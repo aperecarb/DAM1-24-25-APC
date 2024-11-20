@@ -1,4 +1,4 @@
-package ud2.ejerciciosfunciones;
+package funciones;
 
 public class E0407 {
     public static void main(String[] args) {
@@ -11,30 +11,29 @@ public class E0407 {
 
     }
 
-    static int numDivisoresPrimos(int n){
+    static int numDivisoresPrimos(int n) {
         int numDivisoresPrimos = 0;
 
-        for(int i = 2; i < n; i++){
+        for (int i = 2; i < n; i++) {
             if (n % i == 0 && esPrimo(i)) {
                 numDivisoresPrimos++;
             }
         }
 
-        return numDivisoresPrimos; 
+        return numDivisoresPrimos;
     }
-
 
     static boolean esPrimo(int n) {
         boolean primo = true;
         int i = 2;
-    
-        while (i <= n/2 && primo) {
+
+        while (i <= n / 2 && primo) {
             if (n % i == 0) {
                 primo = false;
             }
             i++;
         }
-    
+
         return primo;
     }
 

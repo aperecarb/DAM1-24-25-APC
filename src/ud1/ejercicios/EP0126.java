@@ -1,5 +1,3 @@
-package ud1.ejercicios;
-
 public class EP0126 {
     public static void main(String[] args) {
         // Declaración de variables y constantes

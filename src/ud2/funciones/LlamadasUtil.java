@@ -1,9 +1,8 @@
-package ud2.funciones;
+package funciones;
 
 import java.util.Scanner;
 
-import ud2.Util;
-
+import util.Util;
 
 public class LlamadasUtil {
     public static void main(String[] args) {

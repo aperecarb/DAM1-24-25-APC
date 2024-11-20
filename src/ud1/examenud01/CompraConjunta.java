@@ -1,6 +1,6 @@
 //Saúl Fernández Salgado
 
-package ud1.naoexamen;
+package examenud01;
 
 import java.util.Scanner;
 

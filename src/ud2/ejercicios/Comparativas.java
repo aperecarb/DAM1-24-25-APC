@@ -1,4 +1,4 @@
-package ud2.dorime;
+package ejercicios;
 
 import java.util.Scanner;
 

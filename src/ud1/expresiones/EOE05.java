@@ -1,4 +1,4 @@
-package ud1.expresiones;
+package expresiones;
 
 public class EOE05 {
     public static void main(String[] args) {
@@ -54,7 +54,7 @@ public class EOE05 {
 
         System.out.print("P: ");
         System.out.println();
-        //System.out.println(2 * x + (y == 0));
+        // System.out.println(2 * x + (y == 0));
 
         System.out.print("Q: ");
         System.out.println(x + y >= 0);
@@ -65,8 +65,6 @@ public class EOE05 {
         System.out.print("S: ");
         System.out.println(-(i + j) != -i + j);
 
-
-        
         System.out.print("T: ");
         System.out.println(i <= j && i >= c);
 

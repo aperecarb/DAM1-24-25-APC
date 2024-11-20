@@ -1,4 +1,4 @@
-package ud2.ejercicioscondicionales;
+package ejercicioscondicionales;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ public class E0211 {
         sc.close();
 
         switch (dia) {
-            case 1 -> 
+            case 1 ->
                 System.out.println("Lunes");
             case 2 ->
                 System.out.println("Martes");

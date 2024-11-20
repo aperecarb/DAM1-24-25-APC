@@ -1,4 +1,4 @@
-package ud2.ejercicioscondicionales;
+package ejercicioscondicionales;
 
 import java.time.LocalTime;
 import java.util.Scanner;

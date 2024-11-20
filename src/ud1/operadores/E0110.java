@@ -1,4 +1,4 @@
-package ud1.operadores;
+package operadores;
 
 import java.util.Scanner;
 

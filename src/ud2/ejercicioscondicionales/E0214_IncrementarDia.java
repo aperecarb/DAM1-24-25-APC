@@ -1,4 +1,4 @@
-package ud2.ejercicioscondicionales;
+package ejercicioscondicionales;
 
 import java.util.Scanner;
 
@@ -35,20 +35,21 @@ public class E0214_IncrementarDia {
             }
         };
 
-        /* SOLUCIÓN CON SWITCH TRADICIONAL
-        switch (mes) {
-            case 1, 3, 5, 7, 8, 10, 12:
-                if (dia > 31) hayQueIncrementarMes = true;
-                break;
-            case 2:
-                if (dia > 28) hayQueIncrementarMes = true;
-                break;
-
-            case 4, 6, 9, 11:
-                if (dia > 30) hayQueIncrementarMes = true;
-                break;
-        }
-         */                
+        /*
+         * SOLUCIÓN CON SWITCH TRADICIONAL
+         * switch (mes) {
+         * case 1, 3, 5, 7, 8, 10, 12:
+         * if (dia > 31) hayQueIncrementarMes = true;
+         * break;
+         * case 2:
+         * if (dia > 28) hayQueIncrementarMes = true;
+         * break;
+         * 
+         * case 4, 6, 9, 11:
+         * if (dia > 30) hayQueIncrementarMes = true;
+         * break;
+         * }
+         */
 
         if (hayQueIncrementarMes) {
             dia = 1;
@@ -57,10 +58,8 @@ public class E0214_IncrementarDia {
             if (mes > 12) {
                 mes = 1;
                 anho++;
-            }            
-        }     
-
-
+            }
+        }
 
         System.out.printf("El día siguiente es %d/%d/%d%n", dia, mes, anho);
 

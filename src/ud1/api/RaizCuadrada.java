@@ -1,4 +1,4 @@
-package ud1.api;
+package api;
 
 import java.util.Scanner;
 
@@ -16,5 +16,5 @@ public class RaizCuadrada {
 
         sc.close();
     }
-    
+
 }

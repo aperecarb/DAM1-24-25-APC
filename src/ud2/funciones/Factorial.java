@@ -1,12 +1,10 @@
-package ud2.funciones;
+package funciones;
 
 public class Factorial {
-
 
     // Método Java iterativo para calcular el factorial de un número entero positivo
     public static long factorialIterativo(int n) {
         long factorial = 1;
-
 
         if (n == 0) {
             factorial = 1;
@@ -18,7 +16,6 @@ public class Factorial {
         return factorial;
     }
 
-
     // Método Java recursivo para calcular el factorial de un número entero positivo
     public static long factorial(int n) {
         if (n == 0) {
@@ -28,12 +25,9 @@ public class Factorial {
         }
     }
 
-
     public static void main(String[] args) {
         System.out.println(factorialIterativo(5));
-
 
         System.out.println(factorial(5));
     }
 }
-

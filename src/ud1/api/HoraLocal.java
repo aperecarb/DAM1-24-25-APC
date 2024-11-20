@@ -1,4 +1,4 @@
-package ud1.api;
+package api;
 
 import java.time.LocalTime;
 
