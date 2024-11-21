@@ -2,10 +2,12 @@
 
 package ud2.apcexamen;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class Chicles {
     public static int totalChicles(int comprados, int envoltoriosAEntregar, int chiclesRegalados) {
         /* Primero se validan las entradas */
-        if (comprados < 0 || envoltoriosAEntregar < 0 || chiclesRegalados < 0 || chiclesRegalados > envoltoriosAEntregar) {
+        if (comprados < 0 || envoltoriosAEntregar < 0 || chiclesRegalados < 0 || chiclesRegalados >= envoltoriosAEntregar) {
             return -1;
         }
 
@@ -14,7 +16,7 @@ public class Chicles {
         int envoltorios = comprados;
 
         /* Ahora se calculan los chicles comprados más los conseguidos con envoltorios */
-        if (chiclesRegalados == envoltoriosAEntregar) {
+        if (chiclesRegalados == 0 && envoltoriosAEntregar == 0) {
             int chiclesGratuitos = 0;
         } else {
             while (envoltorios >= envoltoriosAEntregar) {
