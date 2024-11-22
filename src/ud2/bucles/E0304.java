@@ -10,8 +10,9 @@ public class E0304 {
         int numArbolMasAlto = -1;
         Scanner sc = new Scanner(System.in);
 
-         do {
-            System.out.print("Introduce la altura en centímetros del árbol número " + numArbol + " (-1 para terminar): ");
+        do {
+            System.out
+                    .print("Introduce la altura en centímetros del árbol número " + numArbol + " (-1 para terminar): ");
             altura = sc.nextInt();
 
             if (altura > alturaMaxima) {
@@ -19,7 +20,7 @@ public class E0304 {
                 numArbolMasAlto = numArbol;
             }
             numArbol++;
-        }  while (altura != -1);
+        } while (altura != -1);
 
         if (alturaMaxima != -1) {
             System.out.println("El árbol más alto es el número " + numArbolMasAlto +

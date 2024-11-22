@@ -10,7 +10,7 @@ public class E0311_Factorial {
         sc.close();
 
         int factorial = 1;
-        for (int i = n; i > 1; i--){
+        for (int i = n; i > 1; i--) {
             factorial *= i;
         }
 

@@ -1,5 +1,3 @@
-/* Variante. Permite al usuario un número limitado de fallos. */
-
 package bucles;
 
 import java.util.Scanner;
