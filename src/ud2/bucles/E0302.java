@@ -23,8 +23,6 @@ public class E0302 {
             edad = sc.nextInt();
         }
 
-        sc.close();
-
         if (numAlumnos > 0) {
             mediaEdades = sumEdades / numAlumnos;
 
@@ -35,5 +33,6 @@ public class E0302 {
         } else {
             System.out.println("No has introducido ninguna edad válida.");
         }
+        sc.close();
     }
 }

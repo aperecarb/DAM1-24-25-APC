@@ -16,7 +16,6 @@ public class Concierto {
         double precioEntrada = scanner.nextDouble();
         System.out.print("Introduzca el número de entradas vendidas: ");
         int entradasVendidas = scanner.nextInt();
-        scanner.close();
 
         double ganancias = entradasVendidas * precioEntrada;
         double aforo20 = aforo * CANCELAR;
@@ -33,5 +32,7 @@ public class Concierto {
             System.out.printf("\nPrecio entrada por persona: %.2f\n", precioEntrada);
             System.out.printf("Dinero recaudado: %.2f", ganancias);
         }
+        
+        scanner.close();
     }
 }

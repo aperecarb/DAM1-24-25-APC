@@ -10,12 +10,13 @@ public class E0311 {
 
         System.out.print("Introduzca un número para calcular su factorial: ");
         int numero = scanner.nextInt();
-        scanner.close();
-
+        
         for (int i = numero; i > 0; i--) {
             factorial = factorial * i;
         }
 
         System.out.printf("El factorial de %d es %d", numero, factorial);
+
+        scanner.close();
     }
 }

@@ -35,9 +35,8 @@ public class E0305b {
                 System.out.println("La respuesta correcta era " + respuesta);
             }
         }
+        System.out.println("\nNúmero de sumas correctas: " + contador);
 
         scanner.close();
-
-        System.out.println("\nNúmero de sumas correctas: " + contador);
     }
 }

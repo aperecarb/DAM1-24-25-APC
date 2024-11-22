@@ -21,10 +21,10 @@ public class E0313 {
                 case 0, 1, 2, 3 -> nsuspensos++;
             }
         }
-        sc.close();
-
         System.out.println("Aprobados: " + naprobados);
         System.out.println("Condicionados: " + ncondicionados);
         System.out.println("Suspensos: " + nsuspensos);
+
+        sc.close();
     }
 }

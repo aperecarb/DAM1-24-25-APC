@@ -1,4 +1,4 @@
-package ud2.ejerciciosbucles;
+package bucles;
 
 import java.util.Scanner;
 
@@ -6,10 +6,10 @@ public class EP0318{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
-        System.out.print("Introduce el primer número: ");
+        System.out.print("Introduzca el primer número: ");
         int a = sc.nextInt();
         
-        System.out.print("Introduce el segundo número: ");
+        System.out.print("Introduzca el segundo número: ");
         int b = sc.nextInt();
         sc.close();
         

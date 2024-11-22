@@ -14,13 +14,12 @@ public class E0312 {
             if (nota < 5)
                 haySuspensos = true;
         }
-        sc.close();
-
+        
         if (haySuspensos) {
             System.out.println("Hubo suspensos.");
         } else {
             System.out.println("No hubo ningun suspenso.");
         }
-
+        sc.close();
     }
 }

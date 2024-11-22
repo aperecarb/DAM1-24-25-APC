@@ -1,4 +1,4 @@
-package ud2.ejerciciosbucles;
+package bucles;
 
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ public class EP0315 {
         
         System.out.print("Introduce el número de filas del triángulo de Pascal: ");
         int filas = sc.nextInt();
-        sc.close();
+        
         
         for (int n = 0; n < filas; n++) {
             for (int i = 0; i <= n; i++) {
@@ -16,6 +16,7 @@ public class EP0315 {
             }
             System.out.println();
         }
+        sc.close();
     }
     
     public static int coeficienteBinomial(int n, int k) {

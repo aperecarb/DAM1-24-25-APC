@@ -1,5 +1,3 @@
-/* Pedir tres números y mostrarlos ordenados de mayor a menor */
-
 package ejercicios;
 
 import java.util.Scanner;
@@ -14,7 +12,6 @@ public class E0207 {
         int n2 = scanner.nextInt();
         System.out.print("Introduzca el tercer número: ");
         int n3 = scanner.nextInt();
-        scanner.close();
 
         if (n1 < n2 && n1 < n3) {
             if (n2 < n3) {
@@ -41,5 +38,7 @@ public class E0207 {
                 System.out.printf("\nResultado mayor a menor:  %d %d %d", n1, n2, n3);
             }
         }
+        
+        scanner.close();
     }
 }

@@ -9,7 +9,6 @@ public class E0315 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduzca un número: ");
         numero = sc.nextInt();
-        sc.close();
 
         for (int i = 0; i < numero; i++) {
             for (int j = 0; j < numero - i; j++) {
@@ -17,5 +16,6 @@ public class E0315 {
             }
             System.out.println("");
         }
+        sc.close();
     }
 }

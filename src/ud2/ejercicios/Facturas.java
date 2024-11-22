@@ -1,7 +1,3 @@
-/* Escribe un programa para emitir la factura de compra de un producto, introduciendo el precio del producto
-y el número de unidades compradas. La factura deberá añadir al total un IVA de 21%. Si el precio final con IVA es 
-superior a 100 euros se implicará un descuento del 5% */
-
 package ejercicios;
 
 import java.util.Scanner;
@@ -17,7 +13,6 @@ public class Facturas {
         double precioProducto = scanner.nextDouble();
         System.out.print("Introduzca las unidades compradas: ");
         int unidades = scanner.nextInt();
-        scanner.close();
 
         double precioSinIVA = precioProducto * unidades;
         double precioTotal = precioSinIVA + precioSinIVA * IVA;
@@ -28,5 +23,7 @@ public class Facturas {
 
         System.out.printf("Precio = %.2f euros, Unidades = %d => Precio Final = %.2f euros", precioProducto, unidades,
                 precioTotal);
+
+        scanner.close();
     }
 }

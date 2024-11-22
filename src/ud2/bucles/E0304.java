@@ -28,7 +28,6 @@ public class E0304 {
         } else {
             System.out.println("No has introducido ninguna altura.");
         }
-
         sc.close();
     }
 }
