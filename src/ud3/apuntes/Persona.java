@@ -34,4 +34,14 @@ public class Persona {
     public static void incrementarContador() {
         contadorPersonas++;
     }
+
+    public void cumplirAnhos() {
+        edad++;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    
 }

@@ -26,7 +26,12 @@ public class EjemploPoo {
             System.out.println(nombre3 + " no es mayor de edad");
         }
 
-        Persona p4 = null;
+        Persona cumpleanhero = p;
+        cumpleanhero.cumplirAnhos();
+        System.out.println(cumpleanhero.nombreCompleto() + " tiene " + cumpleanhero.getEdad() + " años.");
+
+        cumpleanhero = null;
+        p = null;
 
         /* Miembros estáticos */
         System.out.println(Persona.contadorPersonas);
