@@ -1,15 +1,8 @@
-/* Escribir un programa que calcule el dinero recaudado en un concierto. La aplicación
-solicitará el aforo máximo del local, el precio por entrada (suponemos que todas las
-entradas tienen el mismo precio) y el número de entradas vendidas. Hay que tener en 
-cuenta que si el número de entradas vendidas no supera el 20% del aforo del local, se
-cancela el concierto. Si el número de entradas vendidas no supera el 50% del aforo del
-local, se realiza una rebaja del 25% del precio de la entrada. */
-
-package ejercicioscondicionales;
+package ejercicios;
 
 import java.util.Scanner;
 
-public class Propuesto {
+public class Concierto {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -23,7 +16,6 @@ public class Propuesto {
         double precioEntrada = scanner.nextDouble();
         System.out.print("Introduzca el número de entradas vendidas: ");
         int entradasVendidas = scanner.nextInt();
-        scanner.close();
 
         double ganancias = entradasVendidas * precioEntrada;
         double aforo20 = aforo * CANCELAR;
@@ -40,5 +32,7 @@ public class Propuesto {
             System.out.printf("\nPrecio entrada por persona: %.2f\n", precioEntrada);
             System.out.printf("Dinero recaudado: %.2f", ganancias);
         }
+        
+        scanner.close();
     }
 }

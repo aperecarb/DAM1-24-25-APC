@@ -9,18 +9,17 @@ public class E0312 {
         Scanner sc = new Scanner(System.in);
 
         for (int i = 1; i <= NUM_ALUMNOS; i++) {
-            System.out.print("Escribe la nota del alumno " + i + ": ");
+            System.out.print("Introduzca la nota del alumno " + i + ": ");
             int nota = sc.nextInt();
             if (nota < 5)
                 haySuspensos = true;
         }
-        sc.close();
-
+        
         if (haySuspensos) {
-            System.out.println("Hubo suspensos... :(");
+            System.out.println("Hubo suspensos.");
         } else {
-            System.out.println("Ningún suspenso!!! :)");
+            System.out.println("No hubo ningun suspenso.");
         }
-
+        sc.close();
     }
 }

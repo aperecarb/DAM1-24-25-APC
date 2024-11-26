@@ -1,6 +1,3 @@
-/* Crear una aplicación que solicite al usuario una fecha (día, mes, año) y muestre la
- fecha correspondiente al día siguiente. */
-
 package ejercicios;
 
 import java.util.Scanner;
@@ -8,11 +5,11 @@ import java.util.Scanner;
 public class E0214 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Introduzca una fecha (dd mm aaaa): ");
         int dia = scanner.nextInt();
         int mes = scanner.nextInt();
         int año = scanner.nextInt();
-        scanner.close();
 
         dia++;
 
@@ -45,7 +42,8 @@ public class E0214 {
                 }
             }
         }
-
         System.out.printf("Fecha del día siguiente: %02d/%02d/%04d: ", dia, mes, año);
+        
+        scanner.close();
     }
 }

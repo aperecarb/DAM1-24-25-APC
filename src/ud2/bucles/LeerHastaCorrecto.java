@@ -1,4 +1,4 @@
-package ud2.ejerciciosexcepciones;
+package bucles;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -10,14 +10,14 @@ public class LeerHastaCorrecto {
         int numero = 0;
 
         while (!entradaValida) {
-            System.out.print("Introduce un número entero: ");
+            System.out.print("Introduzca un número entero: ");
             try {
                 numero = scanner.nextInt();
                 entradaValida = true;
                 System.out.println("El número introducido es: " + numero);
             } catch (InputMismatchException e) {
-                System.out.println("Error: Debes introducir un número entero, no letras u otros caracteres.");
-                scanner.next(); // Limpia la entrada no válida
+                System.out.println("Error: Debe introducir un número entero.");
+                scanner.next();
             }
         }
         scanner.close();

@@ -7,12 +7,10 @@ public class E0306 {
         System.out.print("Número: ");
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        sc.close();
 
-
-        for(int i = 1; i <= n; i++) {
+        for (int i = 1; i <= n; i++) {
             System.out.println(i);
         }
-            
+        sc.close();
     }
 }
