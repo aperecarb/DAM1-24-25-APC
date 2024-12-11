@@ -17,6 +17,7 @@ public class Persona {
         apellido1 = a1;
         apellido2 = a2;
         edad = e;
+        contadorPersonas++;
     }
 
     public String nombreCompleto() {
@@ -31,6 +32,8 @@ public class Persona {
         }
     }
 
+    
+
     public static void incrementarContador() {
         contadorPersonas++;
     }
@@ -43,5 +46,12 @@ public class Persona {
         return edad;
     }
 
-    
+    void saludar() {
+        System.out.println("¡Hola, mi nombre es " + nombre + "!");
+        System.out.println("¡Encantad@ de conocerte!");
+    }
+
+    void crecer(double incremento) {
+        estatura += incremento;
+    }
 }
