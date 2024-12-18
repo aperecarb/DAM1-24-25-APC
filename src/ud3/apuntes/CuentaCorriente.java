@@ -29,7 +29,7 @@ public class CuentaCorriente {
 
     public void mostrarInfo() {
         System.out.println("Información de la cuenta: ");
-        System.out.println("Nombre :" + nombre);
+        System.out.println("Nombre: " + nombre);
         System.out.println("DNI: " + dni);
         System.out.println("Saldo: " + saldo);
     }

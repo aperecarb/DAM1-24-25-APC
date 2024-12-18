@@ -10,7 +10,6 @@ public class Precision {
 
         System.out.println("Cálculo con errores de precisión con tipos primitivos: " + suma);
 
-        // Creo e inicializo el objeto BigDecimal
         BigDecimal centimo = new BigDecimal("0.01");
         
         BigDecimal sumaPrecisa = centimo.add(centimo).add(centimo).add(centimo).add(centimo).add(centimo);

@@ -18,5 +18,6 @@ public class E0706 {
             hora.incrementar1Segundo();
             hora.mostrar();
         }
+        sc.close();
     }                
 }

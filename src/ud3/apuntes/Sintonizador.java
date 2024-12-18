@@ -48,26 +48,14 @@ public class Sintonizador {
     }
 
     public void setFrecuencia(double frecuencia) throws IllegalArgumentException {
-        if (frecuencia < 80)
-            // Excepción
+        if (frecuencia < 80) {
             throw new IllegalArgumentException("La frecuencia no puede ser inferior a 80 MHz");
-        else if (frecuencia > 108)
-            // Excepción
+        } else if (frecuencia > 108) {
             throw new IllegalArgumentException("La frecuencia no puede ser superior a 108 MHz");
-        else
+        } else {
             this.frecuencia = frecuencia;
-
-        /*
-         * if (frecuencia < 80)
-         * this.frecuencia = 80;
-         * else if (frecuencia > 108)
-         * this.frecuencia = 108;
-         * else
-         * this.frecuencia = frecuencia;
-         */
+        }
     }
-
-    // GESTIÓN DE MEMORIAS >> SETTERS Y GETTERS
 
     public void fijarMemoria1() {
         this.memoria1 = frecuencia;
@@ -98,5 +86,4 @@ public class Sintonizador {
             frecuencia = memoria3;
         return memoria3;
     }
-
 }

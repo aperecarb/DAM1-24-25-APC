@@ -12,10 +12,8 @@ public class FactorialBigInteger {
     }
 
     private static BigInteger factorial(int n) {
-        // Inicializa el acumulador multiplicador a 1
         BigInteger resultado = BigInteger.ONE;
 
-        // Iterativamente multiplica el número desde 1 hasta n
         for (int i = 1; i <= n; i++) {
             resultado = resultado.multiply(BigInteger.valueOf(i));
         }

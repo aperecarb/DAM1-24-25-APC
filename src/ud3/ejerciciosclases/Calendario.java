@@ -1,11 +1,11 @@
 package ud3.ejerciciosclases;
 
 public class Calendario {
-    private int anho, mes, dia;
+    private int year, mes, dia;
 
-    public Calendario(int anho, int mes, int dia) {
-        if (fechaCorrecta(anho, mes, dia)) {
-            this.anho = anho;
+    public Calendario(int year, int mes, int dia) {
+        if (fechaCorrecta(year, mes, dia)) {
+            this.year = year;
             this.mes = mes;
             this.dia = dia;
         } else {
@@ -15,7 +15,7 @@ public class Calendario {
 
     public void incrementarDia() {
         dia++;
-        if (dia > diasMes(mes, anho)) {
+        if (dia > diasMes(mes, year)) {
             dia = 1;
             incrementarMes();
         }
@@ -30,18 +30,18 @@ public class Calendario {
     }
 
     void incrementarAño(int cantidad) {
-        anho += cantidad;
-        if (anho == 0)
-            anho = cantidad < 0 ? -1 : 1;
+        year += cantidad;
+        if (year == 0)
+            year = cantidad < 0 ? -1 : 1;
     }
 
-    public static int diasMes(int mes, int anho) {
+    public static int diasMes(int mes, int year) {
         if (mes < 1 || mes > 12)
             return -1;
 
         switch (mes) {
             case 2:
-                if (esBisiesto(anho))
+                if (esBisiesto(year))
                     return 29;
                 else
                     return 28;
@@ -55,40 +55,29 @@ public class Calendario {
         }
     }
 
-    public static boolean esBisiesto(int anho) {
-        return ((anho % 4 == 0) && (anho % 100 != 0) || (anho % 400 == 0));
+    public static boolean esBisiesto(int year) {
+        return ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0));
     }
 
-    public static boolean fechaCorrecta(int anho, int mes, int dia) {
-        boolean diaCorrecto, mesCorrecto, anhoCorrecto;
-        anhoCorrecto = (anho != 0);
+    public static boolean fechaCorrecta(int year, int mes, int dia) {
+        boolean diaCorrecto, mesCorrecto, yearCorrecto;
+        yearCorrecto = (year != 0);
         mesCorrecto = (mes >= 1) && (mes <= 12);
-        diaCorrecto = (dia >= 1 && dia <= diasMes(mes, anho));
+        diaCorrecto = (dia >= 1 && dia <= diasMes(mes, year));
 
-        return diaCorrecto && mesCorrecto && anhoCorrecto;
+        return diaCorrecto && mesCorrecto && yearCorrecto;
     }
 
     public boolean iguales(Calendario otraFecha) {
-        return dia == otraFecha.dia && mes == otraFecha.mes && anho == otraFecha.anho;
-        /*
-         * boolean iguales = true;
-         * if (dia != otraFecha.dia)
-         * iguales = false;
-         * else if (mes != otraFecha.mes){
-         * iguales = false;
-         * } else if (anho != otraFecha.anho)
-         * iguales = false;
-         * 
-         * return iguales;
-         */
+        return dia == otraFecha.dia && mes == otraFecha.mes && year == otraFecha.year;
     }
 
     public void mostrar() {
-        System.out.println(dia + "/" + mes + "/" + anho);
+        System.out.println(dia + "/" + mes + "/" + year);
     }
 
-    public int getAnho() {
-        return anho;
+    public int getYear() {
+        return year;
     }
 
     public int getMes() {
@@ -98,5 +87,4 @@ public class Calendario {
     public int getDia() {
         return dia;
     }
-
 }

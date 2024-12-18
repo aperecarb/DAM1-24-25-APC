@@ -13,7 +13,5 @@ public class FactorialPrimitivo {
         for (int i = 2; i < 50; i++) {
             System.out.println("Factorial de " + i + " = " + factorial(i));
         }
-
     }
-
 }

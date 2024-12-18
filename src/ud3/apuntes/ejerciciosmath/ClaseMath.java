@@ -6,12 +6,7 @@ public class ClaseMath {
     public static void main(String[] args) {        
         final int MIN = -360;
         final int MAX = 360;
-        // Generación de un número aleatorio aproximado entre MIN y MAX
         double x = Math.random() * (MAX - MIN) - 360;
-
-        // Otra forma más compleja de generar el número incluyendo 360
-        //double f = Math.random() / Math.nextDown(1.0);
-        //double x = MIN * (1.0 - f) + MAX * f;
 
         System.out.println("Número aleatorio entre -360 y 360: " + x);        
         
