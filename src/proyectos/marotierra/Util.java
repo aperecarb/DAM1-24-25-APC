@@ -16,6 +16,7 @@ public class Util {
         System.setProperty("java.net.useSystemProxies", "true");        
 
         try {
+            @SuppressWarnings("deprecation")
             java.net.URL urlObjeto = new java.net.URL(url);
             java.net.URLConnection conexion = urlObjeto.openConnection();
             conexion.setRequestProperty("Accept-Language", "es");
