@@ -31,9 +31,7 @@ public class Persona {
             return false;
         }
     }
-
     
-
     public static void incrementarContador() {
         contadorPersonas++;
     }

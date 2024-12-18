@@ -1,4 +1,4 @@
-package funciones;
+package ud2.funciones;
 
 public class E0410 {
     public static void main(String[] args) {
@@ -30,5 +30,4 @@ public class E0410 {
 
         return resultado;
     }
-
 }

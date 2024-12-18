@@ -5,7 +5,7 @@ public class CuentaCorriente {
     String nombre;
     double saldo;
 
-    CuentaCorriente(String dni, String nombre) {
+    public CuentaCorriente(String dni, String nombre) {
         this.dni = dni;
         this.nombre = nombre;
         saldo = 0;
