@@ -1,6 +1,6 @@
 /* Escribe un programa que pida un número entero al usuario y muestre su valor absoluto.  */
 
-package operadores;
+package ud1.operadores;
 
 import java.util.Scanner;
 

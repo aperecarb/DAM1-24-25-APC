@@ -1,4 +1,4 @@
-package funciones;
+package ud2.funciones;
 
 import java.util.Scanner;
 

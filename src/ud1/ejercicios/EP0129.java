@@ -1,3 +1,4 @@
+package ud1.ejercicios;
 /* Escribe un programa que tome como entrada un número entero e indique qué cantidad hay que sumarle para que el resultado sea múltiplo de 7 
 
     A 2 hay que sumarle 5 para que el resultado (2+5=7) sea múltiplo de 7

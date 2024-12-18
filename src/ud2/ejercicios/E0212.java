@@ -1,4 +1,4 @@
-package ejercicios;
+package ud2.ejercicios;
 
 import java.util.Scanner;
 

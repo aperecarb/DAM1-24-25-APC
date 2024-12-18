@@ -1,3 +1,4 @@
+package ud1.ejercicios;
 /* Convertir una temperatura introducida por teclado en grados Celsius o centígrados a grados Farenheit, 
 mostrando el resultado por pantalla. */
 

@@ -1,3 +1,4 @@
+package ud1.ejercicios;
 /* La FILA (Federación Internacional de Lanzamiento de Algoritmo) realiza una competición donde cada participante escribe un algoritmo 
 en un papel y lo lanza, ganando quien consiga lanzarlo más lejos. La peculiaridad del concurso es que la longitud del lanzamiento se 
 mide en metros (con tantos decimales como se desee), pero para el ranking solo se tiene en cuenta la longitud en centimetros (sin 

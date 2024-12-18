@@ -1,6 +1,6 @@
 /* Escribe un programa que solicite por teclado un número decimal y lo redondee al entero más próximo. */
 
-package operadores;
+package ud1.operadores;
 
 import java.util.Scanner;
 

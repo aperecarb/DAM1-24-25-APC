@@ -1,6 +1,6 @@
 /* Un frutero necesita calcular los beneficios anuales que obtiene de la venta de manzanas y peras. Escribe una aplicación que solicite las ventas (en kilos) de cada semestre para cada fruta y que muestre el importe total siendo 2,35 € el precio del kilo de manzanas y 1,95 el del kilo de peras. */
 
-package operadores;
+package ud1.operadores;
 
 import java.util.Scanner;
 

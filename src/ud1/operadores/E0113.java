@@ -1,6 +1,6 @@
 /* Escribe un programa que solicite por teclado las notas del primer, segundo y tercer trimestre del curso, que serán números enteros. El programa deberá mostrar la nota media del curso como se utiliza en el boletín de calificaciones (sólo la parte entera) y como se usa en el expediente académico (con decimales). */
 
-package operadores;
+package ud1.operadores;
 
 import java.util.Scanner;
 

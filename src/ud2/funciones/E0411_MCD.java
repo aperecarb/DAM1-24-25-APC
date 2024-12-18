@@ -1,4 +1,4 @@
-package funciones;
+package ud2.funciones;
 
 public class E0411_MCD {
     public static int mcd(int a, int b) {

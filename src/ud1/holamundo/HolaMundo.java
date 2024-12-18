@@ -1,4 +1,4 @@
-package holamundo;
+package ud1.holamundo;
 
 public class HolaMundo {
 

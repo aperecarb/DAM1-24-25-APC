@@ -2,7 +2,7 @@
 triángulo. Deberá mostrarse su área, comprobando que los números introducidos por el usuario no son negativos, algo 
 que no tendría sentido. */
 
-package ejercicioscondicionales;
+package ud2.ejercicioscondicionales;
 
 import java.util.Scanner;
 

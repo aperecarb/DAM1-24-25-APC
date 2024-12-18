@@ -1,4 +1,4 @@
-package funciones;
+package ud2.funciones;
 
 public class E0405_EsVocal {
     public static boolean esVocal(char letra) {

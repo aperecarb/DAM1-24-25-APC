@@ -1,3 +1,4 @@
+package ud1.ejercicios;
 /* Repite el programa anterior intentando generalizar su aplicación a conversiones entre euros y cualquier otra moneda cuyo 
 nombre y valor deberá introducir por teclado el usuario. */
 

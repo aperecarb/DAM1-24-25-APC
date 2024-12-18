@@ -1,4 +1,4 @@
-package operadores;
+package ud1.ejercicios.operadores;
 
 public class Ejercicio4 {
     public static void main(String[] args) {

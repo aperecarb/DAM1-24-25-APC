@@ -1,3 +1,4 @@
+package ud1.ejercicios;
 /* Repite el programa anterior para que, indicando dos números n y m, diga que cantidad hay que sumarle a n para que sea múltiplo de m. 
 
     A 2 hay que sumarle 5 para que el resultado (2+5=7) sea múltiplo de 7

@@ -1,4 +1,4 @@
-package funciones;
+package ud2.funciones;
 
 public class E0407 {
     public static void main(String[] args) {

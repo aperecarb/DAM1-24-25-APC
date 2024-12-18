@@ -1,4 +1,4 @@
-package funciones;
+package ud2.funciones;
 
 public class EP0315_Triangulo_Pascal {
     public static void trianguloPascal(int num) {

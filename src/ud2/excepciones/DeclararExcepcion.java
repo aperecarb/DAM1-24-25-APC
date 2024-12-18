@@ -1,4 +1,4 @@
-package excepciones;
+package ud2.excepciones;
 
 import java.io.IOException;
 

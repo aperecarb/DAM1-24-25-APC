@@ -1,3 +1,4 @@
+package ud1.ejercicios;
 /* Crea un programa que pida la base y la altura de un triángulo y muestre su área */
 
 import java.util.Scanner;

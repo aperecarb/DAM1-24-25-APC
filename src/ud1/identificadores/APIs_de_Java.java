@@ -1,4 +1,4 @@
-package identificadores;
+package ud1.identificadores;
 
 import java.time.LocalDateTime;
 import java.util.Scanner; // Importamos la clase Scanner (scanf)

@@ -1,4 +1,4 @@
-package bucles;
+package ud2.bucles;
 
 public class NumerosEnTexto {
     public static void main(String[] args) {

@@ -1,3 +1,4 @@
+package ud1.ejercicios;
 /* Solicita al usuario tres distancias:
 La primera, medida en milímetros.
 La segunda, medida en centímetros.

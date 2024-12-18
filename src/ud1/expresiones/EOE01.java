@@ -1,4 +1,4 @@
-package expresiones;
+package ud1.expresiones;
 
 public class EOE01 {
     public static void main(String[] args) {

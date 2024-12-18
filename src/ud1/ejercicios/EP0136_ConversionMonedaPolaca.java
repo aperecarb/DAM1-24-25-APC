@@ -1,3 +1,4 @@
+package ud1.ejercicios;
 /* A través del programa Erasmus estos días profesorado polaco está visitando el centro educativo. 
 Haz un programa que facilite la conversión de importes en Euros a la moneda polaca correspondiente 
 y viceversa. Busca el nombre de la moneda y la correspondencia en Euros en Internet. */

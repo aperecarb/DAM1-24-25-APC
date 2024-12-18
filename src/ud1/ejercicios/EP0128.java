@@ -1,3 +1,4 @@
+package ud1.ejercicios;
 /* Pide dos números al usuario: a y b. Deberá mostrarse true si ambos números son iguales y false en caso contrario */
 
 import java.util.Scanner;

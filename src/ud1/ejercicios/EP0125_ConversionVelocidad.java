@@ -1,3 +1,4 @@
+package ud1.ejercicios;
 /* Escribe un programa que convierta unidades de velocidad entre km/h, m/s y mph viceversa. 
 El programa solicitará al usuario la cantidad de velocidad y la unidad de medida origen.
 

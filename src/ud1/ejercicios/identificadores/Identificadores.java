@@ -1,4 +1,4 @@
-package identificadores;
+package ud1.ejercicios.identificadores;
 
 public class Identificadores {
     public static void main(String[] args) {

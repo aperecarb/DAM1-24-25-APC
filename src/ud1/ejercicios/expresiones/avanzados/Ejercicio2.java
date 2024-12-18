@@ -1,4 +1,4 @@
-package expresiones.avanzados;
+package ud1.ejercicios.expresiones.avanzados;
 
 public class Ejercicio2 {
     public static void main(String[] args) {

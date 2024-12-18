@@ -1,5 +1,5 @@
 
-package bucles;
+package ud2.bucles;
 
 import java.util.Scanner;
 

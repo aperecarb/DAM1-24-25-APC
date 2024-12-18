@@ -1,3 +1,4 @@
+package ud1.ejercicios;
 /* Escribe un programa que permita convertir unidades de energía entre julios (J), calorías (cal) y kilovatios-hora (kWh). 
 El usuario deberá ingresar la cantidad de energía, así como la unidad de origen y destino.
 

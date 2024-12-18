@@ -1,6 +1,6 @@
 /* Realizar de nuevo la actividad 3 considerando el caso de que los números introducidos sean iguales */
 
-package ejercicioscondicionales;
+package ud2.ejercicioscondicionales;
 
 import java.util.Scanner;
 

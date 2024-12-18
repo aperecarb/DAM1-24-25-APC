@@ -1,4 +1,4 @@
-package excepciones;
+package ud2.excepciones;
 
 public class DivisionPorCero {
     public static void main(String[] args) {

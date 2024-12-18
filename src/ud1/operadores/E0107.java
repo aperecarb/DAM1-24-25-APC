@@ -1,6 +1,6 @@
 /* Aplicación que calcule el perímetro y el área de un círculo a partir del valor del radio introducido por teclado. El radio puede contener decimales. */
 
-package operadores;
+package ud1.operadores;
 
 import java.util.Scanner;
 

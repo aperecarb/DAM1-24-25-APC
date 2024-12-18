@@ -1,3 +1,4 @@
+package ud1.ejercicios;
 /* Crea un programa en Java que convierta unidades de área entre metros cuadrados, hectáreas y pies cuadrados. 
 El usuario deberá ingresar la cantidad de área y especificar las unidades de origen y destino.
 

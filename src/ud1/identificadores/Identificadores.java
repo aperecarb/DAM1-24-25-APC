@@ -1,8 +1,5 @@
-package identificadores;
+package ud1.identificadores;
 
-/**
- * identificadores
- */
 public class Identificadores {
 
     public static void main(String[] args) {

@@ -1,3 +1,4 @@
+package ud1.ejercicios;
 /* Desarrolla un programa en Java que convierta unidades de presión entre pascales (Pa), atmósferas (atm) y milímetros de mercurio (mmHg). 
 El usuario deberá ingresar la presión y las unidades de origen y destino.
 

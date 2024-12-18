@@ -1,4 +1,4 @@
-package identificadores;
+package ud1.identificadores;
 
 public class Constantes {
     public static void main(String[] args) {

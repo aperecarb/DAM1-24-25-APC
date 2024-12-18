@@ -1,3 +1,4 @@
+package ud1.ejercicios;
 /* Convertir un número de segundos introducido por teclado en horas, minutos y
 segundos. */
 
