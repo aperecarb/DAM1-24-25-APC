@@ -13,6 +13,7 @@ import java.util.Scanner;
  * 
  * El programa terminará cuando el usuario introduce un cero (0).
  */
+
 public class Cronometro {
     public static void main(String[] args) {
         String entrada = "";
