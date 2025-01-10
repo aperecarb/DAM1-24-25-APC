@@ -15,7 +15,7 @@ public class EP0512_Desordenar {
     }
 
     public static void main(String[] args) {
-        int[] tabla= {1, 2, 3, 4, 5};
+        int[] tabla = {1, 2, 3, 4, 5};
 
         System.out.println("Tabla: ");
         for (int num : tabla) {
