@@ -6,13 +6,13 @@ import java.util.Scanner;
 
 public class EP0514_Sueldos {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         ArrayList<Double> sueldos = new ArrayList<>();
 
         System.out.println("Introduce los sueldos individualmente y termina de introducirlos escribiendo -1:");
 
         while (true) {
-            double sueldo = scanner.nextDouble();
+            double sueldo = sc.nextDouble();
             if (sueldo == -1) {
                 break;
             }
@@ -40,6 +40,6 @@ public class EP0514_Sueldos {
             System.out.printf("Sueldo mínimo: %.2f euros.%n", minimo);
             System.out.printf("Sueldo medio: %.2f euros.", promedio);
         }
-        scanner.close();
+        sc.close();
     }
 }
