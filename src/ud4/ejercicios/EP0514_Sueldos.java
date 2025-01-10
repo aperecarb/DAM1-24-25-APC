@@ -7,12 +7,12 @@ import java.util.Scanner;
 public class EP0514_Sueldos {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        ArrayList<Integer> sueldos = new ArrayList<>();
+        ArrayList<Double> sueldos = new ArrayList<>();
 
         System.out.println("Introduce los sueldos individualmente y termina de introducirlos escribiendo -1:");
 
         while (true) {
-            int sueldo = scanner.nextInt();
+            double sueldo = scanner.nextDouble();
             if (sueldo == -1) {
                 break;
             }
@@ -24,21 +24,21 @@ public class EP0514_Sueldos {
         } else {
             sueldos.sort(Collections.reverseOrder());
 
-            int maximo = Collections.max(sueldos);
-            int minimo = Collections.min(sueldos);
+            double maximo = Collections.max(sueldos);
+            double minimo = Collections.min(sueldos);
 
             double suma = 0;
 
-            for (int sueldo : sueldos) {
+            for (double sueldo : sueldos) {
                 suma += sueldo;
             }
 
             double promedio = suma / sueldos.size();
             
             System.out.println("Sueldos descendentemente ordenados: " + sueldos);
-            System.out.println("Sueldo máximo: " + maximo);
-            System.out.println("Sueldo mínimo: " + minimo);
-            System.out.printf("Sueldo medio: %.2f%n", promedio);
+            System.out.printf("Sueldo máximo: %.2f euros.%n", maximo);
+            System.out.printf("Sueldo mínimo: %.2f euros.%n", minimo);
+            System.out.printf("Sueldo medio: %.2f euros.", promedio);
         }
         scanner.close();
     }
