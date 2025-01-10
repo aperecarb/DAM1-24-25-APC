@@ -39,8 +39,7 @@ public class EP0514_Sueldos {
             System.out.println("Sueldo máximo: " + maximo);
             System.out.println("Sueldo mínimo: " + minimo);
             System.out.printf("Sueldo medio: %.2f%n", promedio);
-
-            scanner.close();
         }
+        scanner.close();
     }
 }
