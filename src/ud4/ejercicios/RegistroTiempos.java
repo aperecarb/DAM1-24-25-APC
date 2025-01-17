@@ -1,48 +1,43 @@
 package ud4.ejercicios;
 
 import java.time.LocalTime;
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class RegistroTiempos {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        ArrayList<Integer> tiempos = new ArrayList<>();
+
         LocalTime inicio = LocalTime.now();
+        String input;
+        int[] tiempos = new int[0];
+
         System.out.println("Presiona Enter para registrar un tiempo e introduce 'F' o 'f' para finalizar.");
 
-        while (true) {
-            String input = sc.nextLine().trim();
-            if (input.equalsIgnoreCase("F")) {
+        do {
+            input = sc.nextLine();
                 LocalTime fin = LocalTime.now();
                 int tiempoFinal = fin.toSecondOfDay() - inicio.toSecondOfDay();
-                tiempos.add(tiempoFinal);
-                break;
-            } else {
-                LocalTime ahora = LocalTime.now();
-                int tiempoTranscurrido = ahora.toSecondOfDay() - inicio.toSecondOfDay();
-                tiempos.add(tiempoTranscurrido);
+                tiempos = Arrays.copyOf(tiempos, tiempos.length + 1);
+                tiempos[tiempos.length - 1] = tiempoFinal;
+        } while (!input.equalsIgnoreCase("F"));
+
+        System.out.println("Tiempos: " + Arrays.toString(tiempos));
+
+        double suma = 0;
+        for (int tiempo : tiempos) {
+            suma += tiempo;
+        }
+        double media = (double) suma / tiempos.length;
+        System.out.println("Media = " + media);
+
+        int tiemposSuperiores = 0;
+        for (int tiempo : tiempos) {
+            if (tiempo > media) {
+                tiemposSuperiores++;
             }
         }
-
-        System.out.println("Tiempos: " + tiempos);
-
-        if (!tiempos.isEmpty()) {
-            double suma = 0;
-            for (int tiempo : tiempos) {
-                suma += tiempo;
-            }
-            double media = suma / tiempos.size();
-            System.out.println("Media = " + media);
-
-            int registrosPorEncimaMedia = 0;
-            for (int tiempo : tiempos) {
-                if (tiempo > media) {
-                    registrosPorEncimaMedia++;
-                }
-            }
-            System.out.println("Tiempos superiores a la media: " + registrosPorEncimaMedia);
-        }
+        System.out.println("Tiempos superiores a la media: " + tiemposSuperiores);
         sc.close();
     }
 }
