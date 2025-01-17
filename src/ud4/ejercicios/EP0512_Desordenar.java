@@ -19,13 +19,14 @@ public class EP0512_Desordenar {
 
         System.out.println("Tabla: ");
         for (int num : tabla) {
-            System.out.println(num + "");
+            System.out.printf(num + " ");
         }
         
+        System.out.println();
         System.out.println("Tabla desordenada: ");
         desordenar(tabla);
         for (int num : tabla) {
-            System.out.println(num + " ");
+            System.out.printf(num + " ");
         }
     }
 }
