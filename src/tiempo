@@ -1,0 +1,50 @@
+import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class RegistroTiempos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Integer> tiempos = new ArrayList<>();
+        LocalTime inicio = LocalTime.now();
+        System.out.println("El cronómetro ha iniciado. Presiona Enter para registrar un tiempo. Introduce 'F' para finalizar.");
+
+        while (true) {
+            String input = scanner.nextLine().trim();
+            if (input.equalsIgnoreCase("F")) {
+                LocalTime fin = LocalTime.now();
+                int tiempoFinal = fin.toSecondOfDay() - inicio.toSecondOfDay();
+                tiempos.add(tiempoFinal);
+                break;
+            } else {
+                LocalTime ahora = LocalTime.now();
+                int tiempoTranscurrido = ahora.toSecondOfDay() - inicio.toSecondOfDay();
+                tiempos.add(tiempoTranscurrido);
+            }
+        }
+
+        // Mostrar resultados
+        System.out.println("Tiempos registrados: " + tiempos);
+
+        if (!tiempos.isEmpty()) {
+            double suma = 0;
+            for (int tiempo : tiempos) {
+                suma += tiempo;
+            }
+            double media = suma / tiempos.size();
+            System.out.println("Media = " + media);
+
+            int registrosPorEncimaMedia = 0;
+            for (int tiempo : tiempos) {
+                if (tiempo > media) {
+                    registrosPorEncimaMedia++;
+                }
+            }
+            System.out.println("Número de registros por encima de la media: " + registrosPorEncimaMedia);
+        } else {
+            System.out.println("No se registraron tiempos.");
+        }
+
+        scanner.close();
+    }
+}
