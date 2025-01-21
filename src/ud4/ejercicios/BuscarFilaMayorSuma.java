@@ -7,29 +7,28 @@ public class BuscarFilaMayorSuma {
         }
 
         int filaMayorSuma = 0;
-        int sumaMayor = Integer.MIN_VALUE;
+        int mayorSuma = Integer.MIN_VALUE;
 
         for (int i = 0; i < matriz.length; i++) {
-            int sumaActual = 0;
+            int suma = 0;
 
             for (int j = 0; j < matriz[i].length; j++) {
-                sumaActual += matriz[i][j];
+                suma += matriz[i][j];
             }
 
-            if (sumaActual > sumaMayor) {
-                sumaMayor = sumaActual;
+            if (suma > mayorSuma) {
+                mayorSuma = suma;
                 filaMayorSuma = i;
             }
         }
-
         return matriz[filaMayorSuma];
     }
 
     public static void main(String[] args) {
         int[][] matriz = {
-            {1, 2, 3},
-            {4, 5, 6},
-            {7, 8, 9}
+            { 1, 2, 3 },
+            { 4, 5, 6 },
+            { 7, 8, 9 }
         };
 
         int[] filaResultado = buscarFilaMayorSuma(matriz);
