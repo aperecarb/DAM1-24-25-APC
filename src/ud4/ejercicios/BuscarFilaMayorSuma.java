@@ -2,18 +2,16 @@ package ud4.ejercicios;
 
 public class BuscarFilaMayorSuma {
     public static int[] buscarFilaMayorSuma(int[][] matriz) {
-        // Caso especial: matriz de entrada nula o vacía
         if (matriz == null || matriz.length == 0) {
-            return new int[0]; // Devolvemos un array vacío
+            return new int[0];
         }
 
-        int filaMayorSuma = 0; // Índice de la fila con mayor suma
-        int sumaMayor = Integer.MIN_VALUE; // Inicializamos con el valor mínimo posible
+        int filaMayorSuma = 0;
+        int sumaMayor = Integer.MIN_VALUE;
 
         for (int i = 0; i < matriz.length; i++) {
             int sumaActual = 0;
 
-            // Calculamos la suma de la fila actual
             for (int j = 0; j < matriz[i].length; j++) {
                 sumaActual += matriz[i][j];
             }
