@@ -29,7 +29,7 @@ public class RegistroTiempos {
             suma += tiempo;
         }
         double media = (double) suma / tiempos.length;
-        System.out.println("Media = " + media);
+        System.out.println("Media: " + String.format("%.2f", media));
 
         int tiemposSuperiores = 0;
         for (int tiempo : tiempos) {
