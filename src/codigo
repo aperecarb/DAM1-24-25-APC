@@ -1,0 +1,35 @@
+public class Matriz {
+
+    public static int buscarFilaMayorSuma(int[][] matriz) {
+        int filaMayorSuma = 0; // Índice de la fila con mayor suma
+        int sumaMayor = Integer.MIN_VALUE; // Inicializamos con el valor mínimo posible
+
+        for (int i = 0; i < matriz.length; i++) {
+            int sumaActual = 0;
+
+            // Calculamos la suma de la fila actual
+            for (int j = 0; j < matriz[i].length; j++) {
+                sumaActual += matriz[i][j];
+            }
+
+            // Comparamos con la mayor suma encontrada hasta ahora
+            if (sumaActual > sumaMayor) {
+                sumaMayor = sumaActual;
+                filaMayorSuma = i; // Actualizamos el índice de la fila con mayor suma
+            }
+        }
+
+        return filaMayorSuma;
+    }
+
+    public static void main(String[] args) {
+        int[][] matriz = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        int fila = buscarFilaMayorSuma(matriz);
+        System.out.println("La fila con mayor suma es: " + fila);
+    }
+}
