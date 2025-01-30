@@ -30,10 +30,12 @@ public class Matriculas {
     }
 
     public static String siguienteMatricula(String matricula) {
-        if (!esMatriculaValida(matricula)) return "Matrícula inválida";
+        if (!esMatriculaValida(matricula)) {
+            return "Matrícula inválida";
+        }
 
         String numeros = matricula.substring(0, 4);
-        String letras = matricula.substring(4);
+        String letras = matricula.substring(4).toUpperCase();
 
         String nuevosNumeros = incrementarDigitos(numeros);
 
@@ -72,12 +74,16 @@ public class Matriculas {
     }
 
     public static void main(String[] args) {
-        
-        for (String matricula : pruebas) {
-            System.out.println("Matrícula: " + matricula);
-            System.out.println("Válida: " + esMatriculaValida(matricula));
-            System.out.println("Siguiente: " + siguienteMatricula(matricula));
-            System.out.println();
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Introduce una matrícula: ");
+        String matricula = sc.nextLine().toUpperCase();
+
+        if (esMatriculaValida(matricula)) {
+            System.out.println("La matrícula es válida.\nSiguiente matrícula: " + siguienteMatricula(matricula));
+        } else {
+            System.out.println("La matrícula ingresada no es válida.");
         }
+        sc.close();
     }
 }
