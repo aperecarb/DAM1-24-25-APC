@@ -76,13 +76,15 @@ public class Matriculas {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Introduce una matrícula: ");
+        System.out.print("Ingresa una matrícula: ");
         String matricula = sc.nextLine().toUpperCase();
 
+        System.out.println("Matrícula válida: " + esMatriculaValida(matricula));
+
         if (esMatriculaValida(matricula)) {
-            System.out.println("La matrícula es válida.\nSiguiente matrícula: " + siguienteMatricula(matricula));
+            System.out.println("Siguiente matrícula: " + siguienteMatricula(matricula));
         } else {
-            System.out.println("La matrícula ingresada no es válida.");
+            System.out.println("La matrícula es inválida.");
         }
         sc.close();
     }
