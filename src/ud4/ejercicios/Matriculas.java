@@ -73,17 +73,48 @@ public class Matriculas {
         return c;
     }
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Introduce una matrícula: ");
-        String matricula = sc.nextLine().toUpperCase();
-
-        if (esMatriculaValida(matricula)) {
-            System.out.println("La matrícula es válida.\nSiguiente matrícula: " + siguienteMatricula(matricula));
-        } else {
-            System.out.println("La matrícula ingresada no es válida.");
+public static int comparaMatriculas(String m1, String m2) {
+        if (!esMatriculaValida(m1) || !esMatriculaValida(m2)) {
+            throw new IllegalArgumentException("Una o ambas matrículas no son válidas.");
         }
-        sc.close();
+
+        int numeros1 = Integer.parseInt(m1.substring(0, 4));
+        int numeros2 = Integer.parseInt(m2.substring(0, 4));
+
+        if (numeros1 < numeros2) return -1;
+        if (numeros1 > numeros2) return 1;
+
+        String letras1 = m1.substring(4);
+        String letras2 = m2.substring(4);
+
+        return letras1.compareTo(letras2);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Introduce la primera matrícula: ");
+        String matricula1 = scanner.nextLine().toUpperCase();
+
+        System.out.print("Introduce la segunda matrícula: ");
+        String matricula2 = scanner.nextLine().toUpperCase();
+
+        System.out.println("Matrícula 1 válida: " + esMatriculaValida(matricula1));
+        System.out.println("Matrícula 2 válida: " + esMatriculaValida(matricula2));
+
+        if (esMatriculaValida(matricula1) && esMatriculaValida(matricula2)) {
+            int comparacion = comparaMatriculas(matricula1, matricula2);
+            if (comparacion == 0) {
+                System.out.println("Las matrículas son iguales.");
+            } else if (comparacion < 0) {
+                System.out.println("La matrícula " + matricula1 + " es más antigua que " + matricula2);
+            } else {
+                System.out.println("La matrícula " + matricula2 + " es más antigua que " + matricula1);
+            }
+        } else {
+            System.out.println("No se puede comparar porque una o ambas matrículas no son válidas.");
+        }
+
+        scanner.close();
     }
 }
