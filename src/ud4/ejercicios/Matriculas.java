@@ -1,79 +1,78 @@
-public class Matriculas {
+package ud4.ejercicios;
 
-    // Método para validar si una matrícula es válida
+import java.util.Scanner;
+
+public class Matriculas {
     public static boolean esMatriculaValida(String matricula) {
-        if (matricula.length() != 7) return false;
+        if (matricula.length() != 7) {
+            return false;
+        }
 
         String numeros = matricula.substring(0, 4);
         String letras = matricula.substring(4).toUpperCase();
 
-        // Verificar que los primeros 4 caracteres sean dígitos
         for (char c : numeros.toCharArray()) {
-            if (!Character.isDigit(c)) return false;
+            if (!Character.isDigit(c)) {
+                return false;
+            }
         }
 
-        // Verificar que las últimas 3 letras sean válidas
         for (char c : letras.toCharArray()) {
-            if (!esLetraValida(c)) return false;
+            if (!esLetraValida(c)) {
+                return false;
+            }
         }
-
         return true;
     }
 
-    // Método para verificar si una letra es válida (sin vocales, N ni Q)
     private static boolean esLetraValida(char c) {
         return c >= 'B' && c <= 'Z' && "AEIOUÑNQ".indexOf(c) == -1;
     }
 
-    // Método para obtener la matrícula siguiente
     public static String siguienteMatricula(String matricula) {
         if (!esMatriculaValida(matricula)) return "Matrícula inválida";
 
         String numeros = matricula.substring(0, 4);
         String letras = matricula.substring(4);
 
-        // Incrementar números
         String nuevosNumeros = incrementarDigitos(numeros);
 
-        // Si los números se reiniciaron, incrementar letras
         if (nuevosNumeros.equals("0000")) {
             letras = incrementarLetras(letras);
         }
-
         return nuevosNumeros + letras;
     }
 
-    // Método para incrementar los dígitos de la matrícula
     private static String incrementarDigitos(String numeros) {
         int num = Integer.parseInt(numeros);
-        num = (num + 1) % 10000; // Reiniciar a 0000 si llega a 9999
+        num = (num + 1) % 10000;
         return String.format("%04d", num);
     }
 
-    // Método para incrementar las letras de la matrícula
     private static String incrementarLetras(String letras) {
         char[] chars = letras.toCharArray();
 
         for (int i = 2; i >= 0; i--) {
             chars[i] = siguienteLetra(chars[i]);
-            if (chars[i] != 'B') break; // Si no reinició a 'B', salir
+            if (chars[i] != 'B') {
+                break;
+            }
         }
-
         return new String(chars);
     }
 
-    // Método para obtener la siguiente letra válida
     private static char siguienteLetra(char c) {
         do {
             c++;
-            if (c > 'Z') return 'B'; // Si se pasa de Z, volver a B
+            if (c > 'Z') {
+                return 'B';
+            }
         } while (!esLetraValida(c));
         return c;
     }
 
-    // Método principal para probar los casos de prueba
     public static void main(String[] args) {
-        String[] pruebas = {"123", "1234BBBB", "1234BBR", "9999ZZZ"};
+        
         for (String matricula : pruebas) {
             System.out.println("Matrícula: " + matricula);
             System.out.println("Válida: " + esMatriculaValida(matricula));
