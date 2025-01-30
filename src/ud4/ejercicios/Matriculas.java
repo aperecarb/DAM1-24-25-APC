@@ -73,31 +73,18 @@ public class Matriculas {
         return c;
     }
 
-<<<<<<< HEAD
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Ingresa una matrícula: ");
-        String matricula = sc.nextLine().toUpperCase();
-
-        System.out.println("Matrícula válida: " + esMatriculaValida(matricula));
-
-        if (esMatriculaValida(matricula)) {
-            System.out.println("Siguiente matrícula: " + siguienteMatricula(matricula));
-        } else {
-            System.out.println("La matrícula es inválida.");
-=======
-public static int comparaMatriculas(String m1, String m2) {
+    public static int comparaMatriculas(String m1, String m2) {
         if (!esMatriculaValida(m1) || !esMatriculaValida(m2)) {
             throw new IllegalArgumentException("Una o ambas matrículas no son válidas.");
->>>>>>> b086a978df77a337746022fe6a517586be97013d
         }
 
         int numeros1 = Integer.parseInt(m1.substring(0, 4));
         int numeros2 = Integer.parseInt(m2.substring(0, 4));
 
-        if (numeros1 < numeros2) return -1;
-        if (numeros1 > numeros2) return 1;
+        if (numeros1 < numeros2)
+            return -1;
+        if (numeros1 > numeros2)
+            return 1;
 
         String letras1 = m1.substring(4);
         String letras2 = m2.substring(4);
