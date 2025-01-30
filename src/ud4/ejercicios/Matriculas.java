@@ -116,7 +116,6 @@ public class Matriculas {
         } else {
             System.out.println("No se puede comparar porque una o ambas matrículas no son válidas.");
         }
-
         scanner.close();
     }
 }
