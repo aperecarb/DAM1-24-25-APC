@@ -2,7 +2,7 @@ package ud4.apuntes;
 
 public class TresTablas {
     public static void main(String[] args) {
-        int[] enteros = {1, 2, 3, 4, 5};
+        int[] enteros = { 1, 2, 3, 4, 5 };
         double[] reales = new double[5];
         boolean[] logicos = new boolean[5];
         Boolean[] logicosEnvolvente = new Boolean[5];

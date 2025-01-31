@@ -34,7 +34,7 @@ public class EP0514_Sueldos {
             }
 
             double promedio = suma / sueldos.size();
-            
+
             System.out.println("Sueldos descendentemente ordenados: " + sueldos);
             System.out.printf("Sueldo máximo: %.2f euros.%n", maximo);
             System.out.printf("Sueldo mínimo: %.2f euros.%n", minimo);

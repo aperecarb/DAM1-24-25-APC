@@ -19,7 +19,7 @@ public class Ejemplos02 {
             suma += edad[i];
         }
 
-        double media = suma /  NUM;
+        double media = suma / NUM;
 
         System.out.println("La edad de la persona 2 es " + edad[2]);
         System.out.println("La suma de las edades es: " + suma);

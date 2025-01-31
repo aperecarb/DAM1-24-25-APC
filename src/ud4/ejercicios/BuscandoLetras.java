@@ -19,31 +19,31 @@ public class BuscandoLetras {
         return resultado;
     }
 
-    public static void main(String[] args) { 
-        Scanner sc = new Scanner(System.in); 
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
         System.out.println("Introduce una cadena de texto:");
         String cadena = sc.nextLine();
 
-        System.out.println("Cadena: " + cadena); 
+        System.out.println("Cadena: " + cadena);
 
-        while (true) { 
-            System.out.print("Introduce una letra (no presente para salir): "); 
+        while (true) {
+            System.out.print("Introduce una letra (no presente para salir): ");
             char letra = sc.next().charAt(0);
 
-            int[] posis = buscarLetra(cadena, letra); 
+            int[] posis = buscarLetra(cadena, letra);
 
-            if (posis.length == 0) { 
-                System.out.println("La letra " + letra + " no se encuentra en la cadena."); 
+            if (posis.length == 0) {
+                System.out.println("La letra " + letra + " no se encuentra en la cadena.");
                 break;
-            } 
+            }
 
-            System.out.print("La letra '" + letra + "' aparece en las posiciones: "); 
-            for (int pos : posis) { 
-                System.out.print(pos + " "); 
-            } 
-            System.out.println("\nApariciones: " + posis.length); 
+            System.out.print("La letra '" + letra + "' aparece en las posiciones: ");
+            for (int pos : posis) {
+                System.out.print(pos + " ");
+            }
+            System.out.println("\nApariciones: " + posis.length);
         }
-        sc.close(); 
+        sc.close();
     }
 }

@@ -1,4 +1,5 @@
 package ud4.ejercicios;
+
 import java.time.LocalTime;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -15,10 +16,10 @@ public class RegistroTiempos {
 
         do {
             input = sc.nextLine();
-                LocalTime fin = LocalTime.now();
-                int tiempoFinal = fin.toSecondOfDay() - inicio.toSecondOfDay();
-                tiempos = Arrays.copyOf(tiempos, tiempos.length + 1);
-                tiempos[tiempos.length - 1] = tiempoFinal;
+            LocalTime fin = LocalTime.now();
+            int tiempoFinal = fin.toSecondOfDay() - inicio.toSecondOfDay();
+            tiempos = Arrays.copyOf(tiempos, tiempos.length + 1);
+            tiempos[tiempos.length - 1] = tiempoFinal;
         } while (!input.equalsIgnoreCase("F"));
 
         System.out.println("Tiempos: " + Arrays.toString(tiempos));
