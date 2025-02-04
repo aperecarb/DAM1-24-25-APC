@@ -97,6 +97,7 @@ public class Matriculas {
 
         System.out.print("Introduce la primera matrícula: ");
         String matricula1 = scanner.nextLine().toUpperCase();
+        System.out.println("Siguiente matrícula: ");
 
         System.out.print("Introduce la segunda matrícula: ");
         String matricula2 = scanner.nextLine().toUpperCase();
