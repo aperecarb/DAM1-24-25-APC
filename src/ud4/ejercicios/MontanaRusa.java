@@ -3,12 +3,12 @@ package ud4.ejercicios;
 public class MontanaRusa {
     public static int contarPicos(int[] alturas) {
         int picos = 0;
-        int n = alturas.length;
+        int a = alturas.length;
 
-        for (int i = 0; i < n; i++) {
-            int anterior = alturas[(i - 1 + n) % n];
+        for (int i = 0; i < a; i++) {
+            int anterior = alturas[(i - 1 + a) % a];
             int actual = alturas[i];
-            int siguiente = alturas[(i + 1) % n];
+            int siguiente = alturas[(i + 1) % a];
 
             if (actual > anterior && actual > siguiente) {
                 picos++;
