@@ -1,5 +1,7 @@
 package ud4.ejercicios;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class MontanaRusa {
     public static int contarPicos(int[] alturas) {
         int picos = 0;
@@ -18,16 +20,16 @@ public class MontanaRusa {
     }
 
     public static void main(String[] args) {
-        int[] alturas1 = {4, 10, 3, 2};
+        int[] alturas1 = {10, 4, 3, 2 };
         System.out.println(contarPicos(alturas1)); // 1 pico
 
-        int[] alturas2 = {4, 10, 3, 2, 10};
+        int[] alturas2 = { 4, 10, 3, 2, 10 };
         System.out.println(contarPicos(alturas2)); // 2 picos
 
-        int[] alturas3 = {10, 3};
+        int[] alturas3 = { 10, 3 };
         System.out.println(contarPicos(alturas3)); // 1 pico
 
-        int[] alturas4 = {4, 4};
+        int[] alturas4 = { 4, 4 };
         System.out.println(contarPicos(alturas4)); // 0 picos
     }
 }
