@@ -1,0 +1,57 @@
+public class Conjugador {
+
+    public static String[] conjugarPresente(String verbo) {
+        if (verbo == null || verbo.length() < 3) {
+            return null; // Verificación básica
+        }
+
+        String raiz;
+        String terminacion = verbo.substring(verbo.length() - 2);
+
+        // Verificar si el verbo termina en -ar, -er o -ir
+        if (terminacion.equals("ar")) {
+            raiz = verbo.substring(0, verbo.length() - 2);
+            return new String[]{
+                raiz + "o",     // Yo
+                raiz + "as",    // Tú
+                raiz + "a",     // Él/Ella/Usted
+                raiz + "amos",  // Nosotros/Nosotras
+                raiz + "áis",   // Vosotros/Vosotras
+                raiz + "an"     // Ellos/Ellas/Ustedes
+            };
+        } else if (terminacion.equals("er")) {
+            raiz = verbo.substring(0, verbo.length() - 2);
+            return new String[]{
+                raiz + "o",
+                raiz + "es",
+                raiz + "e",
+                raiz + "emos",
+                raiz + "éis",
+                raiz + "en"
+            };
+        } else if (terminacion.equals("ir")) {
+            raiz = verbo.substring(0, verbo.length() - 2);
+            return new String[]{
+                raiz + "o",
+                raiz + "es",
+                raiz + "e",
+                raiz + "imos",
+                raiz + "ís",
+                raiz + "en"
+            };
+        } else {
+            return null; // No es un verbo regular válido
+        }
+    }
+
+    public static void main(String[] args) {
+        String[] conjugacion = conjugarPresente("hablar");
+        if (conjugacion != null) {
+            for (String forma : conjugacion) {
+                System.out.println(forma);
+            }
+        } else {
+            System.out.println("Verbo no válido");
+        }
+    }
+}
