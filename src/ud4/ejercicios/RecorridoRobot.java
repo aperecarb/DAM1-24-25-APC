@@ -29,34 +29,37 @@ public class RecorridoRobot {
                     break;
                 }
             }
-            if (x != -1)
+            if (x != -1) {
                 break;
+            }
         }
 
         if (x == -1 || y == -1) {
             return false;
         }
 
-        int[][] direcciones = { { -1, 0 }, { 0, 1 }, { 1, 0 }, { 0, -1 } };
-        int direccion = 0;
+        int[][] dirs = { { -1, 0 }, { 0, 1 }, { 1, 0 }, { 0, -1 } };
+        int dir = 0;
 
         for (char instr : instrucciones.toCharArray()) {
             if (instr == 'A') {
-                int nuevoX = x + direcciones[direccion][0];
-                int nuevoY = y + direcciones[direccion][1];
+                int nuevoX = x + dirs[dir][0];
+                int nuevoY = y + dirs[dir][1];
 
-                if (nuevoX < 0 || nuevoX >= fil || nuevoY < 0 || nuevoY >= col)
+                if (nuevoX < 0 || nuevoX >= fil || nuevoY < 0 || nuevoY >= col) {
                     return false;
+                }
 
-                if (mapa[nuevoX].charAt(nuevoY) == '*')
+                if (mapa[nuevoX].charAt(nuevoY) == '*') {
                     return false;
+                }
 
                 x = nuevoX;
                 y = nuevoY;
             } else if (instr == 'R') {
-                direccion = (direccion + 1) % 4;
+                dir = (dir + 1) % 4;
             } else if (instr == 'L') {
-                direccion = (direccion + 3) % 4;
+                dir = (dir + 3) % 4;
             } else {
                 return false;
             }
