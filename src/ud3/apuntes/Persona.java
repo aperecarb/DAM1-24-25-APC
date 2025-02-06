@@ -2,11 +2,14 @@ package ud3.apuntes;
 
 public class Persona {
     // Datos
+    
     private String nombre;
     private String apellido1;
     private String apellido2;
     private int edad;
+    @SuppressWarnings("unused")
     private double estatura = 1.00;
+    @SuppressWarnings("unused")
     private final String dni = null;
 
     public static int contadorPersonas;

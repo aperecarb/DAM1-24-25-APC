@@ -1,7 +1,5 @@
 package ud4.ejercicios;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public class MontanaRusa {
     public static int contarPicos(int[] alturas) {
         int picos = 0;
