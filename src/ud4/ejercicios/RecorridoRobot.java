@@ -10,10 +10,6 @@ public class RecorridoRobot {
                 " A        "
         };
 
-        System.out.println(recorridoRobot(mapa, "AALARAARAA"));
-        System.out.println(recorridoRobot(mapa, "RAALAAAALA"));
-        System.out.println(recorridoRobot(mapa, "ARALA"));
-        System.out.println(recorridoRobot(mapa, "LAA"));
     }
 
     static boolean recorridoRobot(String[] mapa, String instrucciones) {
