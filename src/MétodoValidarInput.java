@@ -1,10 +1,12 @@
+import java.util.Scanner;
+
 public class MétodoValidarInput {
-        // Método para leer un entero positivo
-    private static int leerEnteroPositivo(Scanner scanner) {
+    // Método para leer un entero positivo
+    private static int leerEnteroPositivo(Scanner sc) {
         int numero;
         while (true) {
             try {
-                numero = Integer.parseInt(scanner.nextLine());
+                numero = Integer.parseInt(sc.nextLine());
                 if (numero > 0) {
                     return numero;
                 }
@@ -16,11 +18,11 @@ public class MétodoValidarInput {
     }
 
     // Método para leer un número dentro de un rango específico
-    private static int leerEnteroEnRango(Scanner scanner, int min, int max) {
+    private static int leerEnteroEnRango(Scanner sc, int min, int max) {
         int numero;
         while (true) {
             try {
-                numero = Integer.parseInt(scanner.nextLine());
+                numero = Integer.parseInt(sc.nextLine());
                 if (numero >= min && numero <= max) {
                     return numero;
                 }
