@@ -1,8 +1,9 @@
 package ud5.rol;
 
+import java.util.Random;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Random;
+import org.json.JSONObject;
 
 public class Personaje {
     private String nombre;
