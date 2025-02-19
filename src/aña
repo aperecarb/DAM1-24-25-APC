@@ -1,0 +1,78 @@
+import java.util.Scanner;
+
+class Personaje { private String nombre; private String raza; private int fuerza, agilidad, constitucion, inteligencia, intuicion, presencia; private int nivel; private int experiencia; private int puntosVida;
+
+public Personaje(String nombre, String raza, int fuerza, int agilidad, int constitucion, 
+                 int inteligencia, int intuicion, int presencia) throws Exception {
+    if (!esRazaValida(raza) || fuerza < 1 || agilidad < 1 || constitucion < 1 || 
+        inteligencia < 1 || intuicion < 1 || presencia < 1) {
+        throw new Exception("PersonajeNoValido");
+    }
+    this.nombre = nombre;
+    this.raza = raza;
+    this.fuerza = fuerza;
+    this.agilidad = agilidad;
+    this.constitucion = constitucion;
+    this.inteligencia = inteligencia;
+    this.intuicion = intuicion;
+    this.presencia = presencia;
+    this.nivel = 1;
+    this.experiencia = 0;
+    this.puntosVida = 50 + constitucion;
+}
+
+private boolean esRazaValida(String raza) {
+    return raza.equals("HUMANO") || raza.equals("ELFO") || raza.equals("ENANO") || 
+           raza.equals("HOBBIT") || raza.equals("ORCO") || raza.equals("TROLL");
+}
+
+public void mostrar() {
+    System.out.println("Nombre: " + nombre);
+    System.out.println("Raza: " + raza);
+    System.out.println("Fuerza: " + fuerza + ", Agilidad: " + agilidad + ", Constitución: " + constitucion);
+    System.out.println("Inteligencia: " + inteligencia + ", Intuición: " + intuicion + ", Presencia: " + presencia);
+    System.out.println("Nivel: " + nivel + ", Experiencia: " + experiencia);
+    System.out.println("Puntos de Vida: " + puntosVida);
+}
+
+@Override
+public String toString() {
+    return nombre + " (" + puntosVida + "/" + (50 + constitucion) + ")";
+}
+
+}
+
+public class AppCreaPersonaje { public static void main(String[] args) { Scanner scanner = new Scanner(System.in);
+
+try {
+        System.out.print("Ingrese nombre del personaje: ");
+        String nombre = scanner.nextLine();
+        
+        System.out.print("Ingrese raza (HUMANO, ELFO, ENANO, HOBBIT, ORCO, TROLL): ");
+        String raza = scanner.nextLine().toUpperCase();
+        
+        System.out.print("Ingrese fuerza: ");
+        int fuerza = scanner.nextInt();
+        System.out.print("Ingrese agilidad: ");
+        int agilidad = scanner.nextInt();
+        System.out.print("Ingrese constitución: ");
+        int constitucion = scanner.nextInt();
+        System.out.print("Ingrese inteligencia: ");
+        int inteligencia = scanner.nextInt();
+        System.out.print("Ingrese intuición: ");
+        int intuicion = scanner.nextInt();
+        System.out.print("Ingrese presencia: ");
+        int presencia = scanner.nextInt();
+        
+        Personaje personaje = new Personaje(nombre, raza, fuerza, agilidad, constitucion, inteligencia, intuicion, presencia);
+        personaje.mostrar();
+        
+    } catch (Exception e) {
+        System.out.println("Error: " + e.getMessage());
+    } finally {
+        scanner.close();
+    }
+}
+
+}
+
