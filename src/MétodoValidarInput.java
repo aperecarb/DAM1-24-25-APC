@@ -32,4 +32,25 @@ public class MétodoValidarInput {
             }
         }
     }
+
+    // Método para leer número entero
+    static int leerEntero(int min, int max) {
+        int num = -1;
+        boolean numCorrecto = false;
+        Scanner sc = new Scanner(System.in);
+        do {
+            try {
+                num = sc.nextInt();
+                if (num < min || num > max) {
+                    System.out.printf("Debe ser un número entero entre %d y %d%n", min, max);
+                } else {
+                    numCorrecto = true;
+                }
+            } catch (Exception e) {
+                System.out.printf("Debe ser un número entero entre %d y %d%n", min, max);
+                sc.nextLine();
+            }
+        } while (!numCorrecto);
+        return num;
+    }
 }
