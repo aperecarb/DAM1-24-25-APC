@@ -1,6 +1,15 @@
-import java.util.Scanner; import java.util.Random; import java.io.FileWriter; import java.io.IOException; import org.json.JSONObject;
+import java.util.Scanner;
+import java.util.Random;
+import java.io.FileWriter;
+import java.io.IOException;
+import org.json.JSONObject;
 
-class Personaje { private String nombre; private String raza; private int fuerza, agilidad, constitucion; private int nivel; private int experiencia; private int puntosVida;
+class Personaje { 
+    private String nombre;
+    private String raza;
+    private int fuerza, agilidad, constitucion;
+    private int nivel; private int experiencia;
+    private int puntosVida;
 
 public Personaje(String nombre, String raza, int fuerza, int agilidad, int constitucion) throws Exception {
     if (!esRazaValida(raza) || fuerza < 1 || agilidad < 1 || constitucion < 1) {
