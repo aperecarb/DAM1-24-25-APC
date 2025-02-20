@@ -1,0 +1,46 @@
+package ud5.rol;
+
+import org.json.JSONArray; import org.json.JSONObject; import java.io.File; import java.io.FileWriter; import java.io.IOException; import java.util.Scanner;
+
+public class AppCreaPersonaje { private static final String FILE_PATH = "src/ud5/rol/personajes.json";
+
+public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    JSONArray personajesArray = new JSONArray();
+
+    // Cargar JSON existente
+    File file = new File(FILE_PATH);
+    if (file.exists()) {
+        try (Scanner fileScanner = new Scanner(file)) {
+            StringBuilder jsonStr = new StringBuilder();
+            while (fileScanner.hasNextLine()) {
+                jsonStr.append(fileScanner.nextLine());
+            }
+            if (!jsonStr.toString().isEmpty()) {
+                personajesArray = new JSONArray(jsonStr.toString());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    System.out.println("Introduce el nombre del personaje:");
+    String nombre = scanner.nextLine();
+
+    System.out.println("Introduce la raza del personaje (HUMANO, ELFO, ENANO, HOBBIT, ORCO, TROLL):");
+    String raza = scanner.nextLine().toUpperCase();
+
+    Personaje personaje = new Personaje(nombre, raza);
+    personajesArray.put(personaje.toJSON());
+
+    try (FileWriter fileWriter = new FileWriter(FILE_PATH)) {
+        fileWriter.write(personajesArray.toString(4));
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+
+    System.out.println("Personaje guardado correctamente.");
+}
+
+}
+
