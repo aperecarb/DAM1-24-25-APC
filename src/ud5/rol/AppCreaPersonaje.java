@@ -11,28 +11,33 @@ public class AppCreaPersonaje {
         Scanner sc = new Scanner(System.in);
 
         try {
-            System.out.print("Ingrese nombre del personaje: ");
+            System.out.print("Introduzca nombre del personaje: ");
             String nombre = sc.nextLine();
 
-            System.out.print("Ingrese raza (HUMANO, ELFO, ENANO, HOBBIT, ORCO, TROLL): ");
-            String raza = sc.nextLine().toUpperCase();
-
-            System.out.print("¿Desea ingresar atributos manualmente? (S/N): ");
-            char opcion = sc.next().charAt(0);
-
             Personaje personaje;
-            if (opcion == 'S' || opcion == 's') {
-                System.out.print("Ingrese fuerza: ");
-                int fuerza = sc.nextInt();
-                System.out.print("Ingrese agilidad: ");
-                int agilidad = sc.nextInt();
-                System.out.print("Ingrese constitución: ");
-                int constitucion = sc.nextInt();
-                personaje = new Personaje(nombre, raza, fuerza, agilidad, constitucion);
-            } else {
-                personaje = new Personaje(nombre, raza);
-            }
+            System.out.print("¿Desea introducir una raza (rechazarlo creará un humano con stats aleatorias)? (S/N): ");
+            char opcionRaza = sc.next().charAt(0);
+            if (opcionRaza == 'S' || opcionRaza == 's') {
+                System.out.print("Introduzca raza (HUMANO, ELFO, ENANO, HOBBIT, ORCO, TROLL): ");
+                String raza = sc.nextLine().toUpperCase();
 
+                System.out.print("¿Desea introducir atributos manualmente? (S/N): ");
+                char opcion = sc.next().charAt(0);
+
+                if (opcion == 'S' || opcion == 's') {
+                    System.out.print("Introduzca la fuerza: ");
+                    int fuerza = sc.nextInt();
+                    System.out.print("Introduzca la agilidad: ");
+                    int agilidad = sc.nextInt();
+                    System.out.print("Introduzca la constitución: ");
+                    int constitucion = sc.nextInt();
+                    personaje = new Personaje(nombre, raza, fuerza, agilidad, constitucion);
+                } else {
+                    personaje = new Personaje(nombre, raza);
+                }
+            } else {
+                personaje = new Personaje(nombre);
+            }
             personaje.mostrar();
             guardarPersonaje(personaje);
             System.out.println("Personaje guardado con éxito.");
