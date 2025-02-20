@@ -1,9 +1,8 @@
-import java.io.; import java.util.; import com.google.gson.*;
+import org.json.JSONObject; import java.io.FileWriter; import java.io.IOException; import java.util.Random; import java.util.Scanner;
 
-class Personaje { private String nombre; private String raza; private int fuerza, agilidad, constitucion; private int nivel, experiencia, puntosDeVida;
+class Personaje { private String nombre; private String raza; private int fuerza, agilidad, constitucion, nivel, experiencia, puntosVida;
 
-// Constructor con todos los parámetros
-public Personaje(String nombre, String raza, int fuerza, int agilidad, int constitucion, int nivel, int experiencia, int puntosDeVida) {
+public Personaje(String nombre, String raza, int fuerza, int agilidad, int constitucion, int nivel, int experiencia, int puntosVida) {
     this.nombre = nombre;
     this.raza = raza;
     this.fuerza = fuerza;
@@ -11,51 +10,62 @@ public Personaje(String nombre, String raza, int fuerza, int agilidad, int const
     this.constitucion = constitucion;
     this.nivel = nivel;
     this.experiencia = experiencia;
-    this.puntosDeVida = puntosDeVida;
+    this.puntosVida = puntosVida;
 }
 
-// Constructor con nombre, raza y características físicas (nivel = 1, exp = 0, vida = 50 + constitución)
-public Personaje(String nombre, String raza, int fuerza, int agilidad, int constitucion) {
-    this(nombre, raza, fuerza, agilidad, constitucion, 1, 0, 50 + constitucion);
-}
-
-// Constructor con nombre y raza (resto aleatorio)
 public Personaje(String nombre, String raza) {
-    this(nombre, raza, new Random().nextInt(100) + 1, new Random().nextInt(100) + 1, new Random().nextInt(100) + 1);
+    this(nombre, raza, new Random().nextInt(100) + 1, new Random().nextInt(100) + 1,
+         new Random().nextInt(100) + 1, 1, 0, 50 + new Random().nextInt(100) + 1);
 }
 
-// Constructor solo con nombre (raza por defecto "HUMANO", atributos aleatorios)
 public Personaje(String nombre) {
-    this(nombre, "HUMANO");
+    this(nombre, "Humano");
+}
+
+public JSONObject toJSON() {
+    JSONObject json = new JSONObject();
+    json.put("nombre", nombre);
+    json.put("raza", raza);
+    json.put("fuerza", fuerza);
+    json.put("agilidad", agilidad);
+    json.put("constitucion", constitucion);
+    json.put("nivel", nivel);
+    json.put("experiencia", experiencia);
+    json.put("puntosVida", puntosVida);
+    return json;
 }
 
 }
 
-class AppCreaPersonaje { private static final String FILE_PATH = "src/ud5/rol/personajes.json";
+public class AppCreaPersonaje { private static final String FILE_PATH = "src/ud5/rol/personajes.json";
 
-public static void guardarPersonajes(List<Personaje> personajes) {
-    try {
-        File file = new File(FILE_PATH);
-        file.getParentFile().mkdirs(); // Asegurar que la carpeta exista
-        FileWriter writer = new FileWriter(file);
-        new Gson().toJson(personajes, writer);
-        writer.close();
-    } catch (IOException e) {
-        e.printStackTrace();
+public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Introduce el nombre del personaje:");
+    String nombre = scanner.nextLine();
+    
+    System.out.println("¿Quieres introducir la raza? (s/n)");
+    String opcion = scanner.nextLine();
+    Personaje personaje;
+
+    if (opcion.equalsIgnoreCase("s")) {
+        System.out.println("Introduce la raza:");
+        String raza = scanner.nextLine();
+        personaje = new Personaje(nombre, raza);
+    } else {
+        personaje = new Personaje(nombre);
     }
+
+    guardarPersonaje(personaje);
+    System.out.println("Personaje guardado con éxito.");
+    scanner.close();
 }
 
-public static List<Personaje> cargarPersonajes() {
-    try {
-        File file = new File(FILE_PATH);
-        if (!file.exists()) return new ArrayList<>();
-        BufferedReader reader = new BufferedReader(new FileReader(file));
-        List<Personaje> personajes = new Gson().fromJson(reader, new TypeToken<List<Personaje>>() {}.getType());
-        reader.close();
-        return personajes != null ? personajes : new ArrayList<>();
+private static void guardarPersonaje(Personaje personaje) {
+    try (FileWriter file = new FileWriter(FILE_PATH, true)) {
+        file.write(personaje.toJSON().toString() + "\n");
     } catch (IOException e) {
-        e.printStackTrace();
-        return new ArrayList<>();
+        System.err.println("Error al guardar el personaje: " + e.getMessage());
     }
 }
 
