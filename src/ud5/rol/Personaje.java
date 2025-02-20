@@ -13,7 +13,7 @@ public class Personaje {
 
     public Personaje(String nombre, String raza, int fuerza, int agilidad, int constitucion) throws Exception {
         if (!esRazaValida(raza) || fuerza < 1 || agilidad < 1 || constitucion < 1) {
-            throw new Exception("Personaje no válido");
+            throw new Exception("El personaje no es válido");
         }
         this.nombre = nombre;
         this.raza = raza;

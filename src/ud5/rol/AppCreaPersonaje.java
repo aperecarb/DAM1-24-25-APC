@@ -19,7 +19,7 @@ public class AppCreaPersonaje {
             char opcionRaza = sc.next().charAt(0);
             if (opcionRaza == 'S' || opcionRaza == 's') {
                 System.out.print("Introduzca raza (HUMANO, ELFO, ENANO, HOBBIT, ORCO, TROLL): ");
-                String raza = sc.nextLine().toUpperCase();
+                String raza = sc.next().toUpperCase();
 
                 System.out.print("¿Desea introducir atributos manualmente? (S/N): ");
                 char opcion = sc.next().charAt(0);
@@ -38,9 +38,10 @@ public class AppCreaPersonaje {
             } else {
                 personaje = new Personaje(nombre);
             }
+
             personaje.mostrar();
             guardarPersonaje(personaje);
-            System.out.println("Personaje guardado con éxito.");
+            System.out.println("El personaje se ha guardado con éxito.");
 
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
