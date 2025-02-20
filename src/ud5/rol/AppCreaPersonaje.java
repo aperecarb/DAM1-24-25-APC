@@ -1,5 +1,8 @@
 package ud5.rol;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
@@ -9,6 +12,22 @@ public class AppCreaPersonaje {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        JSONArray personajesArray = new JSONArray();
+
+        File file = new File(FILE_PATH);
+        if (file.exists()) {
+            try (Scanner fileScanner = new Scanner(file)) {
+                StringBuilder jsonStr = new StringBuilder();
+                while (fileScanner.hasNextLine()) {
+                    jsonStr.append(fileScanner.nextLine());
+                }
+                if (!jsonStr.toString().isEmpty()) {
+                    personajesArray = new JSONArray(jsonStr.toString());
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
 
         try {
             System.out.print("Introduzca nombre del personaje: ");
@@ -39,22 +58,20 @@ public class AppCreaPersonaje {
                 personaje = new Personaje(nombre);
             }
 
+            personajesArray.put(personaje.toJSON());
+            try (FileWriter fileWriter = new FileWriter(FILE_PATH)) {
+                fileWriter.write(personajesArray.toString(4));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
             personaje.mostrar();
-            guardarPersonaje(personaje);
             System.out.println("El personaje se ha guardado con éxito.");
 
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         } finally {
             sc.close();
-        }
-    }
-
-    private static void guardarPersonaje(Personaje personaje) {
-        try (FileWriter file = new FileWriter(FILE_PATH, true)) {
-            file.write(personaje.toJSON().toString() + "\n");
-        } catch (IOException e) {
-            System.err.println("Error al guardar el personaje: " + e.getMessage());
         }
     }
 }
