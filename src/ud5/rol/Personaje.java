@@ -54,7 +54,7 @@ public class Personaje {
         json.put("experiencia", experiencia);
         json.put("puntosVida", puntosVida);
 
-        try (FileWriter file = new FileWriter(nombre + ".json")) {
+        try (FileWriter file = new FileWriter("personajes.json")) {
             file.write(json.toString(4));
         } catch (IOException e) {
             System.out.println("Error guardando el personaje en JSON: " + e.getMessage());
