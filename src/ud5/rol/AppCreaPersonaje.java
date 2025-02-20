@@ -1,35 +1,54 @@
 package ud5.rol;
 
-import java.io.*;
-import java.util.*;
-import com.google.gson.*;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
 
 public class AppCreaPersonaje {
-    private static final String FILE_PATH = "src/ud5/rol/personajes.json";
+    private static final String FILE_PATH = "src/ud5/rol/personajes.json";;
 
-public static void guardarPersonajes(List<Personaje> personajes) {
-    try {
-        File file = new File(FILE_PATH);
-        file.getParentFile().mkdirs(); // Asegurar que la carpeta exista
-        FileWriter writer = new FileWriter(file);
-        new Gson().toJson(personajes, writer);
-        writer.close();
-    } catch (IOException e) {
-        e.printStackTrace();
-    }
-}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-public static List<Personaje> cargarPersonajes() {
-    try {
-        File file = new File(FILE_PATH);
-        if (!file.exists()) return new ArrayList<>();
-        BufferedReader reader = new BufferedReader(new FileReader(file));
-        List<Personaje> personajes = new Gson().fromJson(reader, new TypeToken<List<Personaje>>() {}.getType());
-        reader.close();
-        return personajes != null ? personajes : new ArrayList<>();
-    } catch (IOException e) {
-        e.printStackTrace();
-        return new ArrayList<>();
+        try {
+            System.out.print("Ingrese nombre del personaje: ");
+            String nombre = sc.nextLine();
+
+            System.out.print("Ingrese raza (HUMANO, ELFO, ENANO, HOBBIT, ORCO, TROLL): ");
+            String raza = sc.nextLine().toUpperCase();
+
+            System.out.print("¿Desea ingresar atributos manualmente? (S/N): ");
+            char opcion = sc.next().charAt(0);
+
+            Personaje personaje;
+            if (opcion == 'S' || opcion == 's') {
+                System.out.print("Ingrese fuerza: ");
+                int fuerza = sc.nextInt();
+                System.out.print("Ingrese agilidad: ");
+                int agilidad = sc.nextInt();
+                System.out.print("Ingrese constitución: ");
+                int constitucion = sc.nextInt();
+                personaje = new Personaje(nombre, raza, fuerza, agilidad, constitucion);
+            } else {
+                personaje = new Personaje(nombre, raza);
+            }
+
+            personaje.mostrar();
+            guardarPersonaje(personaje);
+            System.out.println("Personaje guardado con éxito.");
+
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        } finally {
+            sc.close();
+        }
     }
-}
+
+    private static void guardarPersonaje(Personaje personaje) {
+        try (FileWriter file = new FileWriter(FILE_PATH, true)) {
+            file.write(personaje.toJSON().toString() + "\n");
+        } catch (IOException e) {
+            System.err.println("Error al guardar el personaje: " + e.getMessage());
+        }
+    }
 }

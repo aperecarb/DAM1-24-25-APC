@@ -1,9 +1,7 @@
 package ud5.rol;
 
-import java.util.Random;
-import java.io.FileWriter;
-import java.io.IOException;
 import org.json.JSONObject;
+import java.util.Random;
 
 public class Personaje {
     private String nombre;
@@ -40,10 +38,11 @@ public class Personaje {
     }
 
     private boolean esRazaValida(String raza) {
-        return raza.equals("HUMANO") || raza.equals("ELFO") || raza.equals("ENANO") || raza.equals("HOBBIT") || raza.equals("ORCO") || raza.equals("TROLL");
+        return raza.equals("HUMANO") || raza.equals("ELFO") || raza.equals("ENANO") || raza.equals("HOBBIT")
+                || raza.equals("ORCO") || raza.equals("TROLL");
     }
 
-    public void guardarEnJSON() {
+    public JSONObject toJSON() {
         JSONObject json = new JSONObject();
         json.put("nombre", nombre);
         json.put("raza", raza);
@@ -53,12 +52,7 @@ public class Personaje {
         json.put("nivel", nivel);
         json.put("experiencia", experiencia);
         json.put("puntosVida", puntosVida);
-
-        try (FileWriter file = new FileWriter("personajes.json")) {
-            file.write(json.toString(4));
-        } catch (IOException e) {
-            System.out.println("Error guardando el personaje en JSON: " + e.getMessage());
-        }
+        return json;
     }
 
     public void mostrar() {
