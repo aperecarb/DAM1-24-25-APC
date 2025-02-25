@@ -28,5 +28,15 @@
         "fuerza": 76,
         "constitucion": 13,
         "nivel": 1
+    },
+    {
+        "raza": "ENANO",
+        "agilidad": 48,
+        "experiencia": 0,
+        "puntosVida": 79,
+        "nombre": "Josejuan",
+        "fuerza": 29,
+        "constitucion": 29,
+        "nivel": 1
     }
 ]
