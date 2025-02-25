@@ -1,13 +1,13 @@
-package herenciaejercicios;
+package ud5.herenciaejercicios;
 
 public class Caja {
-    public enum Unidad { CM, M }
+    public enum Unidad {cm, m}
 
-    private final int ancho;
-    private final int alto;
-    private final int fondo;
-    private final Unidad unidad;
-    private String etiqueta;
+    public final int ancho;
+    public final int alto;
+    public final int fondo;
+    public final Unidad unidad;
+    public String etiqueta;
 
     public Caja(int ancho, int alto, int fondo, Unidad unidad) {
         this.ancho = ancho;
@@ -18,7 +18,7 @@ public class Caja {
     }
 
     public double getVolumen() {
-        double factor = (unidad == Unidad.CM) ? 0.000001 : 1.0; // Convertir cm³ a m³ si es necesario
+        double factor = (unidad == Unidad.cm) ? 0.000001 : 1.0;
         return (ancho * alto * fondo) * factor;
     }
 
@@ -32,7 +32,6 @@ public class Caja {
 
     @Override
     public String toString() {
-        return "Caja [" + ancho + "x" + alto + "x" + fondo + " " + unidad + 
-               "], Volumen: " + getVolumen() + " m³, Etiqueta: " + etiqueta;
+        return "Caja [" + ancho + "x" + alto + "x" + fondo + " " + unidad + "], Volumen: " + getVolumen() + " m³, Etiqueta: " + etiqueta;
     }
 }

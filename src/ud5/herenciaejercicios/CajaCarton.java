@@ -1,14 +1,14 @@
-package herenciaejercicios;
+package ud5.herenciaejercicios;
 
 public class CajaCarton extends Caja {
 
     public CajaCarton(int ancho, int alto, int fondo) {
-        super(ancho, alto, fondo, Unidad.CM); // Siempre en centímetros
+        super(ancho, alto, fondo, Unidad.cm);
     }
 
     @Override
     public double getVolumen() {
-        return super.getVolumen() * 0.8; // 80% del volumen real
+        return super.getVolumen() * 0.8;
     }
 
     public double getSuperficie() {
@@ -16,7 +16,6 @@ public class CajaCarton extends Caja {
         int alto = super.alto;
         int fondo = super.fondo;
         
-        // Superficie total de la caja de cartón en cm²
         return 2 * ((ancho * alto) + (ancho * fondo) + (alto * fondo));
     }
 
