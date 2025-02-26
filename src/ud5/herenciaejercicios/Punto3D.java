@@ -19,4 +19,11 @@ class Punto3D extends Punto {
         }
         return super.distancia(otroPunto);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Punto3D)) return false;
+        Punto3D otro = (Punto3D) obj;
+        return super.equals(otro) && this.z == otro.z;
+    }
 }

@@ -16,6 +16,8 @@ class Punto {
 
     @Override
     public boolean equals(Object obj) {
-        
+        if (!(obj instanceof Punto)) return false;
+        Punto otro = (Punto) obj;
+        return this.x == otro.x && this.y == otro.y;
     }
 }
