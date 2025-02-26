@@ -13,4 +13,9 @@ class Punto {
         int dy = this.y - otroPunto.y;
         return Math.sqrt(dx * dx + dy * dy);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        
+    }
 }
