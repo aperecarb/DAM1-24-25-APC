@@ -1,3 +1,5 @@
+package ud5.herenciaejercicios;
+
 class Punto3D extends Punto {
     private int z;
 

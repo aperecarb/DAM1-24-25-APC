@@ -1,3 +1,5 @@
+package ud5.herenciaejercicios;
+
 class Punto {
     public int x, y;
 
