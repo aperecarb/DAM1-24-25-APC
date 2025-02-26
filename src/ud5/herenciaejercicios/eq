@@ -1,0 +1,31 @@
+class Punto {
+    protected int x, y;
+
+    public Punto(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Punto)) return false;
+        Punto otro = (Punto) obj;
+        return this.x == otro.x && this.y == otro.y;
+    }
+}
+
+class Punto3D extends Punto {
+    private int z;
+
+    public Punto3D(int x, int y, int z) {
+        super(x, y);
+        this.z = z;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Punto3D)) return false;
+        Punto3D otro = (Punto3D) obj;
+        return super.equals(otro) && this.z == otro.z;
+    }
+}
