@@ -1,3 +1,5 @@
+package ud5.herenciaejercicios;
+
 class Suceso extends Punto3D {
     private int tiempo;
     private String descripcion;
