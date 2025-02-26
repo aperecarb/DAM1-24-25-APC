@@ -12,10 +12,10 @@ class Punto3D extends Punto {
     public double distancia(Punto otroPunto) {
         if (otroPunto instanceof Punto3D) {
             Punto3D otroPunto3D = (Punto3D) otroPunto;
+            int dx = this.x - otroPunto.x;
+            int dy = this.y - otroPunto.y;
             int dz = this.z - otroPunto3D.z;
-            return Math.sqrt((this.x - otroPunto3D.x) * (this.x - otroPunto3D.x) +
-                             (this.y - otroPunto3D.y) * (this.y - otroPunto3D.y) +
-                             dz * dz);
+            return Math.sqrt(dx * dx + dy * dy + dz * dz);
         }
         return super.distancia(otroPunto);
     }
