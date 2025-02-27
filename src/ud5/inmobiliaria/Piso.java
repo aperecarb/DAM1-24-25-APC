@@ -10,6 +10,9 @@ class Piso extends Inmueble {
 
     @Override
     public String detalle() {
-        return "Piso en " + direccion + ":\n" + metrosCuadrados + " m2, " + habitaciones + " hab, " + baños + " baños, " + planta + "ª planta.";
+        return "Piso en " + direccion + ":\n" +
+                metrosCuadrados + " m2, " + habitaciones + " hab, " + baños + " baños, " + planta + "ª planta.\n" +
+                "Precio de Alquiler: " + (precioAlquiler > 0 ? precioAlquiler + " €" : "No disponible") + "\n" +
+                "Precio de Venta: " + (precioVenta > 0 ? precioVenta + " €" : "No disponible");
     }
 }
