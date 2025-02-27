@@ -1,5 +1,15 @@
 package ud5.inmobiliaria;
 
-public class Piso {
-    
+class Piso extends Inmueble {
+    private int planta;
+
+    public Piso(String direccion, int metrosCuadrados, int habitaciones, int baños, int planta) {
+        super(direccion, metrosCuadrados, habitaciones, baños);
+        this.planta = planta;
+    }
+
+    @Override
+    public String detalle() {
+        return "Piso en " + direccion + ":\n" + metrosCuadrados + " m2, " + habitaciones + " hab, " + baños + " baños, " + planta + "ª planta.";
+    }
 }
