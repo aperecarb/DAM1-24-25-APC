@@ -1,7 +1,35 @@
 package ud5.inmobiliaria;
 
-public class Inmobiliaria {
-    
+abstract class Inmueble {
+    public String direccion;
+    public int metrosCuadrados;
+    public int habitaciones;
+    public int baños;
+    public double precioAlquiler;
+    public double precioVenta;
+
+    public Inmueble(String direccion, int metrosCuadrados, int habitaciones, int baños) {
+        this.direccion = direccion;
+        this.metrosCuadrados = metrosCuadrados;
+        this.habitaciones = habitaciones;
+        this.baños = baños;
+    }
+
+    public void setPrecioAlquiler(double precioAlquiler) {
+        this.precioAlquiler = precioAlquiler;
+    }
+
+    public void setPrecioVenta(double precioVenta) {
+        this.precioVenta = precioVenta;
+    }
+
+    public abstract String detalle();
+
+    @Override
+    public String toString() {
+        return "Inmueble en " + direccion + " (" + metrosCuadrados + " m2, " + habitaciones + " hab)";
+    }
+
 
     public static void main(String[] args) {
         // 1.1. Modelo de Clases 
