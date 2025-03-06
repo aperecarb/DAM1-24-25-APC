@@ -9,7 +9,7 @@ class Deportista extends MullerTraballadora implements IPioneira {
     }
 
     public String descricionContribucion() {
-        return nome + " " + apelidos + " foi unha deportista pioneira con este fito histórico: " + fitoHistorico;
+        return nome + " " + apelidos + " foi unha deportista pioneira co fito histórico de: " + fitoHistorico;
     }
 
     public String getDescubrimentoOuAporte() {

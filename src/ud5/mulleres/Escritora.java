@@ -9,7 +9,7 @@ class Escritora extends MullerTraballadora implements IPioneira {
     }
 
     public String descricionContribucion() {
-        return nome + " " + apelidos + " foi unha escritora pioneira coa obra mestra: " + obraMestra;
+        return nome + " " + apelidos + " foi unha escritora pioneira coa obra literaria: " + obraMestra;
     }
 
     public String getDescubrimentoOuAporte() {
