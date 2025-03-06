@@ -102,6 +102,10 @@ public class Personaje {
         return agilidad;
     }
 
+    public int getConstitucion() {
+        return constitucion;
+    }
+
     public int atacar(Monstruo enemigo) {
         Random rand = new Random();
         int ataqueTotal = fuerza + rand.nextInt(100) + 1;
