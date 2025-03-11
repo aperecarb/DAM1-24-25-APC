@@ -36,7 +36,6 @@ public class Empleado extends Persona {
     }
 
     public static void main(String[] args) {
-        Empleado maria = new Empleado("María", 30000);
         Empleado pepe = new Empleado("Pepe", 25, "XL", 30000);
         // System.out.println(pepe.edad);
         // pepe.saludar();

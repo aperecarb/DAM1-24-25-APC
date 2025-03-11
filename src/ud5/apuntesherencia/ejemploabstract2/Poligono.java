@@ -33,10 +33,5 @@ public abstract class Poligono {
         for (Poligono poligono : poligonos) {
             System.out.println(poligono.area());
         }
-
-        Triangulo t2 = (Triangulo) poligonos[1];
-
     }
-
-
 }
