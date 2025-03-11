@@ -24,8 +24,4 @@ public class Locomotora {
     public String getMatricula() {
         return matricula;
     }
-
-
-    
-    
 }

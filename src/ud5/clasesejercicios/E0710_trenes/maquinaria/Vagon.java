@@ -21,9 +21,5 @@ class Vagon {
     public String toString() {
         return "Vagon " + id + ". Carga " + cargaActual + "/" + cargaMaxima + ". Mercancia="
                 + tipoMercancia;
-    }    
-
-    
-
-
+    }
 }

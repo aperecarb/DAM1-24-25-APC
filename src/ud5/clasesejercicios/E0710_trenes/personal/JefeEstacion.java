@@ -23,9 +23,4 @@ public class JefeEstacion {
     public String toString() {
         return "Jefe de Estación: " + nombre + " (DNI=" + dni + " Años de Antigüedad=" + getAntiguedad() + ")";
     }
-
-
-
-    
-    
 }

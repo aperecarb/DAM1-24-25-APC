@@ -1,7 +1,6 @@
 package ud5.clasesejercicios.E0710_trenes;
 
 import java.time.LocalDate;
-
 import ud5.clasesejercicios.E0710_trenes.maquinaria.Locomotora;
 import ud5.clasesejercicios.E0710_trenes.maquinaria.Tren;
 import ud5.clasesejercicios.E0710_trenes.personal.*;
@@ -16,19 +15,7 @@ public class App {
 
         JefeEstacion jefe = new JefeEstacion("Lola", "33333333Z", LocalDate.of(2023, 2, 1));
 
-        // Vagon solo es visible por clases vecinas
         Locomotora locomotora = new Locomotora("1111AAA", 5000, 2010, mecanicoPepe);
-
-        
-        /* EJEMPLOS DE INSTANCIACIÓN DE TRENES
-        Tren tren2 = new Tren(locomotora, maquinista, 5);
-
-        try {
-            Tren tren3 = new Tren(locomotora, maquinista, 50);
-        } catch (Exception e) {
-            System.out.println("No se puede crear el tren. " + e.getMessage());
-        }*/
-
 
         Tren tren = new Tren(locomotora, maquinista);
         tren.addVagon(1, 10000, 5000, "MADERA");
@@ -41,6 +28,5 @@ public class App {
 
         mecanicoPepe.revisar(locomotora);
         mecanico2.revisar(locomotora);
-
     }
 }

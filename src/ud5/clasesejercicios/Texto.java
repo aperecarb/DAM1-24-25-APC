@@ -4,8 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Texto {
-
-    String cadena; 
+    String cadena;
     final int LONGITUD_MAXIMA;
     LocalDate fechaCreacion;
     LocalDateTime fechaModificacion;
@@ -77,7 +76,5 @@ public class Texto {
         texto.anhadirInicio('E');
         texto.anhadirFinal(':');
         texto.mostrar();
-
     }
-    
 }

@@ -1,8 +1,6 @@
 package ud5.apuntesherencia.ejemploabstract2;
 
-//Clase Rectangulo
 public class Rectangulo extends Poligono{
-
     private double lado1;
     private double lado2;
 
@@ -31,8 +29,6 @@ public class Rectangulo extends Poligono{
         this.lado2 = lado2;
     }
 
-    //Implementación del método abstracto area()
-    //heredado de la clase Polígono
     @Override
     public double area(){
         return lado1 * lado2;

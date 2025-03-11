@@ -4,10 +4,6 @@ public class Empleado extends Persona {
     double salario;
     String estatura;
 
-    Empleado() {
-
-    }
-
     Empleado(String nombre, double salario) {
         this.nombre = nombre;
         this.salario = salario;
@@ -30,15 +26,11 @@ public class Empleado extends Persona {
         System.out.println("EMPLEADO:");
         System.out.println(nombre);
         System.out.println(estatura);
-        // super.mostrarDatos();
-        // System.out.println(getApellido2());
         System.out.println(salario + " euros anuales.");
     }
 
     public static void main(String[] args) {
         Empleado pepe = new Empleado("Pepe", 25, "XL", 30000);
-        // System.out.println(pepe.edad);
-        // pepe.saludar();
 
         System.out.println(pepe.estatura);
         pepe.mostrarDatos();

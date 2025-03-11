@@ -20,7 +20,4 @@ public class Maquinista {
     public String toString() {
         return nombre + "(DNI=" + dni + ", sueldo=" + sueldo + ", rango=" + rango + ")";
     }
-
-    
-
 }

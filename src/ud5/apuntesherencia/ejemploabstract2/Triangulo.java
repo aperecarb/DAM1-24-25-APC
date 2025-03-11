@@ -1,8 +1,6 @@
 package ud5.apuntesherencia.ejemploabstract2;
 
-//Clase Triangulo
 public class Triangulo extends Poligono{
-
     private double lado1;
     private double lado2;
     private double lado3;
@@ -16,7 +14,6 @@ public class Triangulo extends Poligono{
         this.lado2 = lado2;
         this.lado3 = lado3;
     }
-
 
     public double getLado1() {
         return lado1;
@@ -41,8 +38,6 @@ public class Triangulo extends Poligono{
         this.lado3 = lado3;
     }
 
-    //Implementación del método abstracto area()
-    //heredado de la clase Polígono
     @Override
     public double area(){
         double p = (lado1+lado2+lado3)/2;

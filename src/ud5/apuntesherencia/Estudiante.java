@@ -7,15 +7,11 @@ public class Estudiante extends Persona {
         super(nombre);
         this.curso = curso;
     }
-
-
     
     @Override
     public String toString() {
         return "Estudiante [nombre=" + nombre + ", curso=" + curso + "]";
     }
-
-
 
     @Override
     public void mostrarDatos() {
@@ -38,8 +34,6 @@ public class Estudiante extends Persona {
             per.mostrarDatos();
         }
 
-        // Cómo separar los Empleados de los Estudiantes en dos arrays distintos?
-
         System.out.println("POLIMORFISMO: toString()");
         for (Persona per : p) {
             System.out.println(per);
@@ -50,8 +44,6 @@ public class Estudiante extends Persona {
         System.out.println(p[0] == p[5]);
         p[0].dni = "3333333";
         p[5].dni = "3333333";
-        System.out.println(p[0].equals(p[5]));            
-
+        System.out.println(p[0].equals(p[5]));
     }
-
 }

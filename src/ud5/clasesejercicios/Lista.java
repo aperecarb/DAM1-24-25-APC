@@ -47,7 +47,6 @@ public class Lista {
             System.arraycopy(elementos, i + 1, aux, i, elementos.length - i - 1);
             elementos = aux;
         }
-
         return e;
     }
 
@@ -63,7 +62,6 @@ public class Lista {
                 pos = i;
             i++;
         }
-
         return pos;
     }
 
@@ -75,12 +73,6 @@ public class Lista {
 
 
     public static Lista concatena(Lista l1, Lista l2){
-        
-        // 1. CopyOf + ArrayCopy return
-
-        
-        // 2. Usando insertarFinal
-
         Lista l = l1;
 
         l.insertarFinal(l2);

@@ -21,9 +21,6 @@ public class Mecanico {
     }
 
     public void revisar(Locomotora locomotora) {
-        System.out.println("El/La mecánico/a " + nombre + " ha revisado " + especialidad
-         + " de la locomotora " + locomotora.getMatricula() + " con fecha " + LocalDate.now());
+        System.out.println("El/La mecánico/a " + nombre + " ha revisado " + especialidad + " de la locomotora " + locomotora.getMatricula() + " con fecha " + LocalDate.now());
     }
-    
-
 }

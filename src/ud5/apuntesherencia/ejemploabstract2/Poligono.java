@@ -1,6 +1,5 @@
 package ud5.apuntesherencia.ejemploabstract2;
 
-//Clase abstracta Poligono
 public abstract class Poligono {
 
     private int numLados;
@@ -19,7 +18,6 @@ public abstract class Poligono {
     public void setNumLados(int numLados) {
         this.numLados = numLados;
     }
-    //Declaración del método abstracto area()
     public abstract double area();
 
 

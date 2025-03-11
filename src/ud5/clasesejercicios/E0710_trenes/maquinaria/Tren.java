@@ -1,7 +1,6 @@
 package ud5.clasesejercicios.E0710_trenes.maquinaria;
 
 import java.util.Arrays;
-
 import ud5.clasesejercicios.E0710_trenes.personal.Maquinista;
 
 public class Tren {
@@ -9,7 +8,6 @@ public class Tren {
     Locomotora locomotora;
     Vagon[] vagones;
     Maquinista maquinista;
-
 
     public Tren(Locomotora locomotora, Maquinista maquinista) {
         this(locomotora, maquinista, 0);
@@ -73,8 +71,5 @@ public class Tren {
             cargaMaxima += vagon.cargaMaxima;
         }
         return cargaMaxima;
-    }    
-
-    
-
+    }
 }

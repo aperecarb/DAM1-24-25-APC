@@ -1,7 +1,6 @@
 package ud5.apuntesherencia;
 
 public class Persona {
-    // Datos
     String nombre;
     String apellido1;
     private String apellido2;
@@ -13,7 +12,6 @@ public class Persona {
 
     public static int contadorPersonas;
 
-    // CONSTRUCTORES
     public Persona() {
     }
 
@@ -32,7 +30,7 @@ public class Persona {
     }
 
     public Persona(String nombre, int edad, double estatura) {
-        this.nombre = nombre; // asigna el parámetro al atributo
+        this.nombre = nombre;
         this.edad = edad;
         this.estatura = estatura;
     }
@@ -42,8 +40,6 @@ public class Persona {
         this.edad = edad;
         contadorPersonas++;
     }
-
-    // Otros Métodos
 
     @Override
     public String toString() {

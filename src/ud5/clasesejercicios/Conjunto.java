@@ -27,7 +27,6 @@ public class Conjunto {
             elementos = Arrays.copyOf(elementos, elementos.length + 1);
             elementos[elementos.length - 1] = nuevo;
         }
-
         return insertar;
     }
 
@@ -39,7 +38,6 @@ public class Conjunto {
             if (insertar(otroConjunto.elementos[i]))
                 insertar = true;
         }
-
         return insertar;
     }
 
@@ -55,7 +53,6 @@ public class Conjunto {
             }
             i++;
         }
-
         return eliminar;
     }
 
@@ -94,12 +91,6 @@ public class Conjunto {
         System.out.println(c.insertar(6));
         System.out.println(c.insertar(5));
 
-        /*System.out.println(c.eliminar(5));
-        System.out.println(c.eliminar(6));
-        System.out.println(c.eliminar(6));
-        System.out.println(c.eliminar(7));*/
-
-        
         Conjunto b = new Conjunto();
 
         System.out.println(b.insertar(4));
@@ -112,8 +103,6 @@ public class Conjunto {
 
         System.out.println(c.pertenece(7));
         System.out.println(c.pertenece(4));
-
-
     }
     
 }

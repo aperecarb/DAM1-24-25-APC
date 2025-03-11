@@ -1,35 +1,30 @@
 package ud5.apuntesherencia.ejemploabstract;
 
-//clase abstracta, ya que uno de sus métodos, metodo2(), es abstracto
-
 abstract class A {
     int x = 1;
 
-    void metodo1() { //método implementado y heredados por las subclasen
+    void metodo1() {
         System.out.println("método1 definido en A");
     }
 
-    abstract void metodo2(); //método abstracto para ser implementado por las subclases
-
+    abstract void metodo2();
 
     public static void main(String[] args) {
         B b = new B();
         C c = new C();
 
-        System.out.println("Valor de x en la clase B:" + b.x); //heredado de A
+        System.out.println("Valor de x en la clase B:" + b.x);
 
-        b.metodo1(); //método heredado directamento de A
-        b.metodo2(); //implementación del método2() abstracto de A
+        b.metodo1();
+        b.metodo2();
 
-        c.metodo1(); //método heredado de directamente A
-        c.metodo2(); //implementación del método2() abstracto de A
+        c.metodo1();
+        c.metodo2();
 
         A a = b;
         a.metodo2();
         a = c;
         a.metodo2();
-
     }
-
 }
 

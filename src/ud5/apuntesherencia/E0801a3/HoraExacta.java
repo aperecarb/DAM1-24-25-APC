@@ -38,7 +38,6 @@ public class HoraExacta extends Hora {
         return hora == that.hora && minuto == that.minuto && segundo == that.segundo;
     }
 
-
     public static void main(String[] args) {
         HoraExacta h = new HoraExacta(8, 10, 0);
         System.out.println(h);
@@ -48,8 +47,6 @@ public class HoraExacta extends Hora {
 
         HoraExacta h3 = new HoraExacta(0, 0, 0);
 
-        System.out.println(h2.equals(h3)); // true
-
+        System.out.println(h2.equals(h3));
     }
-
 }
