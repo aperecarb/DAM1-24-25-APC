@@ -2,7 +2,7 @@ package ud5;
 
 public class PasswordValidator {
     public static boolean isValid(String password) {
-        if (password.length() <= 8) { 
+        if (password.length() <= 8) { // Para que acepte contraseñas de 8 caracteres habría que quitar el =
             return false;
         }
         boolean hasUpperCase = false;

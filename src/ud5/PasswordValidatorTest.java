@@ -8,31 +8,26 @@ import org.junit.jupiter.api.Test;
 public class PasswordValidatorTest {
     @Test
     void testIsValid1() {
-        assertTrue(PasswordValidator.isValid("Manolo123"));
+        assertTrue(PasswordValidator.isValid("Passw0rd"));
     }
 
     @Test
     void testIsValid2() {
-        assertFalse(PasswordValidator.isValid("hola"));
+        assertFalse(PasswordValidator.isValid("Passw0"));
     }
 
     @Test
     void testIsValid3() {
-        assertFalse(PasswordValidator.isValid("12345678"));
+        assertFalse(PasswordValidator.isValid("passw0rd"));
     }
 
     @Test
     void testIsValid4() {
-        assertFalse(PasswordValidator.isValid("abcdefgh"));
+        assertFalse(PasswordValidator.isValid("Password"));
     }
 
     @Test
     void testIsValid5() {
-        assertFalse(PasswordValidator.isValid("abcdefg1"));
-    }
-
-    @Test
-    void testIsValid6() {
-        assertFalse(PasswordValidator.isValid("Abcdefgh"));
+        assertFalse(PasswordValidator.isValid("password"));
     }
 }
