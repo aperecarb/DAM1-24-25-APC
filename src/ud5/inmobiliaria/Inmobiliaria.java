@@ -104,11 +104,11 @@ abstract class Inmueble implements Comparable<Inmueble> {
         mostrarInmuebles(inmuebles);
 
         sortMetrosDesc(inmuebles);
-        System.out.println("\nINMUEBLES ORDENADOS POR m2 (de mayor a menor):");
+        System.out.println("\nINMUEBLES ORDENADOS POR m2 (descendente):");
         mostrarInmuebles(inmuebles);
 
         sortHabAMetrosDesc(inmuebles);
-        System.out.println("\nINMUEBLES ORDENADOS POR HABITACIONES Y LUEGO m2 (de mayor a menor):");
+        System.out.println("\nINMUEBLES ORDENADOS POR HABITACIONES Y LUEGO m2 (descendente):");
         mostrarInmuebles(inmuebles);
 
         sortPrecioAlquilerAsc(inmuebles);
