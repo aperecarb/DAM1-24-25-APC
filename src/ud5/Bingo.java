@@ -8,7 +8,7 @@ public class Bingo {
         Scanner sc = new Scanner(System.in);
         Random rnd = new Random();
 
-        System.out.print("Introduce el número de jugadores: ");
+        System.out.print("Introduzca el número de jugadores: ");
         int numJugadores = sc.nextInt();
         sc.nextLine();
 
@@ -18,17 +18,17 @@ public class Bingo {
         for (int i = 0; i < numJugadores; i++) {
             String nombre;
             do {
-                System.out.print("Introduce el nombre del jugador " + (i + 1) + ": ");
+                System.out.print("Introduzca el nombre del jugador " + (i + 1) + ": ");
                 nombre = sc.nextLine();
                 if (nombresJugadores.contains(nombre)) {
-                    System.out.println("El nombre ya existe. Introduce otro.");
+                    System.out.println("Este nombre ya existe. Introduzca otro.");
                 }
             } while (nombresJugadores.contains(nombre));
             nombresJugadores.add(nombre);
 
             int numCartones;
             do {
-                System.out.print("Introduce el número de cartones para " + nombre + " (máximo 5): ");
+                System.out.print("Introduzca el número de cartones para " + nombre + " (máximo 5): ");
                 numCartones = sc.nextInt();
                 if (numCartones < 1 || numCartones > 5) {
                     System.out.println("Número de cartones inválido. Debe ser entre 1 y 5.");
@@ -49,7 +49,7 @@ public class Bingo {
             }
         }
 
-        System.out.println("\n¿Modo de juego? (1: Turno a turno, 2: Automático): ");
+        System.out.println("\n¿Modo de juego? (1: Turno a turno | 2: Automático): ");
         int modoJuego = sc.nextInt();
         sc.nextLine();
 
