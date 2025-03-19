@@ -1,0 +1,45 @@
+public int revisarCarton(int[] numerosSorteo) {
+    int lineas = 0;
+    int bingo = 0;
+
+    // Verificar líneas
+    for (int i = 0; i < MAX_FILAS; i++) {
+        int contador = 0;
+        for (int j = 0; j < MAX_COLS; j++) {
+            for (int numero : numerosSorteo) {
+                if (numeros[i][j] == numero) {
+                    contador++;
+                    break;
+                }
+            }
+        }
+        if (contador == MAX_COLS) {
+            lineas++;
+        }
+    }
+
+    // Verificar bingo
+    int contadorTotal = 0;
+    for (int i = 0; i < MAX_FILAS; i++) {
+        for (int j = 0; j < MAX_COLS; j++) {
+            for (int numero : numerosSorteo) {
+                if (numeros[i][j] == numero) {
+                    contadorTotal++;
+                    break;
+                }
+            }
+        }
+    }
+    if (contadorTotal == MAX_FILAS * MAX_COLS) {
+        bingo = 1;
+    }
+
+    // Determinar resultado
+    if (bingo == 1) {
+        return 2; // Bingo
+    } else if (lineas > 0) {
+        return 1; // Línea
+    } else {
+        return 0; // Nada
+    }
+}
