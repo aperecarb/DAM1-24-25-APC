@@ -1,0 +1,26 @@
+package ud6.apuntes;
+
+import java.util.Arrays;
+
+public class E1201_MetodosGenericos {
+    public static <U> U[] add(U e, U[] arr) {
+        U[] newArr = Arrays.copyOf(arr, arr.length + 1);
+        newArr[arr.length] = e;
+        return newArr;
+    }
+
+    public static <U> boolean buscar(U e, U[] arr) {
+        for (U element : arr) {
+            if (element.equals(e)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static <U> U[] concatenar(U[] arr1, U[] arr2) {
+        U[] newArr = Arrays.copyOf(arr1, arr1.length + arr2.length);
+        System.arraycopy(arr2, 0, newArr, arr1.length, arr2.length);
+        return newArr;
+    }
+}
