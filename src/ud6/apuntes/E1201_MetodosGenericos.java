@@ -14,12 +14,20 @@ public class E1201_MetodosGenericos {
     }
 
     public static <U> U[] add(U e, U[] t) {
+        if (e == null || t == null) {
+            return null;
+        }
+
         U[] newT = Arrays.copyOf(t, t.length + 1);
         newT[t.length] = e;
         return newT;
     }
 
     public static <U> boolean buscar(U e, U[] t) {
+        if (e == null || t == null) {
+            return false;
+        }
+
         for (U el : t) {
             if (el.equals(e)) {
                 return true;
@@ -29,6 +37,10 @@ public class E1201_MetodosGenericos {
     }
 
     public static <U> U[] concatenar(U[] t1, U[] t2) {
+        if (t1 == null || t2 == null) {
+            return null;
+        }
+
         U[] newT = Arrays.copyOf(t1, t1.length + t2.length);
         System.arraycopy(t2, 0, newT, t1.length, t2.length);
         return newT;
