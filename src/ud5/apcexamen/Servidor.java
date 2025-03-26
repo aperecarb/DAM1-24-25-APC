@@ -1,4 +1,6 @@
-package ud5.xxxexamen;
+/* Álvaro Pereira Carballo */
+
+package ud5.apcexamen;
 
 import java.util.Arrays;
 
