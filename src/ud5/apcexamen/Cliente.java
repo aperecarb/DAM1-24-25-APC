@@ -5,7 +5,7 @@ package ud5.apcexamen;
 import java.util.Arrays;
 import java.util.Comparator;
 
-enum SO {WINDOWS, LINUX, MAC, ANDROID, IOS}
+enum SO {ANDROID, IOS, LINUX, MAC, WINDOWS}
 
 public class Cliente extends Host {
     // Definimos las variables
