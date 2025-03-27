@@ -33,28 +33,28 @@ public class ContenedorLista<T extends Comparable<T>> implements Pila<T>, Cola<T
         if (size == 0) {
             return null;
         }
-        T elementoExtraido = elementos[0];
+        T extraido = elementos[0];
         T[] nuevaTabla = (T[]) new Comparable[size - 1];
         for (int i = 1; i < size; i++) {
             nuevaTabla[i - 1] = elementos[i];
         }
         elementos = nuevaTabla;
         size--;
-        return elementoExtraido;
+        return extraido;
     }
 
     public T extraerDelFinal() {
         if (size == 0) {
             return null;
         }
-        T elementoExtraido = elementos[size - 1];
+        T extraido = elementos[size - 1];
         T[] nuevaTabla = (T[]) new Comparable[size - 1];
         for (int i = 0; i < size - 1; i++) {
             nuevaTabla[i] = elementos[i];
         }
         elementos = nuevaTabla;
         size--;
-        return elementoExtraido;
+        return extraido;
     }
 
     public void ordenar() {
