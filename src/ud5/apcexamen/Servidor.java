@@ -2,14 +2,20 @@
 
 package ud5.apcexamen;
 
-import java.util.Arrays;
+import ud5.apcexamen.Cliente.SO;
 
 public class Servidor extends Host {
+    public String servicio;
+    public int puerto;
+    public String protocolo;
+
+    // Definimos el constructor
+    public Servidor(String nombre, String ip, String mac) {
+        // Invocamos al constructor de la clase Host
+        super(nombre, ip, mac);
+    }
+
     
-    // Tu código aquí
-
-
-
 
     public static void main(String[] args) {
         System.out.println("\nClase Servidor");
@@ -30,8 +36,6 @@ public class Servidor extends Host {
         for (Servidor s : servidores) {
             System.out.println(s);
         }
-
-        // Tu código aquí
 
     }
 }

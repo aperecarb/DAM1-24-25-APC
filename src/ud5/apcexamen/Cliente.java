@@ -5,10 +5,9 @@ package ud5.apcexamen;
 import java.util.Arrays;
 import java.util.Comparator;
 
-enum SO {ANDROID, IOS, LINUX, MAC, WINDOWS}
-
 public class Cliente extends Host {
     // Definimos las variables
+    enum SO {ANDROID, IOS, LINUX, MAC, WINDOWS}
     public SO sistemaOperativo;
     public String resolucion;
 
@@ -66,7 +65,7 @@ public class Cliente extends Host {
         Arrays.sort(clientes, Comparator.comparing(Cliente::pixelesTotales).reversed());
         // Mostramos el array ordenado
         System.out.println("\nClientes ordenados por Resolución");
-        System.out.println("===================================\n");
+        System.out.println("=================================\n");
         for (Cliente cliente : clientes) {
             System.out.println(cliente);
         }
