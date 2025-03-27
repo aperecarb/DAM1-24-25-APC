@@ -103,8 +103,4 @@ public class ContenedorLista<T extends Comparable<T>> implements Pila<T>, Cola<T
     public T desencolar() {
         return extraerDelPrincipio();
     }
-
-    public static void main(String[] args) {
-        
-    }
 }
