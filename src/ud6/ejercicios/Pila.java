@@ -1,70 +1,76 @@
 package ud6.ejercicios;
 
-import ud6.apuntes.Cola;
-import ud6.apuntes.Pila;
+public interface Pila<T> {
+    void apilar(T elemento);
+    T desapilar();
+}
+
+public interface Cola<T> {
+    void encolar(T elemento);
+    T desencolar();
+}
 
 public class ContenedorLista<T extends Comparable<T>> implements Pila<T>, Cola<T> {
     private T[] elementos;
-    private int size;
+    private int tamanio;
 
     public ContenedorLista() {
         elementos = (T[]) new Comparable[0];
-        size = 0;
+        tamanio = 0;
     }
 
     public void insertarAlPrincipio(T nuevo) {
-        T[] nuevaTabla = (T[]) new Comparable[size + 1];
+        T[] nuevaTabla = (T[]) new Comparable[tamanio + 1];
         nuevaTabla[0] = nuevo;
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < tamanio; i++) {
             nuevaTabla[i + 1] = elementos[i];
         }
         elementos = nuevaTabla;
-        size++;
+        tamanio++;
     }
 
     public void insertarAlFinal(T nuevo) {
-        T[] nuevaTabla = (T[]) new Comparable[size + 1];
-        nuevaTabla[0] = nuevo;
-        for (int i = 0; i < size; i++) {
+        T[] nuevaTabla = (T[]) new Comparable[tamanio + 1];
+        for (int i = 0; i < tamanio; i++) {
             nuevaTabla[i] = elementos[i];
         }
-        nuevaTabla[size] = nuevo;
+        nuevaTabla[tamanio] = nuevo;
         elementos = nuevaTabla;
-        size++;
+        tamanio++;
     }
 
-    T extraerDelPrincipio() {
-        if (size == 0) {
+    public T extraerDelPrincipio() {
+        if (tamanio == 0) {
             return null;
         }
-        T extraido = elementos[0];
-        T[] nuevaTabla = (T[]) new Comparable[size - 1];
-        for (int i = 1; i < size; i++) {
+        T elementoExtraido = elementos[0];
+        T[] nuevaTabla = (T[]) new Comparable[tamanio - 1];
+        for (int i = 1; i < tamanio; i++) {
             nuevaTabla[i - 1] = elementos[i];
         }
         elementos = nuevaTabla;
-        size--;
-        return extraido;
+        tamanio--;
+        return elementoExtraido;
     }
 
-    T extraerDelFinal() {
-        if (size == 0) {
-            return null;
+    public T extraerDelFinal() {
+        if (tamanio == 0) {
+            return null; // No hay elementos para extraer
         }
-        T extraido = elementos[size - 1];
-        T[] nuevaTabla = (T[]) new Comparable[size - 1];
-        for (int i = 0; i < size - 1; i++) {
+        T elementoExtraido = elementos[tamanio - 1];
+        T[] nuevaTabla = (T[]) new Comparable[tamanio - 1];
+        for (int i = 0; i < tamanio - 1; i++) {
             nuevaTabla[i] = elementos[i];
         }
         elementos = nuevaTabla;
-        size--;
-        return extraido;
+        tamanio--;
+        return elementoExtraido;
     }
 
     public void ordenar() {
-        if (size > 1) {
-            for (int i = 0; i < size - 1; i++) {
-                for (int j = 0; j < size - i - 1; j++) {
+        if (tamanio > 1) {
+            for (int i = 0; i < tamanio - 1; i++) {
+                for (int j = 0; j < tamanio - i - 1; j++) {
                     if (elementos[j].compareTo(elementos[j + 1]) > 0) {
                         T temp = elementos[j];
                         elementos[j] = elementos[j + 1];
@@ -77,27 +83,15 @@ public class ContenedorLista<T extends Comparable<T>> implements Pila<T>, Cola<T
 
     @Override
     public String toString() {
-        if (size == 0) {
+        if (tamanio == 0) {
             return "[]";
         }
         StringBuilder sb = new StringBuilder("[");
-        for (int i = 0; i < size - 1; i++) {
+        for (int i = 0; i < tamanio - 1; i++) {
             sb.append(elementos[i]).append(", ");
         }
-        sb.append(elementos[size - 1]).append("]");
+        sb.append(elementos[tamanio - 1]).append("]");
         return sb.toString();
-    }
-
-    public interface Pila<T> {
-        void apilar(T elemento);
-
-        T desapilar();
-    }
-
-    public interface Cola<T> {
-        void encolar(T elemento);
-
-        T desencolar();
     }
 
     @Override
