@@ -1,5 +1,7 @@
 package ud6.ejercicios;
 
+import java.util.Comparator;
+
 public class ContenedorLista<T extends Comparable<T>> implements Pila<T>, Cola<T> {
     private T[] es;
     private int size;
@@ -102,5 +104,13 @@ public class ContenedorLista<T extends Comparable<T>> implements Pila<T>, Cola<T
     @Override
     public T desencolar() {
         return extraerDelPrincipio();
+    }
+
+    T get (int indice) {
+        return es[indice];
+    }
+
+    void ordenar (Comparator<T> c) {
+        
     }
 }
