@@ -108,6 +108,9 @@ public class ContenedorLista<T extends Comparable<T>> implements Pila<T>, Cola<T
     }
 
     T get (int indice) {
+        if (indice < 0 || indice >= size) {
+            throw new IndexOutOfBoundsException("Índice fuera de rango");
+        }
         return es[indice];
     }
 
