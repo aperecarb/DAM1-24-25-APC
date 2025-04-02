@@ -1,4 +1,4 @@
-package ud6.ejercicios;
+package ud6.apuntes;
 
 import java.util.*;
 
