@@ -1,3 +1,5 @@
+package ud6.ejercicios;
+
 import java.util.*;
 
 public class E1210 {
