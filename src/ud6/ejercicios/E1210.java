@@ -14,7 +14,9 @@ public class E1210 {
 
         System.out.println("Lista original: " + lista);
 
-        Set<Integer> sinRepetir = new HashSet<>(lista);
+        // Set<Integer> sinRepetir = new HashSet<>(lista);
+        Set<Integer> sinRepetir = new HashSet<>();
+        sinRepetir.addAll(lista);
         System.out.println("Conjunto sin repeticiones: " + sinRepetir);
 
         Set<Integer> repetidos = new HashSet<>();
