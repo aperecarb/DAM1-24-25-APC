@@ -42,7 +42,7 @@ class Main {
     public static void main(String[] args) {
         Map<Character, Academico> academia = new HashMap<>();
 
-        try (BufferedReader br = new BufferedReader(new FileReader("academicos.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src/ud6/apuntes/academicos.txt"))) {
             String linea;
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(",");
