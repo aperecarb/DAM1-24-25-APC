@@ -1,8 +1,8 @@
 package ud6.apuntes;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
 
 class Academico implements Comparable<Academico> {
@@ -30,9 +30,6 @@ class Academico implements Comparable<Academico> {
 }
 
 public class Main {
-    public static String readFileToString(String filePath) {
-        
-    }
 
     public static boolean nuevoAcademico(Map<Character, Academico> academia, Academico nuevo, Character letra) {
         if (Character.isLetter(letra)) {
@@ -42,10 +39,35 @@ public class Main {
         return false;
     }
 
+    public static String readFileToString(String filePath) throws IOException {
+        return new String(Files.readAllBytes(Paths.get(filePath)));
+    }
 
     public static void main(String[] args) {
         Map<Character, Academico> academia = new HashMap<>();
 
+        try {
+            String contenido = readFileToString("academicos.txt");
+            String[] lineas = contenido.split("\n");
+            for (String linea : lineas) {
+                String[] partes = linea.split(" ");
+                if (partes.length >= 4) {
+                    Character letra = partes[0].charAt(5);
+                    int anioIngreso = Integer.parseInt(partes[partes.length - 1].replaceAll("[()]", ""));
+                    String nombre = "";
+                    for (int i = 1; i < partes.length - 1; i++) {
+                        nombre += partes[i] + " ";
+                    }
+                    nombre = nombre.trim();
+                    nuevoAcademico(academia, new Academico(nombre, anioIngreso), letra);
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("Error al leer el archivo: " + e.getMessage());
+            return;
+        }
+
+        // Listado 1: Académicos sin letra, ordenados por nombre y año
         List<Academico> academicosSinLetra = new ArrayList<>(academia.values());
         Collections.sort(academicosSinLetra);
         System.out.println("Listado 1: Académicos sin letra (ordenados por nombre y año)");
@@ -53,6 +75,7 @@ public class Main {
             System.out.println(academico);
         }
 
+        // Listado 2: Académicos con letra, ordenados por letra, nombre y año
         List<Map.Entry<Character, Academico>> academicosConLetra = new ArrayList<>(academia.entrySet());
         academicosConLetra.sort(Map.Entry.comparingByKey());
         System.out.println("\nListado 2: Académicos con letra (ordenados por letra, nombre y año)");
