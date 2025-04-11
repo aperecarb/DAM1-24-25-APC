@@ -29,7 +29,7 @@ class Academico implements Comparable<Academico> {
     }
 }
 
-public class Main {
+class Main {
 
     public static boolean nuevoAcademico(Map<Character, Academico> academia, Academico nuevo, Character letra) {
         if (Character.isLetter(letra)) {
@@ -55,10 +55,9 @@ public class Main {
             }
         } catch (IOException e) {
             System.err.println("Error al leer el archivo: " + e.getMessage());
-            return; // Salir si hay un error al leer el archivo
+            return;
         }
 
-        // Listado 1: Académicos sin letra, ordenados por nombre y año
         List<Academico> academicosSinLetra = new ArrayList<>(academia.values());
         Collections.sort(academicosSinLetra);
         System.out.println("Listado 1: Académicos sin letra (ordenados por nombre y año)");
@@ -66,7 +65,6 @@ public class Main {
             System.out.println(academico);
         }
 
-        // Listado 2: Académicos con letra, ordenados por letra, nombre y año
         List<Map.Entry<Character, Academico>> academicosConLetra = new ArrayList<>(academia.entrySet());
         academicosConLetra.sort(Map.Entry.comparingByKey());
         System.out.println("\nListado 2: Académicos con letra (ordenados por letra, nombre y año)");
