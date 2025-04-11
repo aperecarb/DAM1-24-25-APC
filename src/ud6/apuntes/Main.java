@@ -47,7 +47,7 @@ public class Main {
         Map<Character, Academico> academia = new HashMap<>();
 
         try {
-            String contenido = readFileToString("academicos.txt");
+            String contenido = readFileToString("src/ud6/apuntes/academicos.txt");
             String[] lineas = contenido.split("\n");
             for (String linea : lineas) {
                 String[] partes = linea.split(" ");
@@ -66,8 +66,7 @@ public class Main {
             System.err.println("Error al leer el archivo: " + e.getMessage());
             return;
         }
-
-        // Listado 1: Académicos sin letra, ordenados por nombre y año
+        
         List<Academico> academicosSinLetra = new ArrayList<>(academia.values());
         Collections.sort(academicosSinLetra);
         System.out.println("Listado 1: Académicos sin letra (ordenados por nombre y año)");
@@ -75,7 +74,6 @@ public class Main {
             System.out.println(academico);
         }
 
-        // Listado 2: Académicos con letra, ordenados por letra, nombre y año
         List<Map.Entry<Character, Academico>> academicosConLetra = new ArrayList<>(academia.entrySet());
         academicosConLetra.sort(Map.Entry.comparingByKey());
         System.out.println("\nListado 2: Académicos con letra (ordenados por letra, nombre y año)");
