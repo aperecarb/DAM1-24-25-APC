@@ -1,3 +1,5 @@
+package ud6.apuntes;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -27,7 +29,7 @@ class Academico implements Comparable<Academico> {
     }
 }
 
-public class Main {
+class Main {
 
     public static boolean nuevoAcademico(Map<Character, Academico> academia, Academico nuevo, Character letra) {
         if (Character.isLetter(letra)) {
@@ -44,14 +46,12 @@ public class Main {
     public static void main(String[] args) {
         Map<Character, Academico> academia = new HashMap<>();
 
-        // Cargar datos desde el fichero (simulado)
         String datos = "a,Juan Pérez,2020\n" +
                 "b,María García,2018\n" +
                 "c,Luis Rodríguez,2022\n" +
                 "d,Ana Martínez,2019\n" +
                 "e,Pedro López,2021";
 
-        // Procesar datos y crear objetos Academico
         String[] lineas = datos.split("\n");
         for (String linea : lineas) {
             String[] partes = linea.split(",");
@@ -61,7 +61,6 @@ public class Main {
             nuevoAcademico(academia, new Academico(nombre, anioIngreso), letra);
         }
 
-        // Listado 1: Académicos sin letra, ordenados por nombre y año
         List<Academico> academicosSinLetra = new ArrayList<>(academia.values());
         Collections.sort(academicosSinLetra);
         System.out.println("Listado 1: Académicos sin letra (ordenados por nombre y año)");
@@ -69,7 +68,6 @@ public class Main {
             System.out.println(academico);
         }
 
-        // Listado 2: Académicos con letra, ordenados por letra, nombre y año
         List<Map.Entry<Character, Academico>> academicosConLetra = new ArrayList<>(academia.entrySet());
         academicosConLetra.sort(Map.Entry.comparingByKey());
         System.out.println("\nListado 2: Académicos con letra (ordenados por letra, nombre y año)");
