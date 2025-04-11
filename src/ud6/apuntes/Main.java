@@ -30,6 +30,9 @@ class Academico implements Comparable<Academico> {
 }
 
 public class Main {
+    public static String readFileToString(String filePath) {
+        
+    }
 
     public static boolean nuevoAcademico(Map<Character, Academico> academia, Academico nuevo, Character letra) {
         if (Character.isLetter(letra)) {
@@ -39,28 +42,9 @@ public class Main {
         return false;
     }
 
+
     public static void main(String[] args) {
         Map<Character, Academico> academia = new HashMap<>();
-
-        try (BufferedReader br = new BufferedReader(new FileReader("src/ud6/apuntes/academicos.txt"))) {
-            String linea;
-            while ((linea = br.readLine()) != null) {
-                String[] partes = linea.split(" ");
-                if (partes.length >= 4) {
-                    Character letra = partes[0].charAt(5);
-                    int anioIngreso = Integer.parseInt(partes[partes.length - 1].replaceAll("[()]", ""));
-                    String nombre = "";
-                    for (int i = 1; i < partes.length - 1; i++) {
-                        nombre += partes[i] + " ";
-                    }
-                    nombre = nombre.trim();
-                    nuevoAcademico(academia, new Academico(nombre, anioIngreso), letra);
-                }
-            }
-        } catch (IOException e) {
-            System.err.println("Error al leer el archivo: " + e.getMessage());
-            return;
-        }
 
         List<Academico> academicosSinLetra = new ArrayList<>(academia.values());
         Collections.sort(academicosSinLetra);
