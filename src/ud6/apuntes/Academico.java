@@ -1,8 +1,8 @@
 package ud6.apuntes;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.*;
 
 class Academico implements Comparable<Academico> {
@@ -29,7 +29,7 @@ class Academico implements Comparable<Academico> {
     }
 }
 
-class Main {
+public class Main {
 
     public static boolean nuevoAcademico(Map<Character, Academico> academia, Academico nuevo, Character letra) {
         if (Character.isLetter(letra)) {
@@ -39,28 +39,26 @@ class Main {
         return false;
     }
 
-    public static String readFileToString(String filePath) throws IOException {
-        return new String(Files.readAllBytes(Paths.get(filePath)));
-    }
-
     public static void main(String[] args) {
         Map<Character, Academico> academia = new HashMap<>();
 
-        String datos = "a,Juan Pérez,2020\n" +
-                "b,María García,2018\n" +
-                "c,Luis Rodríguez,2022\n" +
-                "d,Ana Martínez,2019\n" +
-                "e,Pedro López,2021";
-
-        String[] lineas = datos.split("\n");
-        for (String linea : lineas) {
-            String[] partes = linea.split(",");
-            Character letra = partes[0].charAt(0);
-            String nombre = partes[1];
-            int anioIngreso = Integer.parseInt(partes[2]);
-            nuevoAcademico(academia, new Academico(nombre, anioIngreso), letra);
+        try (BufferedReader br = new BufferedReader(new FileReader("academicos.txt"))) {
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                String[] partes = linea.split(",");
+                if (partes.length == 3) {
+                    Character letra = partes[0].charAt(0);
+                    String nombre = partes[1].trim();
+                    int anioIngreso = Integer.parseInt(partes[2].trim());
+                    nuevoAcademico(academia, new Academico(nombre, anioIngreso), letra);
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("Error al leer el archivo: " + e.getMessage());
+            return; // Salir si hay un error al leer el archivo
         }
 
+        // Listado 1: Académicos sin letra, ordenados por nombre y año
         List<Academico> academicosSinLetra = new ArrayList<>(academia.values());
         Collections.sort(academicosSinLetra);
         System.out.println("Listado 1: Académicos sin letra (ordenados por nombre y año)");
@@ -68,6 +66,7 @@ class Main {
             System.out.println(academico);
         }
 
+        // Listado 2: Académicos con letra, ordenados por letra, nombre y año
         List<Map.Entry<Character, Academico>> academicosConLetra = new ArrayList<>(academia.entrySet());
         academicosConLetra.sort(Map.Entry.comparingByKey());
         System.out.println("\nListado 2: Académicos con letra (ordenados por letra, nombre y año)");
