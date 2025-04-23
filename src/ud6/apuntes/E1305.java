@@ -14,11 +14,14 @@ public class E1305 {
     }
 
     public static void main(String[] args) {
-        List<Double> numeros = List.of(1.0, 4.0, 9.0, 16.0);
-
-        List<Double> raicesCuadradas = transformar(numeros, Math::sqrt);
-
-        System.out.println("Lista original: " + numeros);
-        System.out.println("Lista de raíces cuadradas: " + raicesCuadradas);
+        List<Integer> numerosL = new ArrayList<>();
+        int rnd;
+        for (int i = 0; i < 10; i++) {
+            rnd = (int) (Math.random() * 100 + 1);
+            numerosL.add(rnd);
+        }
+        System.out.println(numerosL);
+        List<Double> raicesCuadradas = transformar(numerosL, x -> Math.sqrt(x));
+        System.out.println(raicesCuadradas);
     }
 }
