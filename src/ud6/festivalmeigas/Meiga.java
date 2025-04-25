@@ -12,7 +12,7 @@ public class Meiga {
         this.alcume = alcume;
     }
 
-    public boolean agregarFeitizosFavs(Feitizo feitizo) {
+    public boolean addFeitizosFavs(Feitizo feitizo) {
         if (!feitizosFavoritos.contains(feitizo)) {
             feitizosFavoritos.add(feitizo);
         } else {
@@ -21,7 +21,7 @@ public class Meiga {
         return true;
     }
 
-    public boolean quitarFeitizosFavs(Feitizo feitizo) {
+    public boolean delFeitizosFavs(Feitizo feitizo) {
         if (feitizosFavoritos.contains(feitizo)) {
             feitizosFavoritos.remove(feitizo);
         } else {
@@ -46,11 +46,11 @@ public class Meiga {
         this.alcume = alcume;
     }
 
-    public List<Feitizo> getFeitizosFavoritos() {
+    public List<Feitizo> getFeitizosFavs() {
         return feitizosFavoritos;
     }
 
-    public void setFeitizosFavoritos(List<Feitizo> feitizosFavoritos) {
+    public void setFeitizosFavs(List<Feitizo> feitizosFavoritos) {
         this.feitizosFavoritos = feitizosFavoritos;
     }
 }
