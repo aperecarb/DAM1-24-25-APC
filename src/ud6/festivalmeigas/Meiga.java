@@ -30,9 +30,6 @@ public class Meiga {
         return true;
     }
 
-    // Getters e Setters
-
-
     public String getNombre() {
         return nombre;
     }

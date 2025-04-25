@@ -38,11 +38,6 @@ public class Feitizo {
                 ingredientesUnicos.add(i);
             }
         }
-
-//        for (Feitizo f : feitizos) {
-//            ingredientesUnicos.addAll(f.ingredientes);
-//        }
-
         return ingredientesUnicos;
     }
 
