@@ -73,6 +73,11 @@ public class Feitizo {
         return new Feitizo[] { f1, f2, f3, f4, f5, f6 };
     }
 
+    @Override
+        public String toString() {
+            return nome + "(" + dificultade + ")";
+        }
+
     public static void main(String[] args) {
         System.out.println("\nFEITIZOS DE EXEMPLO:");
         System.out.println("====================\n");
@@ -83,7 +88,7 @@ public class Feitizo {
 
         // Imprimir os feitizos
         for (Feitizo feitizo : feitizos) {
-            System.out.println(feitizo);
+            System.out.println(feitizo.toString());
         }
     }
 
