@@ -1,3 +1,4 @@
+/* Álvaro Pereira Carballo */
 package ud6.apcexamen.festivalmeigas;
 
 import java.util.Arrays;
@@ -73,6 +74,7 @@ public class Feitizo {
         return new Feitizo[] { f1, f2, f3, f4, f5, f6 };
     }
 
+    // Sobreescribimos el método toString
     @Override
         public String toString() {
             return nome + "(" + dificultade + ")";
