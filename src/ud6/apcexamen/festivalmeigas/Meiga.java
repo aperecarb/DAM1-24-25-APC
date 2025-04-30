@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -52,6 +53,30 @@ public class Meiga {
 
     }
 
+    // Creamos el método para lanzar feitizos
+    public void lanzarFeitizos(Feitizo feitizo) {
+        // Comprobamos si hay suficientes ingredientes
+        for (String ingrediente : feitizo.ingredientes) {
+            if (!inventario.containsKey(ingrediente) || inventario.get(ingrediente) <= 0) {
+                System.out.println("-X Non ten ingredientes suficientes para lanzar o feitizo: " + feitizo.nome);
+                return;
+            }
+        }
+
+        // Si hay ingredientes se resta uno de cada
+        for (String ingrediente : feitizo.ingredientes) {
+            inventario.put(ingrediente, inventario.get(ingrediente) - 1);
+        }
+
+        // Borrar el ingrediente del inventario cuando se agota
+        if (inventario.get(ingrediente) == 0) {
+            inventario.remove(ingrediente);
+        }
+
+        System.out.println("A meiga " + nome + " lanzou o feitizo \"" + feitizo.nome + "\"!");
+
+    }
+
     static Collection<Feitizo> getFeitizosRnd(Collection<Feitizo> feitizos) {
         // Gentea un sublista aleatoria de Feitizo
         List<Feitizo> feitizosRnd = new ArrayList<>(feitizos);
@@ -89,7 +114,7 @@ public class Meiga {
         Arrays.sort(meigasExemplo);
         // Mostrar as meigas de exemplo
         for (Meiga meiga : meigasExemplo) {
-            System.out.println(meiga);
+            System.out.println(meiga.toString());
             System.out.println();
         }
 

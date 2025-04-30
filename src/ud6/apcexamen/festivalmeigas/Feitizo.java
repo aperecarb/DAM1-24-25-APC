@@ -3,13 +3,14 @@ package ud6.apcexamen.festivalmeigas;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
 public class Feitizo {
     // Atributos
-    private String nome;
+    public String nome;
     List<String> ingredientes;
     private Integer dificultade;
 
@@ -86,7 +87,7 @@ public class Feitizo {
         // Crear un array de feitizos de exemplo
         Feitizo[] feitizos = crearFeitizosExemplo();
 
-        Arrays.sort(feitizos);
+        Arrays.sort(feitizos, Comparator.comparing(Feitizo::getNome));
 
         // Imprimir os feitizos
         for (Feitizo feitizo : feitizos) {
