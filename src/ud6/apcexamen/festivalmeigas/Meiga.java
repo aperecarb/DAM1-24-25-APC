@@ -1,3 +1,4 @@
+/* Álvaro Pereira Carballo */
 package ud6.apcexamen.festivalmeigas;
 
 import java.util.ArrayList;
@@ -53,30 +54,6 @@ public class Meiga {
 
     }
 
-    // Creamos el método para lanzar feitizos
-    public void lanzarFeitizos(Feitizo feitizo) {
-        // Comprobamos si hay suficientes ingredientes
-        for (String ingrediente : feitizo.ingredientes) {
-            if (!inventario.containsKey(ingrediente) || inventario.get(ingrediente) <= 0) {
-                System.out.println("-X Non ten ingredientes suficientes para lanzar o feitizo: " + feitizo.nome);
-                return;
-            }
-        }
-
-        // Si hay ingredientes se resta uno de cada
-        for (String ingrediente : feitizo.ingredientes) {
-            inventario.put(ingrediente, inventario.get(ingrediente) - 1);
-        }
-
-        // Borrar el ingrediente del inventario cuando se agota
-        if (inventario.get(ingrediente) == 0) {
-            inventario.remove(ingrediente);
-        }
-
-        System.out.println("A meiga " + nome + " lanzou o feitizo \"" + feitizo.nome + "\"!");
-
-    }
-
     static Collection<Feitizo> getFeitizosRnd(Collection<Feitizo> feitizos) {
         // Gentea un sublista aleatoria de Feitizo
         List<Feitizo> feitizosRnd = new ArrayList<>(feitizos);
@@ -104,6 +81,29 @@ public class Meiga {
             inventario.put(ingrediente, cantidade);
         }
         return inventario;
+    }
+
+    // Creamos el método para lanzar feitizos
+    public void lanzarFeitizos(Feitizo feitizo) {
+        // Comprobamos si hay suficientes ingredientes
+        for (String ingrediente : feitizo.ingredientes) {
+            if (!inventario.containsKey(ingrediente) || inventario.get(ingrediente) <= 0) {
+                System.out.println("-X Non ten ingredientes suficientes para lanzar o feitizo: " + feitizo.nome);
+                return;
+            }
+        }
+
+        // Si hay ingredientes se resta uno de cada
+        for (String ingrediente : feitizo.ingredientes) {
+            inventario.put(ingrediente, inventario.get(ingrediente) - 1);
+        }
+
+        // Borrar el ingrediente del inventario cuando se agota
+        if (inventario.get(ingrediente) == 0) {
+            inventario.remove(ingrediente);
+        }
+
+        System.out.println("A meiga " + nome + " lanzou o feitizo \"" + feitizo.nome + "\"!");
     }
 
     public static void main(String[] args) {
