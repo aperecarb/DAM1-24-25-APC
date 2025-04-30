@@ -1,4 +1,4 @@
-package ud6.xxxexamen.festivalmeigas;
+package ud6.apcexamen.festivalmeigas;
 
 import java.util.Arrays;
 import java.util.Collection;
