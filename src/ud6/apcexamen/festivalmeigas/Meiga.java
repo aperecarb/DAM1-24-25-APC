@@ -104,6 +104,8 @@ public class Meiga {
         }
 
         System.out.println("A meiga " + nome + " lanzou o feitizo \"" + feitizo.nome + "\"!");
+        int puntos = 0;
+        int puntuacion = puntos += feitizo.getDificultade();
     }
 
     public static void main(String[] args) {
