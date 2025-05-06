@@ -8,7 +8,7 @@ package contornos.ud4;
  * 
  * @see <a href="http://www.google.com">Google</a>
  * @version 1-2025
- * @author NAO
+ * @author APC
  * @since o 1-5-2025
  */
 public class Empregado {
