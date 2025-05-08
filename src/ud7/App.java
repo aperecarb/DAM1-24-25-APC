@@ -26,7 +26,7 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         // Crear el botón principal
-        mainButton = new Button("Mostrar Gato Aleatorio");
+        mainButton = new Button("Generar gatete");
 
         // Ruta a la imagen del gato
         String catImagePath = "D:\\aperecarb\\images.jpg"; // Reemplaza con la ruta real de tu imagen de gato
@@ -48,7 +48,7 @@ public class App extends Application {
                 Stage catStage = new Stage();
                 StackPane catPane = new StackPane(catImageView);
                 Scene catScene = new Scene(catPane);
-                catStage.setTitle("¡Gato!");
+                catStage.setTitle("Gatete");
                 catStage.setScene(catScene);
 
                 // Calcular una posición aleatoria para la nueva ventana
@@ -77,7 +77,7 @@ public class App extends Application {
         StackPane root = new StackPane(mainButton);
         Scene scene = new Scene(root, 250, 100);
 
-        primaryStage.setTitle("Gatos Aleatorios");
+        primaryStage.setTitle("Gatetes");
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.setAlwaysOnTop(true);
