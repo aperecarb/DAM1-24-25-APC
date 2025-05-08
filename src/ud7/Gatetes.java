@@ -14,12 +14,11 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Random;
 
-public class App extends Application {
+public class Gatetes extends Application {
     private Button mainButton;
     private Random random = new Random();
 
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, JavaFX!");
         launch();
     }
 
@@ -29,7 +28,7 @@ public class App extends Application {
         mainButton = new Button("Generar gatete");
 
         // Ruta a la imagen del gato
-        String catImagePath = "D:\\aperecarb\\images.jpg"; // Reemplaza con la ruta real de tu imagen de gato
+        String catImagePath = "D:\\aperecarb\\gatete.jpg"; // Reemplaza con la ruta real de tu imagen de gato
 
         // Obtener los límites de la pantalla principal
         Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
