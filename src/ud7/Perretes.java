@@ -68,7 +68,7 @@ public class Perretes extends Application {
                 mainButton.requestFocus();
 
             } catch (FileNotFoundException ex) {
-                System.err.println("Error: No se encontró la imagen del gato en la ruta: " + dogImagePath);
+                System.err.println("Error: No se encontró la imagen del perro en la ruta: " + dogImagePath);
             }
         });
 
