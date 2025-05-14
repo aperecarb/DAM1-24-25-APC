@@ -27,8 +27,8 @@ public class Perretes extends Application {
         // Crear el botón principal
         mainButton = new Button("Generar perrete");
 
-        // Ruta a la imagen del gato
-        String dogImagePath = "D:\\aperecarb\\perrete.jpg"; // Reemplaza con la ruta real de tu imagen de gato
+        // Ruta a la imagen del perrete
+        String dogImagePath = "D:\\aperecarb\\perrete.jpg";
 
         // Obtener los límites de la pantalla principal
         Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
@@ -38,7 +38,7 @@ public class Perretes extends Application {
         // Acción al pulsar el botón principal
         mainButton.setOnAction(e -> {
             try {
-                // Cargar la imagen del gato
+                // Cargar la imagen del perrete
                 FileInputStream input = new FileInputStream(dogImagePath);
                 Image dogImage = new Image(input);
                 ImageView dogImageView = new ImageView(dogImage);
@@ -51,8 +51,8 @@ public class Perretes extends Application {
                 dogStage.setScene(dogScene);
 
                 // Calcular una posición aleatoria para la nueva ventana
-                double dogWindowWidth = 200; // Ancho estimado de la ventana del gato
-                double dogWindowHeight = 200; // Alto estimado de la ventana del gato
+                double dogWindowWidth = 200;
+                double dogWindowHeight = 200;
                 double randomX = screenWidth * random.nextDouble() - dogWindowWidth / 2;
                 double randomY = screenHeight * random.nextDouble() - dogWindowHeight / 2;
 
@@ -72,7 +72,6 @@ public class Perretes extends Application {
             }
         });
 
-        // Escena principal con el botón
         StackPane root = new StackPane(mainButton);
         Scene scene = new Scene(root, 250, 100);
 

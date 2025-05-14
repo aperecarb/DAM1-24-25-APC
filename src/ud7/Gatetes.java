@@ -27,8 +27,8 @@ public class Gatetes extends Application {
         // Crear el botón principal
         mainButton = new Button("Generar gatete");
 
-        // Ruta a la imagen del gato
-        String catImagePath = "D:\\aperecarb\\gatete.jpg"; // Reemplaza con la ruta real de tu imagen de gato
+        // Ruta a la imagen del gatete
+        String catImagePath = "D:\\aperecarb\\gatete.jpg";
 
         // Obtener los límites de la pantalla principal
         Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
@@ -38,7 +38,7 @@ public class Gatetes extends Application {
         // Acción al pulsar el botón principal
         mainButton.setOnAction(e -> {
             try {
-                // Cargar la imagen del gato
+                // Cargar la imagen del gatete
                 FileInputStream input = new FileInputStream(catImagePath);
                 Image catImage = new Image(input);
                 ImageView catImageView = new ImageView(catImage);
@@ -51,8 +51,8 @@ public class Gatetes extends Application {
                 catStage.setScene(catScene);
 
                 // Calcular una posición aleatoria para la nueva ventana
-                double catWindowWidth = 200; // Ancho estimado de la ventana del gato
-                double catWindowHeight = 200; // Alto estimado de la ventana del gato
+                double catWindowWidth = 200;
+                double catWindowHeight = 200;
                 double randomX = screenWidth * random.nextDouble() - catWindowWidth / 2;
                 double randomY = screenHeight * random.nextDouble() - catWindowHeight / 2;
 
@@ -72,7 +72,6 @@ public class Gatetes extends Application {
             }
         });
 
-        // Escena principal con el botón
         StackPane root = new StackPane(mainButton);
         Scene scene = new Scene(root, 250, 100);
 
