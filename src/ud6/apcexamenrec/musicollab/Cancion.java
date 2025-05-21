@@ -94,7 +94,7 @@ public class Cancion implements Comparable<Cancion> {
                 System.out.println("\nCanciones ordenadas por estilo musical, luego por autor y luego por nombre:");
                 System.out.println("===========================================================================\n");
 
-                Collections.sort(canciones, Comparator.comparing(Cancion::getEstiloMusical));
+                Collections.sort(canciones, Comparator.comparing(Cancion::getEstiloMusical).thenComparing(Cancion::getAutor).thenComparing(Cancion::getNombre));
 
                 canciones.forEach(System.out::println);
 
