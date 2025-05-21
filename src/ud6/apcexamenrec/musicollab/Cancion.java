@@ -2,11 +2,63 @@
 
 package ud6.apcexamenrec.musicollab;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
-public class Cancion {
+public class Cancion implements Comparable<Cancion> {
+        private String nombre;
+        private String autor;
+        private String estiloMusical;
+        private List<String> instrumentosRequeridos;
+
+        // Creamos el constructor de la cancion
+        public Cancion(String nombre, String autor, String estiloMusical, List<String> instrumentosRequeridos) {
+                this.nombre = nombre;
+                this.autor = autor;
+                this.estiloMusical = estiloMusical;
+                this.instrumentosRequeridos = new ArrayList<>(new HashSet<>(instrumentosRequeridos));
+        }
+
+        // Creamos los getters y listas
+        public String getNombre() {
+                return nombre;
+        }
+
+        public String getAutor() {
+                return autor;
+        }
+
+        public String getEstiloMusical() {
+                return estiloMusical;
+        }
+
+        public List<String> getInstrumentosRequeridos() {
+                return instrumentosRequeridos;
+        }
+
+        public static List<String> instrumentosDistintos(Collection<Cancion> canciones) {
+                Set<String> instrumentos = new TreeSet<>();
+                for (Cancion c : canciones) {
+                        instrumentos.addAll(c.getInstrumentosRequeridos());
+                }
+                return new ArrayList<>(instrumentos);
+        }
+
+        @Override
+        public int compareTo(Cancion otra) {
+                return this.nombre.compareToIgnoreCase(otra.nombre);
+        }
+
+        @Override
+        public String toString() {
+                return "\"" + nombre + "\"" + " (" + autor + ") - [" + estiloMusical + "] | Instrumentos: " + instrumentosRequeridos;
+        }
 
         public static void main(String[] args) {
                 // Canciones de ejemplo

@@ -28,11 +28,12 @@ public class UtilGenerico {
     public static <K, V> Map<V, List<K>> invertirOrden(Map<K, V> mainMap) {
         Map<V, List<K>> invertedMap = new HashMap<>();
 
-        // La verdad es que no sé si podemos hacer así este método, a lo mejor me metí en documentaciones que no hemos dado
+        // Cogemos la clave y el valor de cada elemento
         for (Map.Entry<K, V> entrada : mainMap.entrySet()) {
             K claveOriginal = entrada.getKey();
             V valorOriginal = entrada.getValue();
 
+            // La verdad es que no sé si puedo hacer esto aquí, a lo mejor me metí en documentaciones que no hemos dado
             invertedMap.computeIfAbsent(valorOriginal, k -> new ArrayList<>()).add(claveOriginal);
         }
 
@@ -45,10 +46,10 @@ public class UtilGenerico {
         List<Integer> lista1 = Arrays.asList(1, 2, 3, 4, 5);
         List<Integer> lista2 = Arrays.asList(4, 5, 6, 7, 8);
 
-        int coincidencias = contarCoincidencias(lista1, lista2);
+        int resultado = contarCoincidencias(lista1, lista2);
 
         System.out.println("Lista 1: " + lista1 + ", Lista 2: " + lista2);
-        System.out.println("Elementos únicos: " + coincidencias);
+        System.out.println("Elementos únicos: " + resultado);
 
         // Método invertirOrden
         Map<String, String> mapaEjemplo = new HashMap<>();
@@ -60,6 +61,6 @@ public class UtilGenerico {
         Map<String, List<String>> mapaInvertidoEjemplo = invertirOrden(mapaEjemplo);
 
         System.out.println("Mapa original: " + mapaEjemplo);
-        System.out.println("Mapa invertido: " + mapaInvertidoEjemplo);
+        System.out.println("Resultado: " + mapaInvertidoEjemplo);
     }
 }
