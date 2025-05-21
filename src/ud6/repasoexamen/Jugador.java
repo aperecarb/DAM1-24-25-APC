@@ -24,10 +24,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
-
-
-
 enum Posicion {
     PORTERO, DEFENSA, CENTROCAMPISTA, DELANTERO
 }
@@ -80,17 +76,16 @@ public class Jugador implements Comparable<Jugador> {
 
     static void altaJugador(Map<Integer, Jugador> plantilla, Integer dorsal, Jugador jugador) {
         if (plantilla.containsKey(dorsal)) {
-           
-        }else{
-             plantilla.put(dorsal, jugador);
+
+        } else {
+            plantilla.put(dorsal, jugador);
         }
     }
 
     static Jugador eliminarJugador(Map<Integer, Jugador> plantilla, Integer dorsal) {
-       
-           return plantilla.remove(dorsal);
-        
-        
+
+        return plantilla.remove(dorsal);
+
     }
 
     static void mostrar(Map<Integer, Jugador> plantilla) {
@@ -99,31 +94,30 @@ public class Jugador implements Comparable<Jugador> {
         }
     }
 
-    static void mostrar(Map<Integer, Jugador> plantilla,Posicion posicion) {
-        
+    static void mostrar(Map<Integer, Jugador> plantilla, Posicion posicion) {
+
         for (Map.Entry<Integer, Jugador> entry : plantilla.entrySet()) {
-           if (entry.getValue().getPosicion()==posicion) {
-            System.out.println(entry.getKey() + " - " + entry.getValue());
-           }
-            
+            if (entry.getValue().getPosicion() == posicion) {
+                System.out.println(entry.getKey() + " - " + entry.getValue());
+            }
+
         }
     }
 
-    static boolean editarJugador(Map<Integer, Jugador> plantilla, Integer dorsal, Jugador jugador){
+    static boolean editarJugador(Map<Integer, Jugador> plantilla, Integer dorsal, Jugador jugador) {
         if (plantilla.containsKey(dorsal)) {
             Jugador jugadorExistente = plantilla.get(dorsal);
             jugadorExistente.setNombre(jugador.getNombre());
             jugadorExistente.setPosicion(jugador.getPosicion());
             jugadorExistente.setEstatura(jugador.getEstatura());
             return true;
-        }else{
+        } else {
             return false;
         }
 
     }
 
-   
-        public static void main(String[] args) {
+    public static void main(String[] args) {
         // antes de nada, hayq eu implementar el hashmap
         // treeMap te lo ordena
         Map<Integer, Jugador> plantilla = new HashMap<>();
@@ -143,33 +137,27 @@ public class Jugador implements Comparable<Jugador> {
         // string
         System.out.println("Lista de jugadores:");
         System.out.println(plantilla);
-            
+
         Jugador.mostrar(plantilla, Posicion.DEFENSA);
 
         Jugador.editarJugador(plantilla, 2, j3);
         Jugador.mostrar(plantilla, Posicion.CENTROCAMPISTA);
-            List<Jugador> listaLista = new ArrayList<>();
-            listaLista.add(j1);
-            listaLista.add(j2);
-            listaLista.add(j3);
-            Jugador[] lista ={j1,j2,j3};
-            Arrays.sort(lista , c1.reversed());
-            
-            listaLista.sort(c1.reversed());
-        }
-        
-      static  Comparator<Jugador> c1 = (j1, j2) -> j1.getEstatura()-j2.getEstatura(); 
-     static   Comparator<Jugador> c2 = (j1,j2) -> j1.getDni().compareTo(j2.getDni());
+        List<Jugador> listaLista = new ArrayList<>();
+        listaLista.add(j1);
+        listaLista.add(j2);
+        listaLista.add(j3);
+        Jugador[] lista = { j1, j2, j3 };
+        Arrays.sort(lista, c1.reversed());
 
-     @Override
-     public int compareTo(Jugador o) {
-       return getEstatura()-o.getEstatura();
-     }
-       
+        listaLista.sort(c1.reversed());
+    }
 
-       
-       
-     
-       
+    static Comparator<Jugador> c1 = (j1, j2) -> j1.getEstatura() - j2.getEstatura();
+    static Comparator<Jugador> c2 = (j1, j2) -> j1.getDni().compareTo(j2.getDni());
+
+    @Override
+    public int compareTo(Jugador o) {
+        return getEstatura() - o.getEstatura();
+    }
 
 }
