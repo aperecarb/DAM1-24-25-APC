@@ -2,6 +2,8 @@
 
 package ud6.apcexamenrec.genericos;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -14,7 +16,8 @@ public class UtilGenerico {
     public static <T> int contarCoincidencias(Collection<T> coleccion1, Collection<T> coleccion2) {
         Set<T> elementosUnicos = new HashSet<>();
 
-        // Metemos ambas colecciones en elementosUnicos para que se eliminen los elementos que coincidan
+        // Metemos ambas colecciones en elementosUnicos para que se eliminen los
+        // elementos que coincidan
         elementosUnicos.addAll(coleccion1);
         elementosUnicos.addAll(coleccion2);
 
@@ -25,19 +28,32 @@ public class UtilGenerico {
     public static <K, V> Map<V, List<K>> invertirOrden(Map<K, V> mainMap) {
         Map<V, List<K>> invertedMap = new HashMap<>();
 
-        for (Map.entry(K, V) entrada : ) {
-            
+        for (Map.Entry<K, V> entrada : mainMap.entrySet()) {
+            K claveOriginal = entrada.getKey();
+            V valorOriginal = entrada.getValue();
+
+            invertedMap.computeIfAbsent(valorOriginal, k -> new ArrayList<>()).add(claveOriginal);
         }
 
-        return ;
+        return invertedMap;
     }
 
     // Creamos un pequeño programa principal para probar los métodos
     public static void main(String[] args) {
         // Método contarCoincidencias
-
+        List<Integer> lista1 = Arrays.asList(1, 2, 3, 4, 5);
+        List<Integer> lista2 = Arrays.asList(4, 5, 6, 7, 8);
+        int coincidencias = contarCoincidencias(lista1, lista2);
+        System.out.println("Lista 1: " + lista1 + ", Lista 2: " + lista2);
+        System.out.println("Elementos únicos: " + coincidencias);
 
         // Método invertirOrden
-
+        Map<String, String> mapaEjemplo = new HashMap<>();
+        mapaEjemplo.put("1", "a");
+        mapaEjemplo.put("2", "b");
+        mapaEjemplo.put("3", "a");
+        Map<String, List<String>> mapaInvertidoEjemplo = invertirOrden(mapaEjemplo);
+        System.out.println("Mapa original: " + mapaEjemplo);
+        System.out.println("Mapa invertido: " + mapaInvertidoEjemplo);
     }
 }
