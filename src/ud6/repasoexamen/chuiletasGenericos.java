@@ -1,4 +1,4 @@
-package UD6;
+package ud6.repasoexamen;
 
 import java.util.ArrayList;
 import java.util.Arrays;
