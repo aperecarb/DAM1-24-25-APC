@@ -78,8 +78,15 @@ public class chuleta {
          * Se recomienda usar remove() del Iterator en vez de coleccion.remove().
          * 
          * 
-         * 
-         * 
+         * computeIfAbsent
+         * 1. Si ya existe una entrada con clave valor, devuelve su lista asociada.
+
+
+2. Si no existe esa clave, la crea con una nueva ArrayList<>() como valor, y la devuelve.
+
+
+
+Después, .add(clave) simplemente añade la clave a la lista asociada al valor.
          * 
          * 
          * 
