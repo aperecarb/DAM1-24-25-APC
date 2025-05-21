@@ -28,6 +28,7 @@ public class UtilGenerico {
     public static <K, V> Map<V, List<K>> invertirOrden(Map<K, V> mainMap) {
         Map<V, List<K>> invertedMap = new HashMap<>();
 
+        // La verdad es que no sé si podemos hacer así este método, a lo mejor me metí en documentaciones que no hemos dado
         for (Map.Entry<K, V> entrada : mainMap.entrySet()) {
             K claveOriginal = entrada.getKey();
             V valorOriginal = entrada.getValue();
@@ -51,7 +52,7 @@ public class UtilGenerico {
 
         // Método invertirOrden
         Map<String, String> mapaEjemplo = new HashMap<>();
-        
+
         mapaEjemplo.put("1", "a");
         mapaEjemplo.put("2", "b");
         mapaEjemplo.put("3", "a");
