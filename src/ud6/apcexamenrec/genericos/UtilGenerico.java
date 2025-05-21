@@ -33,7 +33,6 @@ public class UtilGenerico {
             K claveOriginal = entrada.getKey();
             V valorOriginal = entrada.getValue();
 
-            // La verdad es que no sé si puedo usar esto
             invertedMap.computeIfAbsent(valorOriginal, k -> new ArrayList<>()).add(claveOriginal);
         }
 

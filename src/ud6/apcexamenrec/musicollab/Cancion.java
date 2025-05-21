@@ -6,16 +6,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
 public class Cancion implements Comparable<Cancion> {
-        private String nombre;
-        private String autor;
-        private String estiloMusical;
-        private List<String> instrumentosRequeridos;
+        public String nombre;
+        public String autor;
+        public String estiloMusical;
+        public List<String> instrumentosRequeridos;
 
         // Creamos el constructor de la cancion
         public Cancion(String nombre, String autor, String estiloMusical, List<String> instrumentosRequeridos) {
@@ -42,6 +43,7 @@ public class Cancion implements Comparable<Cancion> {
                 return instrumentosRequeridos;
         }
 
+        // Creamos el método instrumentosDistintos
         public static List<String> instrumentosDistintos(Collection<Cancion> canciones) {
                 Set<String> instrumentos = new TreeSet<>();
                 for (Cancion c : canciones) {
@@ -50,6 +52,7 @@ public class Cancion implements Comparable<Cancion> {
                 return new ArrayList<>(instrumentos);
         }
 
+        // Cambiamos compareTo y toString
         @Override
         public int compareTo(Cancion otra) {
                 return this.nombre.compareToIgnoreCase(otra.nombre);
@@ -91,9 +94,7 @@ public class Cancion implements Comparable<Cancion> {
                 System.out.println("\nCanciones ordenadas por estilo musical, luego por autor y luego por nombre:");
                 System.out.println("===========================================================================\n");
 
-                // TODO Tu código aquí
-                // ...
-                // ...
+                Collections.sort(canciones, Comparator.comparing(Cancion::getEstiloMusical));
 
                 canciones.forEach(System.out::println);
 
