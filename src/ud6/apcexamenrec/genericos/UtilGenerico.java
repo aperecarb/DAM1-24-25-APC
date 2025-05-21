@@ -43,16 +43,21 @@ public class UtilGenerico {
         // Método contarCoincidencias
         List<Integer> lista1 = Arrays.asList(1, 2, 3, 4, 5);
         List<Integer> lista2 = Arrays.asList(4, 5, 6, 7, 8);
+
         int coincidencias = contarCoincidencias(lista1, lista2);
+
         System.out.println("Lista 1: " + lista1 + ", Lista 2: " + lista2);
         System.out.println("Elementos únicos: " + coincidencias);
 
         // Método invertirOrden
         Map<String, String> mapaEjemplo = new HashMap<>();
+        
         mapaEjemplo.put("1", "a");
         mapaEjemplo.put("2", "b");
         mapaEjemplo.put("3", "a");
+
         Map<String, List<String>> mapaInvertidoEjemplo = invertirOrden(mapaEjemplo);
+
         System.out.println("Mapa original: " + mapaEjemplo);
         System.out.println("Mapa invertido: " + mapaInvertidoEjemplo);
     }
