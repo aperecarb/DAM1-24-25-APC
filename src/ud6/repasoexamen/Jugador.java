@@ -15,7 +15,7 @@ static boolean editarJugador(Map<Integer, Jugador> plantilla, Integer dorsal, Ju
 
  */
 
-package UD6.repasoexamen;
+package ud6.repasoexamen;
 
 import java.util.ArrayList;
 import java.util.Arrays;
