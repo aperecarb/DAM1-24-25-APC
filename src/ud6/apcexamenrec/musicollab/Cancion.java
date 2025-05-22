@@ -103,7 +103,7 @@ public class Cancion implements Comparable<Cancion> {
                 System.out.println("================================\n");
                 System.out.println(instrumentosDistintos(canciones));
 
-                System.out.println("\n");d
+                System.out.println("\n");
         }
 
 }
