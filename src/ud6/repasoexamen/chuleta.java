@@ -88,6 +88,14 @@ public class chuleta {
          * Después, .add(clave) añade la clave a la lista asociada al valor.
          */
 
+        /*
+         * Comparator.comparing()
+         * Se utiliza para comparar en base a un índice.
+         * 
+         * Comparator.comparing().thenComparing()
+         * Se utiliza para añadir otro criterio de búsqueda cuando el primero coincida en múltiples objetos.
+         */
+
 
         List<T> Lista = new ArrayList<>();
 
