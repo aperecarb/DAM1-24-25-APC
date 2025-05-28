@@ -47,6 +47,9 @@ public class Entrenamiento extends Application {
         btnAdd.setOnAction(e -> {
             String nombre = nameField.getText().trim();
             LocalDate fecha = datePicker.getValue();
+            String distancia = distanceField.getText().trim();
+
+            
         });
 
         // Hacemos que el botón muestre los registros al ser pulsado
